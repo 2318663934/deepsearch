@@ -299,6 +299,10 @@ def _git_commit(paths: List[Path], message: str) -> None:
 
 
 def ingest_one(raw_path: Path, client: LlamaCppClient, entity_type_override: Optional[str] = None) -> Dict[str, Any]:
+    # 已处理跳过：raw 路径旁有 .processed 标记文件则跳过（避免重复 ingest）
+    if raw_path.with_suffix(raw_path.suffix + ".processed").exists():
+        return {"status": "skipped_processed", "path": str(raw_path)}
+
     print(f"\n=== 处理: {raw_path} ===")
     raw_text = read_raw_file(raw_path)
     print(f"  原文长度: {len(raw_text)} 字")
@@ -460,6 +464,12 @@ def ingest_one(raw_path: Path, client: LlamaCppClient, entity_type_override: Opt
             )
             _git_commit(paths_to_commit, commit_msg)
 
+    # 无论结果如何，写 .processed 标记（避免重跑）
+    raw_path.with_suffix(raw_path.suffix + ".processed").write_text(
+        f"status={result['status']}\nconfidence={result.get('confidence', 'N/A')}\n",
+        encoding="utf-8",
+    )
+
     return result
 
 
@@ -486,9 +496,9 @@ def main():
         if not d.is_dir():
             print(f"目录不存在: {d}")
             sys.exit(1)
+        # 只处理 txt 和 md（不处理 html，避免和 txt 重复）
         targets.extend(sorted(d.rglob("*.txt")))
         targets.extend(sorted(d.rglob("*.md")))
-        targets.extend(sorted(d.rglob("*.html")))
 
     if not targets:
         print("未找到任何 raw 文件")
