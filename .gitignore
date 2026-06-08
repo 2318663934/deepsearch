@@ -1,0 +1,48 @@
+# 环境与密钥
+.env
+*.env
+!/.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.whl
+.venv/
+venv/
+env/
+
+# 临时文件
+*.log
+state/discarded.log
+state/*.tmp
+
+# raw/ 下的二进制大文件（可选）
+raw/**/*.png
+raw/**/*.jpg
+raw/**/*.jpeg
+raw/**/*.gif
+raw/**/*.pdf
+raw/**/*.zip
+
+# 爬取缓存
+raw/**/cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# 用户的项目实施记录文件（与代码无关）
+*.docx
+~$*.docx
