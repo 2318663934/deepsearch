@@ -10,6 +10,10 @@
 2. **可追溯**：每一条事实必须能对应回原文的具体片段（在 `evidence` 字段中）。
 3. **多源独立抽取**：不要把"你知道的王者荣耀常识"混入。当原文未提到某字段时，**保持为空**而不是猜测。
 4. **拒绝幻觉**：宁可少抽，不要错抽。
+5. **slug 必须规范化**：
+   - 对于已知产品（如王者荣耀），**必须**使用标准 slug `wangzhe-rongyao`
+   - 不要因为有"海外名"（如 Honor of Kings）就改用英文 slug
+   - 英雄 slug 用拼音小写连字符：`li-bai`、`hou-yi`、`diao-chan`
 
 ## 输入
 
@@ -68,10 +72,25 @@
 - `examples`：举例
 
 **产品概述（overview）**：
-- `category`：概述类别（游戏定位 / 发展历程 / 商业模式 / 美术风格 ...）
+- `category`：概述类别（game_positioning / development_history / business_model / art_style / target_audience / release_info）
 - `description`：详细说明
-- `key_dates`：重要日期
-- `key_events`：重要事件
+- `key_dates`：重要日期（用 YYYY-MM-DD 格式；多条用分号分隔）
+- `key_events`：重要事件（"YYYY-MM: 事件简述" 格式，多条用分号分隔）
+- `developer`：开发商
+- `publisher`：发行商
+- `platforms`：支持平台（多平台用分号分隔，如 "iOS;Android"）
+- `genre`：游戏类型（MOBA / 5v5 / 团队竞技等）
+- `target_audience`：目标用户
+- `monetization`：商业模式（免费+内购 / 抽卡 / 直购皮肤等）
+- `official_website`：官网 URL
+- `related_heroes_count`：英雄总数（仅当原文给出确切数字时）
+- `related_skins_count`：皮肤总数（仅当原文给出确切数字时）
+- `lore_summary`：世界观/剧情总结
+
+**注意**：
+- `category` 字段必须是 `game_positioning / development_history / business_model / art_style / target_audience / release_info` 之一
+- 数值类字段（`related_heroes_count` 等）必须能在原文找到对应数字，否则 confidence 降 0.2
+- `description` 字段长度 50-300 字最佳
 
 ## `confidence` 评分参考
 

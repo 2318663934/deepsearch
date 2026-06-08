@@ -8,16 +8,18 @@ aliases:
 - 勇气竞技场：5v5竞技场游戏
 - Arena Of Valor:5v5ArenaGame
 - Penta Storm
+- Honor of Kings
+- 亡者农药
 sources:
 - raw\wangzhe\sogou-baike\2026-06-08\v152719307.txt
+- raw\wangzhe\moegirl-baike\2026-06-08\E78E8BE88085E88DA3E88080.txt
 confidence: 0.95
-confidence_reason: '信息来自百科摘要及基本信息栏，包含明确的开发商、发行商、上线日期、平台及游戏类型，表述清晰且有多处原文直接对应，无推断内容。
-  | 硬规则校准: 无调整'
+confidence_reason: '信息来自搜狗百科和萌娘百科双源，包含开发商、发行商、上线日期、平台、游戏类型、英雄/皮肤总数、商业模式等关键事实，关键数据多源一致。'
 created: '2026-06-08T16:50:21+08:00'
-updated: '2026-06-08T16:50:21+08:00'
-last_verified: '2026-06-08T16:50:21+08:00'
+updated: '2026-06-08T16:55:00+08:00'
+last_verified: '2026-06-08T16:55:00+08:00'
 status: verified
-version: 1
+version: 2
 ---
 
 《王者荣耀》是由腾讯游戏天美工作室开发、腾讯游戏运行的一款MOBA类手机游戏，支持Android、iOS及NS平台。游戏于2015年11月26日公测，2025年1月16日上架鸿蒙平台。具备5V5、3V3、1V1等多种竞技模式，拥有法师、战士、坦克等六大英雄定位及丰富的皮肤与道具系统。
@@ -58,3 +60,35 @@ version: 1
 ### key_dates
 - **值**: 2015-11-26: 正式公测; 2025-01-16: 鸿蒙正式版本上架
 - **原文依据**: 于2015年11月26日正式公测; 2025年1月16日，《王者荣耀》鸿蒙正式版本上架应用市场及游戏中心
+
+### monetization
+- **值**: 免费+内购
+- **原文依据**: 游戏中部分玩法和道具需要付费。
+
+### related_heroes_count
+- **值**: 125
+- **原文依据**: 截至2025.05.06，正式服（安卓/和IOS平台）已经推出125位（不含内测英雄和已删除英雄，包括元流之子的不同定位）英雄
+
+### related_skins_count
+- **值**: 700
+- **原文依据**: 截至2025.05.06，正式服（安卓/和IOS平台）已经推出...700款皮肤（不含已删除和未发售皮肤，包含限定皮肤和绝版皮肤）
+
+### age_rating
+- **值**: 12+
+- **原文依据**: 适龄提示：12+
+
+### engine
+- **值**: Unity 3D
+- **原文依据**: 引擎：Unity 3D
+
+### producers
+- **值**: 李旻
+- **原文依据**: 制作人：李旻
+
+### designers
+- **值**: 多尼（Donny）、艾露（ELU）
+- **原文依据**: 设计师：多尼（Donny）、艾露（ELU）
+
+### overseas_variants
+- **值**: Arena of Valor (AOV), 傳說對決, Warsong, 펜타스톰, Liên Quân Mobile, RoV: Mobile MOBA, Mobile Arena
+- **原文依据**: 欧美：Arena of Valor... 台湾地区：傳說對決 日本：Warsong 韩国：펜타스톰 越南：Liên Quân Mobile 泰国：RoV: Mobile MOBA 其它：Mobile Arena
