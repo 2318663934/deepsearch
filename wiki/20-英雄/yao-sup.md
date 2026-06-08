@@ -1,7 +1,7 @@
 ---
 title: 瑶
 type: hero
-slug: yao
+slug: yao-sup
 aliases:
 - Yaria
 - 鹿灵守心

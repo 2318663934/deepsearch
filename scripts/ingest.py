@@ -298,7 +298,7 @@ def _git_commit(paths: List[Path], message: str) -> None:
 # ---------------------------------------------------------------------------
 
 
-def ingest_one(raw_path: Path, client: LlamaCppClient, entity_type_override: Optional[str] = None) -> Dict[str, Any]:
+def ingest_one(raw_path: Path, client: LlamaCppClient, entity_type_override: Optional[str] = None, slug_override: Optional[str] = None) -> Dict[str, Any]:
     # 已处理跳过：raw 路径旁有 .processed 标记文件则跳过（避免重复 ingest）
     if raw_path.with_suffix(raw_path.suffix + ".processed").exists():
         return {"status": "skipped_processed", "path": str(raw_path)}
@@ -313,6 +313,11 @@ def ingest_one(raw_path: Path, client: LlamaCppClient, entity_type_override: Opt
     if not extracted:
         print("  [X] 抽取失败，跳过")
         return {"status": "extract_failed", "path": str(raw_path)}
+
+    # slug 覆盖（命令行传入时优先）
+    if slug_override:
+        print(f"  强制 slug 覆盖: {extracted.get('slug')} -> {slug_override}")
+        extracted["slug"] = slug_override
 
     print(f"  抽取 entity_type={extracted.get('entity_type')}, slug={extracted.get('slug')}")
     print(f"  LLM 自评 confidence={extracted.get('confidence')}, facts数={len(extracted.get('facts') or [])}")
@@ -479,6 +484,7 @@ def main():
     parser.add_argument("--raw-dir", type=str, help="批量处理目录（相对项目根）")
     parser.add_argument("--entity-type", type=str, choices=list(ENTITY_TYPE_TO_DIR.keys()),
                         help="强制指定 entity_type")
+    parser.add_argument("--slug", type=str, help="强制指定 slug（覆盖 LLM 抽取结果）")
     args = parser.parse_args()
 
     if not args.raw and not args.raw_dir:
@@ -507,7 +513,7 @@ def main():
     print(f"待处理 {len(targets)} 个文件")
     results = []
     for t in targets:
-        r = ingest_one(t, client, entity_type_override=args.entity_type)
+        r = ingest_one(t, client, entity_type_override=args.entity_type, slug_override=args.slug)
         results.append(r)
 
     print("\n=== 处理汇总 ===")
