@@ -346,8 +346,8 @@ def _llm_filter_subpages(
         # 过滤明显是地区/分类的
         if any(kw in name for kw in region_kw):
             continue
-        # 过滤太短或带特殊字符
-        if len(name) < 2 or len(name) > 8:
+        # 过滤空名或过长名字（注意：单字名是合法英雄名，如"瑶"/"澜"/"铠"等，不要过滤！）
+        if not name or len(name) > 8:
             continue
         # 过滤明显非人名（纯数字、含括号等）
         if re.search(r"[\(\)\[\]0-9]", name):
