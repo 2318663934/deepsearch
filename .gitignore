@@ -19,6 +19,9 @@ build/
 venv/
 env/
 
+# Claude Code 配置目录（项目级，不入仓）
+.claude/
+
 # 临时文件
 *.log
 state/discarded.log
