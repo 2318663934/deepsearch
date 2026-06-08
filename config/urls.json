@@ -1,0 +1,16 @@
+[
+  {
+    "source": "sogou-baike",
+    "url": "https://baike.sogou.com/v152719307.htm",
+    "product": "wangzhe",
+    "discover_subpages": false,
+    "subpage_max": 0
+  },
+  {
+    "source": "moegirl-baike",
+    "url": "https://mzh.moegirl.org.cn/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80",
+    "product": "wangzhe",
+    "discover_subpages": true,
+    "subpage_max": 30
+  }
+]

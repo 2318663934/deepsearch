@@ -49,3 +49,12 @@ Thumbs.db
 # 用户的项目实施记录文件（与代码无关）
 *.docx
 ~$*.docx
+
+# 爬取的 HTML/TXT 是中间产物，体积大，按需保留
+# 取消下一行的注释以入仓；当前不入仓（爬虫可重建）
+raw/wangzhe/sogou-baike/
+raw/wangzhe/moegirl-baike/
+raw/wangzhe/moegirl-baike_sub/
+
+# scripts/_tmp 是用户工作目录里的临时文件，不入仓
+scripts/_tmp/

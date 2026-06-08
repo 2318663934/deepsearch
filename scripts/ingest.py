@@ -332,15 +332,77 @@ def ingest_one(raw_path: Path, client: LlamaCppClient, entity_type_override: Opt
 
     # 冲突时（既有页存在）先入 99-待审核
     if target.exists():
-        review_path = WIKI_ROOT / "99-待审核" / f"{fm['slug']}-{dt.datetime.now().strftime('%Y%m%d%H%M%S')}.md"
-        _write_md(review_path, md)
-        print(f"  ⚠️  既有页 {target.relative_to(_PROJECT_ROOT)} 存在，新条目入 {review_path.relative_to(_PROJECT_ROOT)}")
-        result = {
-            "status": "conflict",
-            "wiki_path": str(target.relative_to(_PROJECT_ROOT)),
-            "review_path": str(review_path.relative_to(_PROJECT_ROOT)),
-            "confidence": final_conf,
-        }
+        # 升级为完整冲突检测：规则 + LLM 兜底
+        from scripts.lib_confidence import decide_action
+
+        print("  [conflict] 既有页存在，调用 decide_action...")
+        diff_result, existing_page = decide_action(extracted, client=client)
+        print(f"  [conflict] action={diff_result.action}, reason={diff_result.reason[:100]}")
+
+        # 根据 action 决定处理
+        if diff_result.action == "no_overlap":
+            # LLM 判定"不是同一实体"——以新为准（罕见情况，覆盖既有页）
+            if final_conf >= CONFIDENCE_AUTO_WRITE:
+                _write_md(target, md)
+                print(f"  ✓ 覆盖写入 {target.relative_to(_PROJECT_ROOT)} (LLM 判定非同一实体)")
+                result = {
+                    "status": "written",
+                    "wiki_path": str(target.relative_to(_PROJECT_ROOT)),
+                    "confidence": final_conf,
+                }
+            else:
+                review_path = WIKI_ROOT / "99-待审核" / target.name
+                _write_md(review_path, md)
+                result = {
+                    "status": "review",
+                    "wiki_path": str(target.relative_to(_PROJECT_ROOT)),
+                    "review_path": str(review_path.relative_to(_PROJECT_ROOT)),
+                    "confidence": final_conf,
+                }
+        elif diff_result.action == "replace":
+            # 规则/LLM 判定：可以替换既有页
+            if final_conf >= CONFIDENCE_AUTO_WRITE:
+                _write_md(target, md)
+                print(f"  ✓ 替换既有页: {target.relative_to(_PROJECT_ROOT)}")
+                result = {
+                    "status": "replaced",
+                    "wiki_path": str(target.relative_to(_PROJECT_ROOT)),
+                    "confidence": final_conf,
+                }
+            else:
+                review_path = WIKI_ROOT / "99-待审核" / target.name
+                _write_md(review_path, md)
+                result = {
+                    "status": "review",
+                    "wiki_path": str(target.relative_to(_PROJECT_ROOT)),
+                    "review_path": str(review_path.relative_to(_PROJECT_ROOT)),
+                    "confidence": final_conf,
+                }
+        elif diff_result.action == "append":
+            # 互补：保留既有页，新事实追加到既有页（暂用待审核）
+            review_path = WIKI_ROOT / "99-待审核" / f"{fm['slug']}-append-{dt.datetime.now().strftime('%Y%m%d%H%M%S')}.md"
+            _write_md(review_path, md)
+            print(f"  ➕ 追加模式：写入 {review_path.relative_to(_PROJECT_ROOT)}（待人工合并）")
+            result = {
+                "status": "append",
+                "wiki_path": str(target.relative_to(_PROJECT_ROOT)),
+                "review_path": str(review_path.relative_to(_PROJECT_ROOT)),
+                "confidence": final_conf,
+                "appended_keys": diff_result.appended_keys,
+            }
+        else:
+            # conflict：写入 99-待审核
+            review_path = WIKI_ROOT / "99-待审核" / f"{fm['slug']}-{dt.datetime.now().strftime('%Y%m%d%H%M%S')}.md"
+            _write_md(review_path, md)
+            print(f"  ⚠️  冲突: {review_path.relative_to(_PROJECT_ROOT)}")
+            print(f"      冲突字段: {diff_result.conflicting_keys[:5]}")
+            result = {
+                "status": "conflict",
+                "wiki_path": str(target.relative_to(_PROJECT_ROOT)),
+                "review_path": str(review_path.relative_to(_PROJECT_ROOT)),
+                "confidence": final_conf,
+                "conflicting_keys": diff_result.conflicting_keys,
+            }
     elif final_conf >= CONFIDENCE_AUTO_WRITE:
         _write_md(target, md)
         print(f"  ✓ 写入 {target.relative_to(_PROJECT_ROOT)}")
