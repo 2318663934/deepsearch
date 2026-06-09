@@ -12,6 +12,9 @@ updated: '2026-06-09T15:38:37+08:00'
 last_verified: '2026-06-09T15:38:37+08:00'
 status: verified
 version: 1
+related:
+  - 20-精灵/CLAUDE.md
+  - 00-索引/CLAUDE.md
 ---
 
 传说中灵魂的收集者，通过吸收其他精灵的灵魂，来塑造自己的身躯，偶尔会自言自语，似乎是在安抚不听从的灵魂。

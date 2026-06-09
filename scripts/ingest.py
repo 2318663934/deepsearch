@@ -73,7 +73,7 @@ def read_raw_file(path: Path) -> str:
     if not path.exists():
         raise FileNotFoundError(f"raw 文件不存在: {path}")
     suffix = path.suffix.lower()
-    if suffix in {".txt", ".md"}:
+    if suffix in {".txt", ".md", ".wikitext"}:
         return path.read_text(encoding="utf-8")
     if suffix in {".html", ".htm"}:
         # 简单 HTML 文本提取（不引入额外依赖）
@@ -136,6 +136,64 @@ def _call_extract(client: LlamaCppClient, source_path: str, raw_text: str, produ
 # ---------------------------------------------------------------------------
 # 硬规则校准
 # ---------------------------------------------------------------------------
+
+
+def _pet_to_extracted(parsed: Dict[str, Any], source_path: str) -> Dict[str, Any]:
+    """把 lib_luoke_parser.parse_pet_wikitext 的输出包装成 ingest 期望的 schema。"""
+    stats = parsed.get("stats") or {}
+    facts: List[Dict[str, str]] = []
+    if parsed.get("phase"):
+        facts.append({"key": "phase", "value": parsed["phase"], "evidence": f"精灵阶段={parsed['phase']}"})
+    if parsed.get("main_attr"):
+        facts.append({"key": "main_attr", "value": parsed["main_attr"], "evidence": f"主属性={parsed['main_attr']}"})
+    if parsed.get("sub_attr"):
+        facts.append({"key": "sub_attr", "value": parsed["sub_attr"], "evidence": f"2属性={parsed['sub_attr']}"})
+    for k, v in stats.items():
+        if v != "" and v is not None:
+            facts.append({"key": f"stat_{k}", "value": str(v), "evidence": f"{k}={v}"})
+    if parsed.get("description"):
+        facts.append({"key": "description", "value": parsed["description"], "evidence": "精灵描述"})
+    if parsed.get("region"):
+        facts.append({"key": "region", "value": parsed["region"], "evidence": "分布地区"})
+    if parsed.get("evolution"):
+        facts.append({"key": "evolution", "value": parsed["evolution"], "evidence": "进化条件"})
+
+    from scripts.lib_luoke_parser import slugify_zh
+    slug = slugify_zh(parsed["name"])
+
+    return {
+        "entity_type": "pet",
+        "slug": slug,
+        "title": parsed["name"],
+        "aliases": [],
+        "summary": parsed.get("description", "")[:80],
+        "facts": facts,
+        "sources": [source_path],
+        "confidence": 0.95,  # 模板解析 = 100% 准确
+        "confidence_reason": "B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM",
+    }
+
+
+def _skill_to_extracted(parsed: Dict[str, Any], source_path: str) -> Dict[str, Any]:
+    """把 parse_skill_wikitext 输出包装成 ingest schema。"""
+    facts: List[Dict[str, str]] = []
+    for k in ("attr", "category", "cost", "power", "effect", "description", "version"):
+        v = parsed.get(k)
+        if v:
+            facts.append({"key": k, "value": v, "evidence": f"{k}={v}"})
+    from scripts.lib_luoke_parser import slugify_zh
+    slug = slugify_zh(parsed["name"])
+    return {
+        "entity_type": "skill",
+        "slug": slug,
+        "title": parsed["name"],
+        "aliases": [],
+        "summary": parsed.get("description", "")[:80],
+        "facts": facts,
+        "sources": [source_path],
+        "confidence": 0.95,
+        "confidence_reason": "B 站 wiki 技能模板结构化解析",
+    }
 
 
 def _calibrate_confidence(
@@ -333,18 +391,25 @@ def ingest_one(
     if product == "luoke" and "bilibili" in str(raw_path):
         from scripts.lib_luoke_parser import parse_pet_wikitext, parse_skill_wikitext
 
+        rel_path = str(raw_path.relative_to(_PROJECT_ROOT))
         # 先按 entity_type_override 决定走哪条解析,否则按顺序试
+        parsed: Optional[Dict[str, Any]] = None
         if entity_type_override == "pet":
-            extracted = parse_pet_wikitext(raw_text)
+            parsed = parse_pet_wikitext(raw_text)
         elif entity_type_override == "skill":
-            extracted = parse_skill_wikitext(raw_text)
+            parsed = parse_skill_wikitext(raw_text)
         else:
-            extracted = parse_pet_wikitext(raw_text) or parse_skill_wikitext(raw_text)
-        if extracted:
-            print(f"  [parser] bilibili SMW 解析成功: type={extracted.get('entity_type')}, name={extracted.get('name')}")
+            parsed = parse_pet_wikitext(raw_text) or parse_skill_wikitext(raw_text)
+        if parsed:
+            et = parsed.get("entity_type", "stub")
+            if et == "pet":
+                extracted = _pet_to_extracted(parsed, rel_path)
+            elif et == "skill":
+                extracted = _skill_to_extracted(parsed, rel_path)
+            print(f"  [parser] bilibili SMW 解析成功: type={et}, name={parsed.get('name')}")
         else:
             print("  [parser] SMW 模板未命中,回退 LLM 抽取")
-            extracted = _call_extract(client, str(raw_path.relative_to(_PROJECT_ROOT)), raw_text, product)
+            extracted = _call_extract(client, rel_path, raw_text, product)
     else:
         extracted = _call_extract(client, str(raw_path.relative_to(_PROJECT_ROOT)), raw_text, product)
     if not extracted:
@@ -544,6 +609,7 @@ def main():
         # 只处理 txt 和 md（不处理 html，避免和 txt 重复）
         targets.extend(sorted(d.rglob("*.txt")))
         targets.extend(sorted(d.rglob("*.md")))
+        targets.extend(sorted(d.rglob("*.wikitext")))
 
     if not targets:
         print("未找到任何 raw 文件")

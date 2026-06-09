@@ -24,7 +24,7 @@ PET_TEMPLATE = "精灵信息/兼容"
 SKILL_TEMPLATE = "技能信息"
 
 PET_EXPECTED_FIELDS = [
-    "精灵名", "精灵形态", "地区形态名称", "精灵初阶名称", "是否有异色",
+    "精灵名称", "精灵形态", "地区形态名称", "精灵初阶名称", "是否有异色",
     "精灵阶段", "精灵类型", "精灵描述", "主属性", "2属性", "特性", "特性描述",
     "生命", "物攻", "魔攻", "物防", "魔防", "速度", "体型", "重量",
     "分布地区", "图鉴课题", "课题技能石", "技能", "技能解锁等级",
@@ -133,8 +133,8 @@ def parse_pet_wikitext(wikitext: str) -> Optional[Dict[str, Any]]:
     if not raw:
         return None
 
-    # 必填字段:精灵名
-    name = raw.get("精灵名")
+    # 必填字段:精灵名称
+    name = raw.get("精灵名称")
     if not name:
         return None
 

@@ -52,6 +52,7 @@ class CrawlTarget:
     subpage_max: int = 30  # 子页最多抓几个
     subpage_url_pattern: Optional[str] = None  # 简单白名单 regex，如 r"王者荣耀:[^/]+$"
     delay_sec: float = 1.0  # 每个 URL 抓取后 sleep 时长(秒),礼貌爬取
+    action_raw: bool = False  # 抓 ?action=raw(MediaWiki 原始 wikitext,模板未渲染)
 
 
 @dataclass
@@ -146,21 +147,25 @@ def fetch_url(
 ) -> Optional[bytes]:
     """带 UA / 重试 / 指数退避的 HTTP GET。返回原始 bytes 或 None。"""
     headers = {"User-Agent": DEFAULT_UA, **target.extra_headers}
+    url = target.url
+    if target.action_raw and "action=raw" not in url:
+        sep = "&" if "?" in url else "?"
+        url = f"{url}{sep}action=raw"
     last_err: Optional[Exception] = None
     for attempt in range(retries):
         try:
-            resp = requests.get(target.url, headers=headers, timeout=timeout)
+            resp = requests.get(url, headers=headers, timeout=timeout)
             # 显式 4xx/5xx 抛错
             resp.raise_for_status()
-            # 简单判断内容是否有效
-            if len(resp.content) < 500:
+            # action=raw 短一些 OK(如多灵 735 字节),不做 < 500 拒绝
+            if not target.action_raw and len(resp.content) < 500:
                 raise ValueError(f"响应过短（{len(resp.content)} 字节），可能不是真实页面")
             return resp.content
         except Exception as e:
             last_err = e
             if attempt < retries - 1:
                 time.sleep(backoff ** attempt)
-    print(f"  [crawl] {target.url} 抓取失败：{last_err}")
+    print(f"  [crawl] {url} 抓取失败：{last_err}")
     return None
 
 
@@ -191,11 +196,23 @@ def save_crawl(
     """把抓到的内容存到 raw/{product}/{source}/{date}/{slug}.{html|txt}
 
     同时保存原始 HTML 和提取后的纯文本。
+
+    action_raw=True 时,只存 .wikitext 一份(原始 wikitext),不解析 HTML。
     """
     today = dt.date.today().isoformat()
     out_dir = RAW_ROOT / target.product / target.source / today
     out_dir.mkdir(parents=True, exist_ok=True)
     slug = _url_to_slug(target.url)
+
+    if target.action_raw:
+        # 存原始 wikitext 文本(MediaWiki ?action=raw 端点返回 text/plain UTF-8)
+        try:
+            wt = raw_bytes.decode("utf-8")
+        except UnicodeDecodeError:
+            wt = raw_bytes.decode("utf-8", errors="ignore")
+        wt_path = out_dir / f"{slug}.wikitext"
+        wt_path.write_text(wt, encoding="utf-8")
+        return wt_path
 
     html_path = out_dir / f"{slug}.html"
     html_path.write_bytes(raw_bytes)
@@ -486,6 +503,8 @@ def main():
     parser.add_argument("--min-interval-min", type=int, default=60, help="最小重抓间隔（分钟）")
     parser.add_argument("--with-subpages", action="store_true", help="聚合页抓取后自动发现子页")
     parser.add_argument("--subpage-max", type=int, default=30, help="子页最多抓 N 个")
+    parser.add_argument("--delay", type=float, default=None, help="每个 URL 抓取后 sleep 时长(秒),覆盖 CrawlTarget.delay_sec")
+    parser.add_argument("--action-raw", action="store_true", help="抓 ?action=raw 原始 wikitext(MediaWiki)")
     args = parser.parse_args()
 
     targets: List[CrawlTarget] = []
@@ -494,6 +513,8 @@ def main():
             targets.append(CrawlTarget(
                 source=args.source, url=u, product=args.product,
                 discover_subpages=args.with_subpages, subpage_max=args.subpage_max,
+                delay_sec=args.delay if args.delay is not None else 1.0,
+                action_raw=args.action_raw,
             ))
     if args.config:
         cfg = _PROJECT_ROOT / args.config

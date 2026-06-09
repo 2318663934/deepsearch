@@ -124,17 +124,26 @@ def _parse_facts(body: str) -> List[Dict[str, Any]]:
     return facts
 
 
-def load_all_wiki() -> Dict[str, WikiFile]:
+def load_all_wiki(product: Optional[str] = None) -> Dict[str, WikiFile]:
+    """加载 wiki/ 下所有 md 文件。
+
+    Args:
+        product: None = 全扫;否则只扫 wiki/{product}/ 子树
+    """
     files: Dict[str, WikiFile] = {}
-    for md in WIKI_ROOT.rglob("*.md"):
-        rel = str(md.relative_to(WIKI_ROOT))
-        if rel.startswith("99-待审核"):
-            # 待审核目录是临时区，不纳入 lint 主体（但矛盾检查可以纳入）
-            pass
-        text = md.read_text(encoding="utf-8")
-        fm, body = _split_fm(text)
-        facts = _parse_facts(body)
-        files[rel] = WikiFile(rel_path=rel, fm=fm, body=body, facts=facts)
+    roots = [WIKI_ROOT / product] if product else [WIKI_ROOT]
+    for root in roots:
+        if not root.exists():
+            continue
+        for md in root.rglob("*.md"):
+            rel = str(md.relative_to(WIKI_ROOT))
+            if rel.startswith("99-待审核"):
+                # 待审核目录是临时区，不纳入 lint 主体（但矛盾检查可以纳入）
+                pass
+            text = md.read_text(encoding="utf-8")
+            fm, body = _split_fm(text)
+            facts = _parse_facts(body)
+            files[rel] = WikiFile(rel_path=rel, fm=fm, body=body, facts=facts)
     return files
 
 
