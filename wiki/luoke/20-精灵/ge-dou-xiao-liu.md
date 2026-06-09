@@ -7,9 +7,9 @@ sources:
 - raw\luoke\bilibili-wiki\2026-06-09\rocom_E6A0BCE69697E5B08FE585AD.wikitext
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
-created: '2026-06-09T18:20:30+08:00'
-updated: '2026-06-09T18:20:30+08:00'
-last_verified: '2026-06-09T18:20:30+08:00'
+created: '2026-06-09T18:55:39+08:00'
+updated: '2026-06-09T18:55:39+08:00'
+last_verified: '2026-06-09T18:55:39+08:00'
 status: verified
 version: 1
 ---
@@ -52,3 +52,7 @@ version: 1
 ### description
 - **值**: 掌力十足,岩石上常常出现它们的掌印。研究员根据其攻击招式,改编了一套能够强身健体的健体操,在学院中曾挂起过一阵不小的习武之风。
 - **原文依据**: 精灵描述
+
+### form
+- **值**: 原始形态
+- **原文依据**: 精灵形态=原始形态
