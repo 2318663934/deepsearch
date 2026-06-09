@@ -1,0 +1,34 @@
+---
+title: 炽焰狮(悲鸣的样子)
+type: pet
+slug: chi-yan-shi-bei-ming-de-yang-zi
+aliases: []
+sources:
+- raw\luoke\bilibili-wiki\2026-06-09\rocom_E782BDE784B0E78BAEEFBC88E682B2E9B8A3E79A84E6A0B7E5AD90.wikitext
+confidence: 0.95
+confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
+created: '2026-06-09T18:56:06+08:00'
+updated: '2026-06-09T18:56:06+08:00'
+last_verified: '2026-06-09T18:56:06+08:00'
+status: verified
+version: 1
+---
+
+人们的正义之心化为实体，形成熊熊烈焰，最终照亮城市中每一个阴暗的角落。邪恶见到这光芒会四处遁逃，而市民们得以乘光前行。——《魔法学院都市安全法》
+
+## 事实
+### phase
+- **值**: Ⅱ阶
+- **原文依据**: 精灵阶段=Ⅱ阶
+
+### main_attr
+- **值**: 火
+- **原文依据**: 主属性=火
+
+### description
+- **值**: 人们的正义之心化为实体，形成熊熊烈焰，最终照亮城市中每一个阴暗的角落。邪恶见到这光芒会四处遁逃，而市民们得以乘光前行。——《魔法学院都市安全法》
+- **原文依据**: 精灵描述
+
+### form_name
+- **值**: 悲鸣的样子
+- **原文依据**: 地区形态名称=悲鸣的样子
