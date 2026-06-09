@@ -1,39 +1,43 @@
 ---
 title: 洛克王国世界
-type: stub
+type: hero
 slug: luoke-guowang-shijie
 aliases: []
 sources:
-- raw\luoke\bilibili-wiki\2026-06-09\rocom_Widget3AFakePond.wikitext
-confidence: 0.8
-confidence_reason: '原文为HTML/Wikitext代码片段，明确包含“数据源为BWIKI洛克王国wiki.biligame.com”字样，且展示了具体的宠物名称（喵喵）和属性（草），信息提取准确，但属于UI组件而非完整产品文档，故置信度略低于完整文档。
+- raw\luoke\bilibili-wiki\2026-06-09\rocom_E6A8A1E69DBF3AE7B2BEE781B5E4BFA1E681AF.wikitext
+confidence: 0.85
+confidence_reason: '原文为洛克王国世界（根据文件名rocom及内容推断）的精灵数据模板，明确展示了游戏的核心玩法元素（精灵、属性、技能、课题），信息具体且结构清晰，但缺乏官方发行日期等宏观信息，故置信度较高但未满分。
   | 硬规则校准: 无调整'
-created: '2026-06-09T18:20:54+08:00'
-updated: '2026-06-09T18:20:54+08:00'
-last_verified: '2026-06-09T18:20:54+08:00'
+created: '2026-06-09T18:24:54+08:00'
+updated: '2026-06-09T18:24:54+08:00'
+last_verified: '2026-06-09T18:24:54+08:00'
 status: verified
 version: 1
 ---
 
-该片段为BWIKI洛克王国Wiki的Widget组件代码，主要展示宠物“喵喵”的立绘、属性图标及资质条等UI元素，数据源指向wiki.biligame.com。
+洛克王国世界是一款包含精灵捕捉、养成和战斗玩法的游戏。资料展示了精灵数据模板，包含种族值、属性、技能及图鉴课题等详细数值设定。
 
 ## 事实
-### data_source
-- **值**: BWIKI洛克王国wiki.biligame.com
-- **原文依据**: 数据源为BWIKI洛克王国wiki.biligame.com
+### genre
+- **值**: 精灵捕捉养成
+- **原文依据**: 分类:精灵... 精灵编号... 精灵类型... 技能... 血脉技能
 
-### ui_component_type
-- **值**: 宠物立绘与资质展示组件
-- **原文依据**: <div class="rocom_sprite_grament_img">...<div class="rocom_sprite_info_qualification">...
+### core_mechanics
+- **值**: 包含精灵编号、主/副属性、种族值（生命/速度/物攻/魔攻/物防/魔防）、特性、技能解锁、图鉴课题系统。
+- **原文依据**: 精灵编号... 主属性... 副属性... 种族值... 特性... 技能... 图鉴课题
 
-### displayed_pet_name
-- **值**: 喵喵
-- **原文依据**: alt="页面 宠物 立绘 喵喵 1.png"
+### example_stats
+- **值**: 以默认模板值为例：生命115, 速度110, 物攻108, 魔攻92, 物防94, 魔防100。
+- **原文依据**: |生命={{{生命|115}}}|速度={{{速度|110}}}|物攻={{{物攻|108}}}|魔攻={{{魔攻|92}}}|物防={{{物防|94}}}|魔防={{{魔防|100}}}
 
-### displayed_attributes
-- **值**: 草
-- **原文依据**: alt="图标 宠物 属性 草.png"
+### example_attribute
+- **值**: 默认主属性为光。
+- **原文依据**: |主属性={{{主属性|光}}}
 
-### displayed_qualification
-- **值**: 生命
-- **原文依据**: alt="图标 宠物 资质 生命.png"
+### example_feature
+- **值**: 特性描述示例：释放恶系技能时，敌方失去4点能量。
+- **原文依据**: |特性描述={{{特性描述|释放恶系技能时，敌方失去4点能量。}}}
+
+### example_achievement
+- **值**: 图鉴课题包括：捕捉特定数量精灵、捕捉不同血脉精灵、使用特定道具（暗星球）捕捉等。
+- **原文依据**: |图鉴课题={{{图鉴课题|捕捉1/5/10只精灵... 使用暗星球捕捉成功5次}}}
