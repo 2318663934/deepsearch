@@ -7,9 +7,9 @@ sources:
 - raw\luoke\bilibili-wiki\2026-06-09\rocom_E5B883E9B281E696AF.wikitext
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
-created: '2026-06-09T18:09:36+08:00'
-updated: '2026-06-09T18:09:36+08:00'
-last_verified: '2026-06-09T18:09:36+08:00'
+created: '2026-06-09T18:55:23+08:00'
+updated: '2026-06-09T18:55:23+08:00'
+last_verified: '2026-06-09T18:55:23+08:00'
 status: verified
 version: 1
 ---
@@ -56,3 +56,7 @@ version: 1
 ### region
 - **值**: 行踪神秘
 - **原文依据**: 分布地区
+
+### form
+- **值**: 原始形态
+- **原文依据**: 精灵形态=原始形态
