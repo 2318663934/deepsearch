@@ -7,9 +7,9 @@ sources:
 - raw\luoke\bilibili-wiki\2026-06-09\rocom_E5B7A8E599ACE99288E9BCB9.wikitext
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
-created: '2026-06-09T18:48:04+08:00'
-updated: '2026-06-09T18:48:04+08:00'
-last_verified: '2026-06-09T18:48:04+08:00'
+created: '2026-06-09T18:55:21+08:00'
+updated: '2026-06-09T18:55:21+08:00'
+last_verified: '2026-06-09T18:55:21+08:00'
 status: verified
 version: 1
 ---
@@ -60,3 +60,7 @@ version: 1
 ### evolution
 - **值**: 击败三只虫系精灵进化
 - **原文依据**: 进化条件
+
+### form
+- **值**: 原始形态
+- **原文依据**: 精灵形态=原始形态
