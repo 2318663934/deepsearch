@@ -7,9 +7,9 @@ sources:
 - raw\luoke\bilibili-wiki\2026-06-09\rocom_E998BFE7B1B3E6A8B1.wikitext
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
-created: '2026-06-09T17:14:58+08:00'
-updated: '2026-06-09T17:14:58+08:00'
-last_verified: '2026-06-09T17:14:58+08:00'
+created: '2026-06-09T18:56:50+08:00'
+updated: '2026-06-09T18:56:50+08:00'
+last_verified: '2026-06-09T18:56:50+08:00'
 status: verified
 version: 1
 ---
@@ -56,3 +56,7 @@ version: 1
 ### region
 - **值**: 乌黑巷 / 叽叽喳喳台地 / 商店街周边 / 奥贝斯坦湖 / 学院驻地 / 岚语峰 / 挽风屏障 / 月牙湖岸 / 月牙镇 / 皇家办事处 / 聆风塔地 / 聆风镇 / 轻风山 / 风眠圣所
 - **原文依据**: 分布地区
+
+### form
+- **值**: 原始形态
+- **原文依据**: 精灵形态=原始形态
