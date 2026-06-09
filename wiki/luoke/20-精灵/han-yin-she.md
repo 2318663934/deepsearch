@@ -7,9 +7,9 @@ sources:
 - raw\luoke\bilibili-wiki\2026-06-09\rocom_E5AF92E99FB3E89B87.wikitext
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
-created: '2026-06-09T18:20:23+08:00'
-updated: '2026-06-09T18:20:23+08:00'
-last_verified: '2026-06-09T18:20:23+08:00'
+created: '2026-06-09T18:55:17+08:00'
+updated: '2026-06-09T18:55:17+08:00'
+last_verified: '2026-06-09T18:55:17+08:00'
 status: verified
 version: 1
 ---
@@ -52,3 +52,7 @@ version: 1
 ### description
 - **值**: 拥有能分泌毒液的特殊腺体，能够通过背部空心管状的骨棘发射毒液，致使猎物晕厥。毒液会散发出腐臭的气味，有精灵或洛克靠近查看味道来源时，会猛然跃起扑击。
 - **原文依据**: 精灵描述
+
+### form
+- **值**: 原始形态
+- **原文依据**: 精灵形态=原始形态
