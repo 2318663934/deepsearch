@@ -139,16 +139,19 @@ def load_wiki_page(rel_path: str) -> Optional[WikiPage]:
     return WikiPage(path=p.relative_to(WIKI_ROOT), fm=fm, body=body, facts=facts)
 
 
-def find_existing_page(entity_type: str, slug: str) -> Optional[WikiPage]:
-    """根据 entity_type + slug 找既有 wiki 页。"""
+def find_existing_page(entity_type: str, slug: str, product: str = "wangzhe") -> Optional[WikiPage]:
+    """根据 product + entity_type + slug 找既有 wiki 页。"""
     type_to_dir = {
-        "hero": "20-英雄",
-        "skill": "30-技能机制",
+        "hero": "20-英雄", "pet": "20-精灵",
+        "skill": "30-技能机制", "mechanism": "30-技能机制",
+        "item": "40-道具",
+        "quest": "50-任务",
+        "map": "60-地图",
         "overview": "10-产品概述",
         "stub": "99-待审核",
     }
     sub = type_to_dir.get(entity_type, "99-待审核")
-    candidate = WIKI_ROOT / sub / f"{slug}.md"
+    candidate = WIKI_ROOT / product / sub / f"{slug}.md"
     if candidate.exists():
         return load_wiki_page(str(candidate.relative_to(WIKI_ROOT)))
     return None
@@ -320,6 +323,7 @@ def decide_action(
     new_extracted: Dict[str, Any],
     client: Optional[LlamaCppClient] = None,
     use_llm_fallback: bool = True,
+    product: str = "wangzhe",
 ) -> Tuple[DiffResult, Optional[WikiPage]]:
     """
     对一个新抽取的条目，决定它和 wiki 既有页的关系。
@@ -330,7 +334,7 @@ def decide_action(
     if not slug:
         return DiffResult(action="no_overlap", reason="无 slug"), None
 
-    existing = find_existing_page(entity_type, slug)
+    existing = find_existing_page(entity_type, slug, product=product)
     if existing is None:
         return DiffResult(action="no_overlap", reason="无既有页"), None
 

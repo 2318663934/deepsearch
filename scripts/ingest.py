@@ -254,12 +254,12 @@ def _render_markdown(fm: Dict[str, Any], body: str) -> str:
     return f"---\n{fm_text}---\n\n{body}"
 
 
-def _target_path(extracted: Dict[str, Any], entity_type_override: Optional[str] = None) -> Path:
+def _target_path(extracted: Dict[str, Any], product: str, entity_type_override: Optional[str] = None) -> Path:
     entity_type = entity_type_override or extracted.get("entity_type", "stub")
     sub = ENTITY_TYPE_TO_DIR.get(entity_type, "99-待审核")
     slug = str(extracted.get("slug", "unknown")).strip().lower().replace(" ", "-")
     slug = re.sub(r"[^a-z0-9\-_]", "", slug) or "unknown"
-    return WIKI_ROOT / sub / f"{slug}.md"
+    return WIKI_ROOT / product / sub / f"{slug}.md"
 
 
 def _write_md(path: Path, content: str) -> None:
@@ -298,12 +298,26 @@ def _git_commit(paths: List[Path], message: str) -> None:
 # ---------------------------------------------------------------------------
 
 
-def ingest_one(raw_path: Path, client: LlamaCppClient, entity_type_override: Optional[str] = None, slug_override: Optional[str] = None) -> Dict[str, Any]:
+def ingest_one(
+    raw_path: Path,
+    client: LlamaCppClient,
+    product: Optional[str] = None,
+    entity_type_override: Optional[str] = None,
+    slug_override: Optional[str] = None,
+) -> Dict[str, Any]:
+    # product 必填:由 raw 路径 raw/<product>/<source>/<date>/xxx.txt 推断
+    if product is None:
+        try:
+            rel = raw_path.relative_to(RAW_ROOT)
+            product = rel.parts[0]  # e.g. raw/wangzhe/... → "wangzhe"
+        except ValueError:
+            raise ValueError(f"无法从 raw 路径推断 product: {raw_path},请显式传 --product")
+
     # 已处理跳过：raw 路径旁有 .processed 标记文件则跳过（避免重复 ingest）
     if raw_path.with_suffix(raw_path.suffix + ".processed").exists():
         return {"status": "skipped_processed", "path": str(raw_path)}
 
-    print(f"\n=== 处理: {raw_path} ===")
+    print(f"\n=== 处理: {raw_path} (product={product}) ===")
     raw_text = read_raw_file(raw_path)
     print(f"  原文长度: {len(raw_text)} 字")
 
@@ -335,9 +349,9 @@ def ingest_one(raw_path: Path, client: LlamaCppClient, entity_type_override: Opt
     md = _render_markdown(fm, body)
 
     if entity_type_override:
-        target = _target_path(extracted, entity_type_override=entity_type_override)
+        target = _target_path(extracted, product, entity_type_override=entity_type_override)
     else:
-        target = _target_path(extracted)
+        target = _target_path(extracted, product)
 
     # 冲突时（既有页存在）先入 99-待审核
     if target.exists():
@@ -345,7 +359,7 @@ def ingest_one(raw_path: Path, client: LlamaCppClient, entity_type_override: Opt
         from scripts.lib_confidence import decide_action
 
         print("  [conflict] 既有页存在，调用 decide_action...")
-        diff_result, existing_page = decide_action(extracted, client=client)
+        diff_result, existing_page = decide_action(extracted, client=client, product=product)
         print(f"  [conflict] action={diff_result.action}, reason={diff_result.reason[:100]}")
 
         # 根据 action 决定处理
@@ -360,7 +374,7 @@ def ingest_one(raw_path: Path, client: LlamaCppClient, entity_type_override: Opt
                     "confidence": final_conf,
                 }
             else:
-                review_path = WIKI_ROOT / "99-待审核" / target.name
+                review_path = WIKI_ROOT / product / "99-待审核" / target.name
                 _write_md(review_path, md)
                 result = {
                     "status": "review",
@@ -379,7 +393,7 @@ def ingest_one(raw_path: Path, client: LlamaCppClient, entity_type_override: Opt
                     "confidence": final_conf,
                 }
             else:
-                review_path = WIKI_ROOT / "99-待审核" / target.name
+                review_path = WIKI_ROOT / product / "99-待审核" / target.name
                 _write_md(review_path, md)
                 result = {
                     "status": "review",
@@ -389,7 +403,7 @@ def ingest_one(raw_path: Path, client: LlamaCppClient, entity_type_override: Opt
                 }
         elif diff_result.action == "append":
             # 互补：保留既有页，新事实追加到既有页（暂用待审核）
-            review_path = WIKI_ROOT / "99-待审核" / f"{fm['slug']}-append-{dt.datetime.now().strftime('%Y%m%d%H%M%S')}.md"
+            review_path = WIKI_ROOT / product / "99-待审核" / f"{fm['slug']}-append-{dt.datetime.now().strftime('%Y%m%d%H%M%S')}.md"
             _write_md(review_path, md)
             print(f"  ➕ 追加模式：写入 {review_path.relative_to(_PROJECT_ROOT)}（待人工合并）")
             result = {
@@ -401,7 +415,7 @@ def ingest_one(raw_path: Path, client: LlamaCppClient, entity_type_override: Opt
             }
         else:
             # conflict：写入 99-待审核
-            review_path = WIKI_ROOT / "99-待审核" / f"{fm['slug']}-{dt.datetime.now().strftime('%Y%m%d%H%M%S')}.md"
+            review_path = WIKI_ROOT / product / "99-待审核" / f"{fm['slug']}-{dt.datetime.now().strftime('%Y%m%d%H%M%S')}.md"
             _write_md(review_path, md)
             print(f"  ⚠️  冲突: {review_path.relative_to(_PROJECT_ROOT)}")
             print(f"      冲突字段: {diff_result.conflicting_keys[:5]}")
@@ -421,7 +435,7 @@ def ingest_one(raw_path: Path, client: LlamaCppClient, entity_type_override: Opt
             "confidence": final_conf,
         }
     elif final_conf >= CONFIDENCE_REVIEW:
-        review_path = WIKI_ROOT / "99-待审核" / target.name
+        review_path = WIKI_ROOT / product / "99-待审核" / target.name
         _write_md(review_path, md)
         print(f"  ⚠️  置信度 {final_conf} 入待审核: {review_path.relative_to(_PROJECT_ROOT)}")
         result = {
@@ -439,6 +453,7 @@ def ingest_one(raw_path: Path, client: LlamaCppClient, entity_type_override: Opt
                     {
                         "ts": dt.datetime.now().isoformat(),
                         "raw_path": str(raw_path.relative_to(_PROJECT_ROOT)),
+                        "product": product,
                         "confidence": final_conf,
                         "reason": extracted.get("confidence_reason", ""),
                     },
@@ -514,7 +529,7 @@ def main():
     print(f"待处理 {len(targets)} 个文件")
     results = []
     for t in targets:
-        r = ingest_one(t, client, entity_type_override=args.entity_type, slug_override=args.slug)
+        r = ingest_one(t, client, product=args.product, entity_type_override=args.entity_type, slug_override=args.slug)
         results.append(r)
 
     print("\n=== 处理汇总 ===")
