@@ -7,9 +7,9 @@ sources:
 - raw\luoke\bilibili-wiki\2026-06-09\rocom_E6A0BCE69697E5B08FE4BA94.wikitext
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
-created: '2026-06-09T18:20:30+08:00'
-updated: '2026-06-09T18:20:30+08:00'
-last_verified: '2026-06-09T18:20:30+08:00'
+created: '2026-06-09T18:55:39+08:00'
+updated: '2026-06-09T18:55:39+08:00'
+last_verified: '2026-06-09T18:55:39+08:00'
 status: verified
 version: 1
 ---
@@ -52,3 +52,7 @@ version: 1
 ### description
 - **值**: 执着于进行腿法训练，能够在瞬间发动数次踢击。得益于发达的腿部肌肉，在奔跑时有着极强的爆发力，乐于向遇见的一切生物发起竞速挑战。
 - **原文依据**: 精灵描述
+
+### form
+- **值**: 原始形态
+- **原文依据**: 精灵形态=原始形态
