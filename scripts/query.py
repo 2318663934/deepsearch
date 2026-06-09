@@ -23,6 +23,7 @@ from pathlib import Path
 from typing import List, Optional, Tuple
 
 from scripts.lib_llm import MiniMaxClient
+from scripts.lib_prompt import load_product_prompt
 
 # ---------------------------------------------------------------------------
 # 路径
@@ -159,18 +160,18 @@ def parse_response(text: str) -> Tuple[Optional[str], Optional[Tuple[str, str]],
 # ---------------------------------------------------------------------------
 
 
-def _load_protocol_prompt() -> str:
-    react_md = (PROMPTS_DIR / "react_query.md").read_text(encoding="utf-8")
+def _load_protocol_prompt(product: str = "wangzhe") -> str:
+    react_md = load_product_prompt("react_query.md", product)
     answer_md = (PROMPTS_DIR / "answer.md").read_text(encoding="utf-8")
     # 合并 react 协议说明 + answer 协议作为 system prompt
     return f"{react_md}\n\n---\n\n{answer_md}"
 
 
-def query(question: str, client: Optional[MiniMaxClient] = None, verbose: bool = True) -> str:
+def query(question: str, client: Optional[MiniMaxClient] = None, verbose: bool = True, product: str = "wangzhe") -> str:
     if client is None:
         client = MiniMaxClient()
 
-    system_prompt = _load_protocol_prompt()
+    system_prompt = _load_protocol_prompt(product=product)
     messages: List[dict] = [
         {"role": "user", "content": f"用户问题: {question}\n\n请开始 ReAct 协议。"}
     ]
@@ -257,7 +258,7 @@ def main():
     parser = argparse.ArgumentParser(description="Query the wiki via ReAct")
     parser.add_argument("--q", required=True, help="用户问题")
     parser.add_argument("--quiet", action="store_true", help="不打印 ReAct 步骤")
-    parser.add_argument("--product", type=str, default=None, help="产品 ID(wangzhe/luoke),None 时查全 wiki")
+    parser.add_argument("--product", type=str, default="wangzhe", help="产品 ID(wangzhe/luoke)")
     args = parser.parse_args()
 
     answer = query(args.q, verbose=not args.quiet, product=args.product)

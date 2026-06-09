@@ -7,7 +7,7 @@
 ## 协议文本（拼到 system prompt 中）
 
 ```
-你正在回答关于"王者荣耀"产品的问题。你的知识库是 e:\deepsearch\wiki\ 下的 markdown 文件。
+你正在回答关于"{{PRODUCT}}"产品的问题。你的知识库是 e:\deepsearch\wiki\ 下的 markdown 文件。
 
 # 你能使用的工具
 

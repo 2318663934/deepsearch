@@ -24,6 +24,7 @@ from typing import Any, Dict, List, Optional
 import yaml
 
 from scripts.lib_llm import LlamaCppClient, parse_json_safe
+from scripts.lib_prompt import load_product_prompt
 
 # ---------------------------------------------------------------------------
 # 路径常量
@@ -107,8 +108,8 @@ def read_raw_file(path: Path) -> str:
 # ---------------------------------------------------------------------------
 
 
-def _build_extract_prompt(source_path: str, raw_text: str) -> tuple[str, str]:
-    system = _load_prompt("extract.md")
+def _build_extract_prompt(source_path: str, raw_text: str, product: str) -> tuple[str, str]:
+    system = load_product_prompt("extract.md", product)
     user = (
         f"## source_path\n{source_path}\n\n"
         f"## raw_text（前 4000 字）\n{raw_text[:4000]}\n\n"
@@ -117,8 +118,8 @@ def _build_extract_prompt(source_path: str, raw_text: str) -> tuple[str, str]:
     return system, user
 
 
-def _call_extract(client: LlamaCppClient, source_path: str, raw_text: str) -> Optional[Dict[str, Any]]:
-    system, user = _build_extract_prompt(source_path, raw_text)
+def _call_extract(client: LlamaCppClient, source_path: str, raw_text: str, product: str) -> Optional[Dict[str, Any]]:
+    system, user = _build_extract_prompt(source_path, raw_text, product)
     resp = client.generate_with_system(system, user, temperature=0.2, max_tokens=2000)
     parsed = parse_json_safe(resp.content)
     if not isinstance(parsed, dict):
@@ -323,7 +324,7 @@ def ingest_one(
 
     # 1. 抽取
     print("  [1/3] 抽取中...")
-    extracted = _call_extract(client, str(raw_path.relative_to(_PROJECT_ROOT)), raw_text)
+    extracted = _call_extract(client, str(raw_path.relative_to(_PROJECT_ROOT)), raw_text, product)
     if not extracted:
         print("  [X] 抽取失败，跳过")
         return {"status": "extract_failed", "path": str(raw_path)}
