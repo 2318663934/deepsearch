@@ -7,9 +7,9 @@ sources:
 - raw\luoke\bilibili-wiki\2026-06-09\rocom_E69FB4E6B8A3E899AB.wikitext
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
-created: '2026-06-09T18:09:43+08:00'
-updated: '2026-06-09T18:09:43+08:00'
-last_verified: '2026-06-09T18:09:43+08:00'
+created: '2026-06-09T18:55:37+08:00'
+updated: '2026-06-09T18:55:37+08:00'
+last_verified: '2026-06-09T18:55:37+08:00'
 status: verified
 version: 1
 ---
@@ -64,3 +64,7 @@ version: 1
 ### evolution
 - **值**: 使用3次[[引燃]]
 - **原文依据**: 进化条件
+
+### form
+- **值**: 原始形态
+- **原文依据**: 精灵形态=原始形态
