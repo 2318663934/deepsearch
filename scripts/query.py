@@ -41,28 +41,43 @@ TIMEOUT_SEC = 60
 # ---------------------------------------------------------------------------
 
 
-def _safe_path(rel_path: str) -> Optional[Path]:
+def _safe_path(rel_path: str, product: Optional[str] = None) -> Optional[Path]:
     """
     把 LLM 给的相对路径安全地映射到 WIKI_ROOT 下的真实路径。
     防止 LLM 输出 ../../../etc/passwd 之类的越权。
+
+    Args:
+        rel_path: LLM 给的相对路径,如 "20-英雄/li-bai.md" 或 "wangzhe/20-英雄/li-bai.md"
+        product: 产品 ID,None=全搜;非 None 时简写路径找不到会自动试加 product 前缀
     """
     rel = rel_path.strip().lstrip("/")
+    # 1) 直接尝试
     candidate = (WIKI_ROOT / rel).resolve()
     try:
         candidate.relative_to(WIKI_ROOT.resolve())
     except ValueError:
         return None
-    if not candidate.exists():
-        return None
-    return candidate
+    if candidate.exists():
+        return candidate
+    # 2) product 限定时,fallback 试加 product 前缀
+    if product:
+        prefixed = f"{product}/{rel}"
+        candidate2 = (WIKI_ROOT / prefixed).resolve()
+        try:
+            candidate2.relative_to(WIKI_ROOT.resolve())
+        except ValueError:
+            return None
+        if candidate2.exists():
+            return candidate2
+    return None
 
 
-def tool_read_file(rel_path: str) -> str:
-    p = _safe_path(rel_path)
+def tool_read_file(rel_path: str, product: Optional[str] = None) -> str:
+    p = _safe_path(rel_path, product)
     if not p:
         return f"[ERROR] 文件不存在或越界: {rel_path}"
     if p.is_dir():
-        return tool_list_dir(str(p.relative_to(WIKI_ROOT)))
+        return tool_list_dir(str(p.relative_to(WIKI_ROOT)), product)
     try:
         content = p.read_text(encoding="utf-8")
     except Exception as e:
@@ -73,12 +88,19 @@ def tool_read_file(rel_path: str) -> str:
     return f"[FILE: {rel_path}]\n{content}"
 
 
-def tool_list_dir(rel_path: str = ".") -> str:
+def tool_list_dir(rel_path: str = ".", product: Optional[str] = None) -> str:
     if rel_path.strip() in ("", "."):
-        target = WIKI_ROOT
-        prefix = ""
+        # 根目录:有 product 限定时进到产品子目录
+        if product:
+            target = WIKI_ROOT / product
+            prefix = product
+        else:
+            target = WIKI_ROOT
+            prefix = ""
+        if not target.exists():
+            return f"[ERROR] 目录不存在: {target}"
     else:
-        p = _safe_path(rel_path)
+        p = _safe_path(rel_path, product)
         if not p:
             return f"[ERROR] 目录不存在或越界: {rel_path}"
         target = p
@@ -93,27 +115,32 @@ def tool_list_dir(rel_path: str = ".") -> str:
     return "\n".join(lines)
 
 
-def tool_search(query: str) -> str:
-    """在所有 md 文件中搜索关键词。"""
+def tool_search(query: str, product: Optional[str] = None) -> str:
+    """在所有 md 文件中搜索关键词。product 限定时只搜产品子目录。"""
     if not query.strip():
         return "[ERROR] search query 为空"
     pattern = re.compile(re.escape(query), re.IGNORECASE)
     hits: List[Tuple[str, str]] = []
-    for md in WIKI_ROOT.rglob("*.md"):
-        try:
-            text = md.read_text(encoding="utf-8")
-        except Exception:
+    roots = [WIKI_ROOT / product] if product else [WIKI_ROOT]
+    for root in roots:
+        if not root.exists():
             continue
-        if pattern.search(text):
-            # 取第一个匹配行的前后文
-            for i, line in enumerate(text.splitlines()):
-                if pattern.search(line):
-                    ctx_start = max(0, i - 1)
-                    ctx_end = min(len(text.splitlines()), i + 2)
-                    ctx = "\n".join(text.splitlines()[ctx_start:ctx_end])
-                    rel = md.relative_to(WIKI_ROOT)
-                    hits.append((str(rel), ctx))
-                    break
+        for md in root.rglob("*.md"):
+            try:
+                text = md.read_text(encoding="utf-8")
+            except Exception:
+                continue
+            if pattern.search(text):
+                for i, line in enumerate(text.splitlines()):
+                    if pattern.search(line):
+                        ctx_start = max(0, i - 1)
+                        ctx_end = min(len(text.splitlines()), i + 2)
+                        ctx = "\n".join(text.splitlines()[ctx_start:ctx_end])
+                        rel = md.relative_to(WIKI_ROOT)
+                        hits.append((str(rel), ctx))
+                        break
+            if len(hits) >= 5:
+                break
         if len(hits) >= 5:
             break
     if not hits:
@@ -223,13 +250,13 @@ def query(question: str, client: Optional[MiniMaxClient] = None, verbose: bool =
         if verbose:
             print(f"  → 执行 ACTION: {action_type} {arg}")
 
-        # 执行工具
+        # 执行工具(注入 product 上下文)
         if action_type == "read_file":
-            observation = tool_read_file(arg)
+            observation = tool_read_file(arg, product=product)
         elif action_type == "list_dir":
-            observation = tool_list_dir(arg)
+            observation = tool_list_dir(arg, product=product)
         elif action_type == "search":
-            observation = tool_search(arg)
+            observation = tool_search(arg, product=product)
         else:
             observation = f"[ERROR] 未知 action: {action_type}"
 

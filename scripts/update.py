@@ -74,20 +74,29 @@ def _write_wiki_md(rel_path: str, fm: Dict[str, Any], body: str) -> Path:
 # ---------------------------------------------------------------------------
 
 
-def _safe_path(rel_path: str) -> Optional[Path]:
+def _safe_path(rel_path: str, product: Optional[str] = None) -> Optional[Path]:
     rel = rel_path.strip().lstrip("/")
     candidate = (WIKI_ROOT / rel).resolve()
     try:
         candidate.relative_to(WIKI_ROOT.resolve())
     except ValueError:
         return None
-    if not candidate.exists() or not candidate.is_file():
-        return None
-    return candidate
+    if candidate.exists() and candidate.is_file():
+        return candidate
+    if product:
+        prefixed = f"{product}/{rel}"
+        cand2 = (WIKI_ROOT / prefixed).resolve()
+        try:
+            cand2.relative_to(WIKI_ROOT.resolve())
+        except ValueError:
+            return None
+        if cand2.exists() and cand2.is_file():
+            return cand2
+    return None
 
 
-def tool_read_file(rel_path: str) -> str:
-    p = _safe_path(rel_path)
+def tool_read_file(rel_path: str, product: Optional[str] = None) -> str:
+    p = _safe_path(rel_path, product)
     if not p:
         return f"[ERROR] 文件不存在或越界: {rel_path}"
     content = p.read_text(encoding="utf-8")
@@ -96,10 +105,10 @@ def tool_read_file(rel_path: str) -> str:
     return f"[FILE: {rel_path}]\n{content}"
 
 
-def tool_list_dir(rel_path: str = ".") -> str:
+def tool_list_dir(rel_path: str = ".", product: Optional[str] = None) -> str:
     if rel_path.strip() in ("", "."):
-        target = WIKI_ROOT
-        prefix = ""
+        target = WIKI_ROOT / product if product else WIKI_ROOT
+        prefix = product or ""
     else:
         rel = rel_path.strip().lstrip("/")
         target = (WIKI_ROOT / rel).resolve()
@@ -118,25 +127,31 @@ def tool_list_dir(rel_path: str = ".") -> str:
     return "\n".join(lines)
 
 
-def tool_search(query: str) -> str:
+def tool_search(query: str, product: Optional[str] = None) -> str:
     if not query.strip():
         return "[ERROR] search query 为空"
     pat = re.compile(re.escape(query), re.IGNORECASE)
     hits: List[Tuple[str, str]] = []
-    for md in WIKI_ROOT.rglob("*.md"):
-        try:
-            text = md.read_text(encoding="utf-8")
-        except Exception:
+    roots = [WIKI_ROOT / product] if product else [WIKI_ROOT]
+    for root in roots:
+        if not root.exists():
             continue
-        if pat.search(text):
-            for i, line in enumerate(text.splitlines()):
-                if pat.search(line):
-                    ctx_start = max(0, i - 1)
-                    ctx_end = min(len(text.splitlines()), i + 2)
-                    ctx = "\n".join(text.splitlines()[ctx_start:ctx_end])
-                    rel = md.relative_to(WIKI_ROOT)
-                    hits.append((str(rel), ctx))
-                    break
+        for md in root.rglob("*.md"):
+            try:
+                text = md.read_text(encoding="utf-8")
+            except Exception:
+                continue
+            if pat.search(text):
+                for i, line in enumerate(text.splitlines()):
+                    if pat.search(line):
+                        ctx_start = max(0, i - 1)
+                        ctx_end = min(len(text.splitlines()), i + 2)
+                        ctx = "\n".join(text.splitlines()[ctx_start:ctx_end])
+                        rel = md.relative_to(WIKI_ROOT)
+                        hits.append((str(rel), ctx))
+                        break
+            if len(hits) >= 8:
+                break
         if len(hits) >= 8:
             break
     if not hits:
@@ -301,6 +316,7 @@ def locate_target(
     instruction: str,
     client: LlamaCppClient,
     verbose: bool = True,
+    product: Optional[str] = None,
 ) -> Optional[Dict[str, Any]]:
     """阶段 A：通过 ReAct 定位目标文件 + 决策"""
     if verbose:
@@ -354,11 +370,11 @@ def locate_target(
             print(f"  → 执行 ACTION: {action_type} {arg}")
 
         if action_type == "read_file":
-            obs = tool_read_file(arg)
+            obs = tool_read_file(arg, product=product)
         elif action_type == "list_dir":
-            obs = tool_list_dir(arg)
+            obs = tool_list_dir(arg, product=product)
         elif action_type == "search":
-            obs = tool_search(arg)
+            obs = tool_search(arg, product=product)
         else:
             obs = f"[ERROR] 未知 action: {action_type}"
 
@@ -469,7 +485,7 @@ def main():
     print(f"使用模型: {client.model}")
 
     # 阶段 A: 定位
-    target = locate_target(args.instruction, client, verbose=not args.quiet)
+    target = locate_target(args.instruction, client, verbose=not args.quiet, product=args.product)
     if not target or not target.get("target_path"):
         print("\n[X] 阶段 A 失败：未定位到目标文件")
         return
