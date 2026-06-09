@@ -11,6 +11,10 @@ updated: '2026-06-09T15:30:00+08:00'
 last_verified: '2026-06-09T15:30:00+08:00'
 status: verified
 version: 1
+related:
+  - 10-产品概述/luoke-guowang-shijie.md
+  - 20-精灵/CLAUDE.md
+  - 20-精灵/duo-ling.md
 ---
 
 # 洛克王国世界产品知识库 — 总索引

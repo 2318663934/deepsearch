@@ -11,6 +11,9 @@ updated: '2026-06-09T15:30:00+08:00'
 last_verified: '2026-06-09T15:30:00+08:00'
 status: verified
 version: 1
+related:
+  - 00-索引/CLAUDE.md
+  - 20-精灵/duo-ling.md
 ---
 
 # 20-精灵(洛克王国世界)
