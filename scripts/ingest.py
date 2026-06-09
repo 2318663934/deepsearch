@@ -39,8 +39,13 @@ CONFIDENCE_AUTO_WRITE = 0.7
 CONFIDENCE_REVIEW = 0.4
 
 ENTITY_TYPE_TO_DIR = {
-    "hero": "20-英雄",
-    "skill": "30-技能机制",
+    "hero": "20-英雄",      # 王者:英雄
+    "pet": "20-精灵",       # 洛克:精灵(对应王者荣耀英雄)
+    "skill": "30-技能机制",  # 通用
+    "mechanism": "30-技能机制",  # 通用
+    "item": "40-道具",      # 洛克:道具
+    "quest": "50-任务",     # 洛克:任务
+    "map": "60-地图",       # 洛克:地图/地区
     "overview": "10-产品概述",
     "stub": "99-待审核",
 }
@@ -322,9 +327,26 @@ def ingest_one(
     raw_text = read_raw_file(raw_path)
     print(f"  原文长度: {len(raw_text)} 字")
 
-    # 1. 抽取
+    # 1. 抽取(洛克+bilibili 走结构化 parser,其他走 LLM)
     print("  [1/3] 抽取中...")
-    extracted = _call_extract(client, str(raw_path.relative_to(_PROJECT_ROOT)), raw_text, product)
+    extracted: Optional[Dict[str, Any]] = None
+    if product == "luoke" and "bilibili" in str(raw_path):
+        from scripts.lib_luoke_parser import parse_pet_wikitext, parse_skill_wikitext
+
+        # 先按 entity_type_override 决定走哪条解析,否则按顺序试
+        if entity_type_override == "pet":
+            extracted = parse_pet_wikitext(raw_text)
+        elif entity_type_override == "skill":
+            extracted = parse_skill_wikitext(raw_text)
+        else:
+            extracted = parse_pet_wikitext(raw_text) or parse_skill_wikitext(raw_text)
+        if extracted:
+            print(f"  [parser] bilibili SMW 解析成功: type={extracted.get('entity_type')}, name={extracted.get('name')}")
+        else:
+            print("  [parser] SMW 模板未命中,回退 LLM 抽取")
+            extracted = _call_extract(client, str(raw_path.relative_to(_PROJECT_ROOT)), raw_text, product)
+    else:
+        extracted = _call_extract(client, str(raw_path.relative_to(_PROJECT_ROOT)), raw_text, product)
     if not extracted:
         print("  [X] 抽取失败，跳过")
         return {"status": "extract_failed", "path": str(raw_path)}
