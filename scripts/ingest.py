@@ -485,6 +485,7 @@ def main():
     parser.add_argument("--entity-type", type=str, choices=list(ENTITY_TYPE_TO_DIR.keys()),
                         help="强制指定 entity_type")
     parser.add_argument("--slug", type=str, help="强制指定 slug（覆盖 LLM 抽取结果）")
+    parser.add_argument("--product", type=str, default=None, help="产品 ID(wangzhe/luoke),None 时根据 raw 路径推断")
     args = parser.parse_args()
 
     if not args.raw and not args.raw_dir:

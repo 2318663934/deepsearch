@@ -460,6 +460,7 @@ def main():
     parser.add_argument("--dry-run", action="store_true", default=True, help="只预览不写（默认）")
     parser.add_argument("--apply", action="store_true", help="实际写文件+commit")
     parser.add_argument("--quiet", action="store_true", help="不打印中间过程")
+    parser.add_argument("--product", type=str, default=None, help="产品 ID(wangzhe/luoke)")
     args = parser.parse_args()
 
     dry_run = not args.apply

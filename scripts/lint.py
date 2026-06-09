@@ -355,9 +355,10 @@ def render_text(alerts: List[Alert], files: Dict[str, WikiFile]) -> str:
 def main():
     parser = argparse.ArgumentParser(description="Wiki 健康检查")
     parser.add_argument("--json", action="store_true", help="JSON 输出")
+    parser.add_argument("--product", type=str, default=None, help="产品 ID(wangzhe/luoke),None 时全扫")
     args = parser.parse_args()
 
-    files = load_all_wiki()
+    files = load_all_wiki(product=args.product)
     if not files:
         print("未发现任何 wiki 文件")
         return

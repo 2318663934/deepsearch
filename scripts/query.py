@@ -257,9 +257,10 @@ def main():
     parser = argparse.ArgumentParser(description="Query the wiki via ReAct")
     parser.add_argument("--q", required=True, help="用户问题")
     parser.add_argument("--quiet", action="store_true", help="不打印 ReAct 步骤")
+    parser.add_argument("--product", type=str, default=None, help="产品 ID(wangzhe/luoke),None 时查全 wiki")
     args = parser.parse_args()
 
-    answer = query(args.q, verbose=not args.quiet)
+    answer = query(args.q, verbose=not args.quiet, product=args.product)
     print("\n" + "=" * 60)
     print("最终回答:")
     print("=" * 60)

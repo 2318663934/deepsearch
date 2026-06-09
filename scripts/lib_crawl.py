@@ -26,6 +26,8 @@ from typing import Dict, List, Optional
 import requests
 from bs4 import BeautifulSoup
 
+from scripts.lib_prompt import PRODUCT_DISPLAY
+
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent
 RAW_ROOT = _PROJECT_ROOT / "raw"
 STATE_DIR = _PROJECT_ROOT / "state"
@@ -246,16 +248,17 @@ def crawl_one(
 # ---------------------------------------------------------------------------
 
 
-def _extract_subpage_hrefs(html_bytes: bytes, base_url: str) -> List[str]:
+def _extract_subpage_hrefs(html_bytes: bytes, base_url: str, product: str = "wangzhe") -> List[str]:
     """
     从聚合页 HTML 中提取候选子页 URL。
     规则：
-      - href 在 title="王者荣耀*"/title="本产品*" 等带产品前缀的 <a> 标签内
+      - href 在 title="<产品名>*"/title="本产品*" 等带产品前缀的 <a> 标签内
       - 排除 self、edit、redlink、css/js/icon/锚点
       - 绝对化（拼上 base_url 的 host）
     """
     from urllib.parse import urljoin, urlparse, unquote
 
+    product_display = PRODUCT_DISPLAY.get(product, "本产品")
     html = html_bytes.decode("utf-8", errors="ignore")
     soup = BeautifulSoup(html, "html.parser")
     parsed_base = urlparse(base_url)
@@ -270,8 +273,8 @@ def _extract_subpage_hrefs(html_bytes: bytes, base_url: str) -> List[str]:
         href = a.get("href", "")
         if not title or not href:
             continue
-        # 只看含"王者荣耀"标题的（可按需调整）
-        if "王者荣耀" not in title:
+        # 只看含产品名前缀的标题
+        if product_display not in title:
             continue
         # 排除 edit / redlink / 锚点
         if "action=edit" in href or "redlink" in href or href.startswith("#"):
@@ -305,22 +308,30 @@ def _llm_filter_subpages(
     base_url: str,
     max_keep: int,
     llm_client=None,
+    product: str = "wangzhe",
 ) -> List[str]:
     """
-    LLM 兜底：让 LLM 在候选 URL 列表中标记"是英雄详情页"的项。
-    为减少 LLM 调用成本，先做简单规则过滤（如要求 URL 形如 王者荣耀:xxx）。
+    LLM 兜底：让 LLM 在候选 URL 列表中标记"是详情页"的项。
+    为减少 LLM 调用成本，先做简单规则过滤（如要求 URL 形如 <产品名>:xxx）。
+
+    Args:
+        product: 产品 ID。决定 URL 形如 "<产品显示名>:xxx" 的过滤规则。
     """
     from urllib.parse import unquote, urlparse
 
     if not candidates:
         return []
 
-    # 规则预过滤：URL decode 后含"王者荣耀:"（冒号=英雄）/"王者荣耀/"（斜杠=分类）的优先
+    product_display = PRODUCT_DISPLAY.get(product, "本产品")
+    product_prefix = f"{product_display}:"
+    product_prefix_slash = f"{product_display}/"
+
+    # 规则预过滤：URL decode 后含"产品名:"（冒号=详情）/"产品名/"（斜杠=分类）的优先
     pref = []
     rest = []
     for url in candidates:
         decoded = unquote(url)
-        if "王者荣耀:" in decoded or "王者荣耀/" in decoded:
+        if product_prefix in decoded or product_prefix_slash in decoded:
             pref.append(url)
         else:
             rest.append(url)
@@ -332,22 +343,22 @@ def _llm_filter_subpages(
     if not pool:
         return []
 
-    # 简化：暂时跳过 LLM 调用，先用启发式——只要 URL 含"王者荣耀:"且不含地区/版本关键字
+    # 简化：暂时跳过 LLM 调用，先用启发式——只要 URL 含"<产品名>:"且不含地区/版本关键字
     region_kw = ["城", "地区", "学院", "赛季", "版本", "背景", "故事", "设定", "地图", "模式", "玩法", "铭文", "装备", "技能", "皮肤", "更新", "公告", "新闻", "活动", "手册", "设定", "词条"]
     heroes = []
     for url in pool:
         decoded = unquote(url)
-        if "王者荣耀:" not in decoded:
+        if product_prefix not in decoded:
             continue
         # 提取冒号后的名字
-        m = re.search(r"王者荣耀:(.+)$", decoded)
+        m = re.search(re.escape(product_prefix) + r"(.+)$", decoded)
         if not m:
             continue
         name = m.group(1)
         # 过滤明显是地区/分类的
         if any(kw in name for kw in region_kw):
             continue
-        # 过滤空名或过长名字（注意：单字名是合法英雄名，如"瑶"/"澜"/"铠"等，不要过滤！）
+        # 过滤空名或过长名字（注意：单字名是合法主名，如"瑶"/"澜"/"铠"等，不要过滤！）
         if not name or len(name) > 8:
             continue
         # 过滤明显非人名（纯数字、含括号等）
@@ -385,11 +396,11 @@ def crawl_with_subpages(
         print(f"  [subpage] 找不到原始 HTML: {html_path}")
         return results
     html_bytes = html_path.read_bytes()
-    candidates = _extract_subpage_hrefs(html_bytes, target.url)
+    candidates = _extract_subpage_hrefs(html_bytes, target.url, product=target.product)
     print(f"  [subpage] 从 {target.url} 提取到 {len(candidates)} 个候选子页 URL")
 
     # 3) LLM/启发式过滤
-    filtered = _llm_filter_subpages(candidates, target.url, target.subpage_max, llm_client)
+    filtered = _llm_filter_subpages(candidates, target.url, target.subpage_max, llm_client, product=target.product)
     print(f"  [subpage] 过滤后保留 {len(filtered)} 个子页 URL")
 
     # 4) 逐个抓
