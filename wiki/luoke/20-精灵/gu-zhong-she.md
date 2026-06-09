@@ -7,9 +7,9 @@ sources:
 - raw\luoke\bilibili-wiki\2026-06-09\rocom_E58FA4E9929FE89B87.wikitext
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
-created: '2026-06-09T18:20:17+08:00'
-updated: '2026-06-09T18:20:17+08:00'
-last_verified: '2026-06-09T18:20:17+08:00'
+created: '2026-06-09T18:55:01+08:00'
+updated: '2026-06-09T18:55:01+08:00'
+last_verified: '2026-06-09T18:55:01+08:00'
 status: verified
 version: 1
 ---
@@ -52,3 +52,7 @@ version: 1
 ### description
 - **值**: 通常低伏身体，隐藏在草丛中，只露出尾巴发出咚咚咚的轻响，吸引好奇的精灵过来。其尾部的结构可以在摇晃时发出咚咚的鼓声，据说玄玉岛的洛克以此为灵感，制作出了某种广受欢迎的玩具。
 - **原文依据**: 精灵描述
+
+### form
+- **值**: 原始形态
+- **原文依据**: 精灵形态=原始形态
