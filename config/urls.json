@@ -1,16 +1,43 @@
-[
-  {
-    "source": "sogou-baike",
-    "url": "https://baike.sogou.com/v152719307.htm",
-    "product": "wangzhe",
-    "discover_subpages": false,
-    "subpage_max": 0
-  },
-  {
-    "source": "moegirl-baike",
-    "url": "https://mzh.moegirl.org.cn/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80",
-    "product": "wangzhe",
-    "discover_subpages": true,
-    "subpage_max": 200
-  }
-]
+{
+  "products": [
+    {
+      "name": "wangzhe",
+      "urls": [
+        {
+          "source": "sogou-baike",
+          "url": "https://baike.sogou.com/v152719307.htm",
+          "product": "wangzhe",
+          "discover_subpages": false,
+          "subpage_max": 0
+        },
+        {
+          "source": "moegirl-baike",
+          "url": "https://mzh.moegirl.org.cn/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80",
+          "product": "wangzhe",
+          "discover_subpages": true,
+          "subpage_max": 200
+        }
+      ]
+    },
+    {
+      "name": "luoke",
+      "urls": [
+        {
+          "source": "moegirl-baike",
+          "url": "https://mzh.moegirl.org.cn/%E6%B4%9B%E5%85%8B%E7%8E%8B%E5%9B%BD%EF%BC%9A%E4%B8%96%E7%95%8C",
+          "product": "luoke",
+          "discover_subpages": false,
+          "subpage_max": 0
+        },
+        {
+          "source": "bilibili-wiki",
+          "url": "https://wiki.biligame.com/rocom/%E5%88%86%E7%B1%BB:%E7%B2%BE%E7%81%B5",
+          "product": "luoke",
+          "discover_subpages": true,
+          "subpage_max": 1000,
+          "delay_sec": 2.0
+        }
+      ]
+    }
+  ]
+}

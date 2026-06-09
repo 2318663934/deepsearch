@@ -49,6 +49,7 @@ class CrawlTarget:
     discover_subpages: bool = False
     subpage_max: int = 30  # 子页最多抓几个
     subpage_url_pattern: Optional[str] = None  # 简单白名单 regex，如 r"王者荣耀:[^/]+$"
+    delay_sec: float = 1.0  # 每个 URL 抓取后 sleep 时长(秒),礼貌爬取
 
 
 @dataclass
@@ -418,26 +419,43 @@ def crawl_with_subpages(
 def load_targets_from_config(config_path: Optional[Path] = None) -> List[CrawlTarget]:
     """从 config/urls.json 加载 URL 列表。
 
-    json 格式示例：
-    [
-      {
-        "source": "sogou-baike",
-        "url": "https://baike.sogou.com/v152719307.htm",
-        "product": "wangzhe"
-      },
-      {
-        "source": "moegirl-baike",
-        "url": "https://mzh.moegirl.org.cn/王者荣耀",
-        "product": "wangzhe"
-      }
-    ]
+    支持两种格式(向后兼容):
+
+    1. 新格式(嵌套多产品):
+       {
+         "products": [
+           {"name": "wangzhe", "urls": [{"source": ..., "url": ..., ...}]},
+           {"name": "luoke",   "urls": [...]}
+         ]
+       }
+
+    2. 老格式(扁平数组,单产品时代遗留):
+       [{"source": ..., "url": ..., "product": "wangzhe"}, ...]
     """
     if config_path is None:
         config_path = CONFIG_DIR / "urls.json"
     if not config_path.exists():
         return []
     data = json.loads(config_path.read_text(encoding="utf-8"))
-    return [CrawlTarget(**item) for item in data]
+
+    targets: List[CrawlTarget] = []
+
+    if isinstance(data, dict) and "products" in data:
+        # 新格式
+        for product_block in data["products"]:
+            product_name = product_block.get("name")
+            for url_item in product_block.get("urls", []):
+                item = dict(url_item)
+                item.setdefault("product", product_name)
+                targets.append(CrawlTarget(**item))
+    elif isinstance(data, list):
+        # 老格式
+        for item in data:
+            targets.append(CrawlTarget(**item))
+    else:
+        raise ValueError(f"urls.json 格式无法识别(既不是 list 也不是含 'products' 的 dict)")
+
+    return targets
 
 
 # ---------------------------------------------------------------------------
