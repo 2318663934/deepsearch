@@ -1,0 +1,46 @@
+---
+title: 文物清洁剂
+type: item
+slug: wen-wu-qing-jie-ji
+aliases: []
+sources:
+- raw\luoke\bilibili-wiki\2026-06-10\rocom_E69687E789A9E6B885E6B481E58982.wikitext
+confidence: 0.95
+confidence_reason: 'B 站 wiki 物品信息模板结构化解析 | 硬规则校准: 无调整'
+created: '2026-06-10T18:56:31+08:00'
+updated: '2026-06-10T18:56:31+08:00'
+last_verified: '2026-06-10T18:56:31+08:00'
+status: verified
+version: 1
+---
+
+詹姆斯这个糊涂学长，连自己的文物清洁剂也能搞丢！
+
+## 事实
+### rarity
+- **值**: 蓝
+- **原文依据**: rarity=蓝
+
+### main_category
+- **值**: 任务
+- **原文依据**: main_category=任务
+
+### sub_category
+- **值**: 任务道具
+- **原文依据**: sub_category=任务道具
+
+### use
+- **值**: 詹姆斯这个糊涂学长，连自己的文物清洁剂也能搞丢！
+- **原文依据**: use=詹姆斯这个糊涂学长，连自己的文物清洁剂也能搞丢！
+
+### source
+- **值**: 拾遗任务获得
+- **原文依据**: source=拾遗任务获得
+
+### icon
+- **值**: 100785
+- **原文依据**: icon=100785
+
+### version
+- **值**: 0.2
+- **原文依据**: version=0.2
