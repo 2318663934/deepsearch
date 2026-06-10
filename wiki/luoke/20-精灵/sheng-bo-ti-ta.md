@@ -7,9 +7,9 @@ sources:
 - raw\luoke\bilibili-wiki\2026-06-09\rocom_E5A3B0E6B3A2E7BC87E5A194.wikitext
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
-created: '2026-06-10T10:19:04+08:00'
-updated: '2026-06-10T10:19:04+08:00'
-last_verified: '2026-06-10T10:19:04+08:00'
+created: '2026-06-10T10:38:31+08:00'
+updated: '2026-06-10T10:38:31+08:00'
+last_verified: '2026-06-10T10:38:31+08:00'
 status: verified
 version: 1
 ---
