@@ -1,0 +1,46 @@
+---
+title: 木质边几
+type: item
+slug: mu-zhi-bian-ji
+aliases: []
+sources:
+- raw\luoke\bilibili-wiki\2026-06-10\rocom_E69CA8E8B4A8E8BEB9E587A0.wikitext
+confidence: 0.95
+confidence_reason: 'B 站 wiki 物品信息模板结构化解析 | 硬规则校准: 无调整'
+created: '2026-06-10T18:56:53+08:00'
+updated: '2026-06-10T18:56:53+08:00'
+last_verified: '2026-06-10T18:56:53+08:00'
+status: verified
+version: 1
+---
+
+用处广泛的木质边几，设计与工艺都较为简洁
+
+## 事实
+### rarity
+- **值**: 蓝
+- **原文依据**: rarity=蓝
+
+### main_category
+- **值**: 家具
+- **原文依据**: main_category=家具
+
+### sub_category
+- **值**: 家具
+- **原文依据**: sub_category=家具
+
+### use
+- **值**: 用处广泛的木质边几，设计与工艺都较为简洁
+- **原文依据**: use=用处广泛的木质边几，设计与工艺都较为简洁
+
+### source
+- **值**: 家园获得
+- **原文依据**: source=家园获得
+
+### icon
+- **值**: 1002031
+- **原文依据**: icon=1002031
+
+### version
+- **值**: 0.2
+- **原文依据**: version=0.2
