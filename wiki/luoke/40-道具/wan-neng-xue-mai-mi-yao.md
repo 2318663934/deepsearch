@@ -1,0 +1,46 @@
+---
+title: 万能血脉秘药
+type: item
+slug: wan-neng-xue-mai-mi-yao
+aliases: []
+sources:
+- raw\luoke\bilibili-wiki\2026-06-10\rocom_E4B887E883BDE8A180E88489E7A798E88DAF.wikitext
+confidence: 0.95
+confidence_reason: 'B 站 wiki 物品信息模板结构化解析 | 硬规则校准: 无调整'
+created: '2026-06-10T18:51:44+08:00'
+updated: '2026-06-10T18:51:44+08:00'
+last_verified: '2026-06-10T18:51:44+08:00'
+status: verified
+version: 1
+---
+
+修改血脉的秘药，使精灵获得任意一种“系别血脉”。
+
+## 事实
+### rarity
+- **值**: 紫
+- **原文依据**: rarity=紫
+
+### main_category
+- **值**: 重要
+- **原文依据**: main_category=重要
+
+### sub_category
+- **值**: 血脉修改道具
+- **原文依据**: sub_category=血脉修改道具
+
+### use
+- **值**: 修改血脉的秘药，使精灵获得任意一种“系别血脉”。
+- **原文依据**: use=修改血脉的秘药，使精灵获得任意一种“系别血脉”。
+
+### source
+- **值**: 炼金造物获得
+- **原文依据**: source=炼金造物获得
+
+### icon
+- **值**: xuemai_juzhouxuemai
+- **原文依据**: icon=xuemai_juzhouxuemai
+
+### version
+- **值**: 0.2
+- **原文依据**: version=0.2
