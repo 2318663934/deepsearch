@@ -1,0 +1,50 @@
+---
+title: 国王球
+type: item
+slug: guo-wang-qiu
+aliases: []
+sources:
+- raw\luoke\bilibili-wiki\2026-06-10\rocom_E59BBDE78E8BE79083.wikitext
+confidence: 0.95
+confidence_reason: 'B 站 wiki 物品信息模板结构化解析 | 硬规则校准: 无调整'
+created: '2026-06-10T18:52:47+08:00'
+updated: '2026-06-10T18:52:47+08:00'
+last_verified: '2026-06-10T18:52:47+08:00'
+status: verified
+version: 1
+---
+
+曾经专供贵族使用，制作方法不明。
+
+## 事实
+### rarity
+- **值**: 橙
+- **原文依据**: rarity=橙
+
+### main_category
+- **值**: 咕噜球
+- **原文依据**: main_category=咕噜球
+
+### sub_category
+- **值**: 咕噜球
+- **原文依据**: sub_category=咕噜球
+
+### use
+- **值**: 昂贵且好用的咕噜球，能十分轻易地捕捉精灵，并能提升精灵的天分。
+- **原文依据**: use=昂贵且好用的咕噜球，能十分轻易地捕捉精灵，并能提升精灵的天分。
+
+### description
+- **值**: 曾经专供贵族使用，制作方法不明。
+- **原文依据**: description=曾经专供贵族使用，制作方法不明。
+
+### source
+- **值**: 珍稀道具城购买；炼金造物获得
+- **原文依据**: source=珍稀道具城购买；炼金造物获得
+
+### icon
+- **值**: 100255
+- **原文依据**: icon=100255
+
+### version
+- **值**: 0.2
+- **原文依据**: version=0.2
