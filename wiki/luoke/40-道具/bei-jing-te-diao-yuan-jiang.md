@@ -1,0 +1,46 @@
+---
+title: 北境特调原浆
+type: item
+slug: bei-jing-te-diao-yuan-jiang
+aliases: []
+sources:
+- raw\luoke\bilibili-wiki\2026-06-10\rocom_E58C97E5A283E789B9E8B083E58E9FE6B586.wikitext
+confidence: 0.95
+confidence_reason: 'B 站 wiki 物品信息模板结构化解析 | 硬规则校准: 无调整'
+created: '2026-06-10T18:52:13+08:00'
+updated: '2026-06-10T18:52:13+08:00'
+last_verified: '2026-06-10T18:52:13+08:00'
+status: verified
+version: 1
+---
+
+北境战士们用于取暖的饮品，是特伦斯家族和白银骑士团成员的最爱。代表着「温暖」。
+
+## 事实
+### rarity
+- **值**: 绿
+- **原文依据**: rarity=绿
+
+### main_category
+- **值**: 任务
+- **原文依据**: main_category=任务
+
+### sub_category
+- **值**: 任务道具
+- **原文依据**: sub_category=任务道具
+
+### use
+- **值**: 北境战士们用于取暖的饮品，是特伦斯家族和白银骑士团成员的最爱。代表着「温暖」。
+- **原文依据**: use=北境战士们用于取暖的饮品，是特伦斯家族和白银骑士团成员的最爱。代表着「温暖」。
+
+### source
+- **值**: 拾遗任务获得
+- **原文依据**: source=拾遗任务获得
+
+### icon
+- **值**: 100707
+- **原文依据**: icon=100707
+
+### version
+- **值**: 0.2
+- **原文依据**: version=0.2
