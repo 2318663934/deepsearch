@@ -151,6 +151,7 @@ def parse_pet_wikitext(wikitext: str) -> Optional[Dict[str, Any]]:
         "entity_type": "pet",
         "name": name,
         "form": raw.get("精灵形态"),
+        "form_name": raw.get("地区形态名称"),  # 仅异形态时有,主形态为空
         "type": raw.get("精灵类型"),
         "phase": raw.get("精灵阶段"),
         "main_attr": raw.get("主属性"),

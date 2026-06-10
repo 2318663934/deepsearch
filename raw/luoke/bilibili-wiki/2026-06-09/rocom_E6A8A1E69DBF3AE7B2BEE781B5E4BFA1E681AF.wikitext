@@ -1,0 +1,956 @@
+[[分类:精灵]]{{#set:
+|精灵序号={{精灵序号|{{{精灵名称|}}}{{#if:{{{地区形态名称|}}}|（{{{地区形态名称|}}}）|}}}}
+|精灵名称={{{精灵名称|}}}
+|精灵形态={{{精灵形态|}}}<!--精灵的异色等-->
+|地区形态名称={{{地区形态名称|}}}
+|精灵初阶名称={{{精灵初阶名称|}}}
+|是否有异色={{{是否有异色|}}}
+|精灵阶段={{{精灵阶段|}}}
+|精灵编号={{精灵编号|{{{精灵名称|冬羽雀}}}}}
+|上一个序号={{#ifeq:{{精灵编号|{{{精灵名称|冬羽雀}}}}}|1|351|{{#expr:{{精灵编号|{{{精灵名称|冬羽雀}}}}}-1}}}}
+|下一个序号={{#ifeq:{{精灵编号|{{{精灵名称|冬羽雀}}}}}|351|1|{{#expr:{{精灵编号|{{{精灵名称|冬羽雀}}}}}+1}}}}
+|精灵类型={{{精灵类型|}}}
+|精灵描述={{{精灵描述|}}}
+|主属性={{{主属性|}}}
+|2属性={{{2属性|}}}
+|副属性={{{副属性|}}}
+|特性={{{特性|}}}
+|特性描述={{{特性描述|释放恶系技能时，敌方失去4点能量。}}}
+|生命={{{生命|115}}}
+|速度={{{速度|110}}}
+|物攻={{{物攻|108}}}
+|魔攻={{{魔攻|92}}}
+|物防={{{物防|94}}}
+|魔防={{{魔防|100}}}
+|初始生命={{{初始生命|115}}}
+|初始速度={{{初始速度|110}}}
+|初始物攻={{{初始物攻|108}}}
+|初始魔攻={{{初始魔攻|92}}}
+|初始物防={{{初始物防|94}}}
+|初始魔防={{{初始魔防|100}}}
+|体型={{{体型|1.40,1.78}}}
+|重量={{{重量|88.06,95.09}}}
+|分布地区={{{分布地区|QN:我不知道}}}
+|图鉴课题={{{图鉴课题|
+捕捉1/5/10只精灵
+捕捉3/6种不同血脉的精灵
+捕捉3/6只了不起天分的精灵
+捕捉2只身高较高的精灵
+使用暗星球捕捉成功5次
+}}}
+|课题技能石={{{课题技能石|}}}<!--该项的格式为: 星星数 . 物品名1x奖励数量，物品名2x奖励数量,每条直接应换行-->
+|是否有错别字={{{是否有错别字}}}
+|技能={{{技能|暴风眼，气泡}}}<!--格式为:技能名x解锁等级,技能名x解锁等级-- 别看这个了，直接填技能名吧--宁夜如是说-->
+|技能解锁等级={{{技能解锁等级|}}}
+|血脉技能={{{血脉技能|}}}
+|可学技能石={{{可学技能石|}}}
+|宠物立绘形态={{{宠物立绘形态|}}}
+|更新版本={{{更新版本|}}}
+|进化条件={{{进化条件|}}}
+|立绘=页面_宠物_立绘_{{{精灵名称|冬羽雀}}}{{#if:{{{地区形态名称}}}|（{{{地区形态名称|本来的样子}}}）|}}_1.png
+}}{{#arraymap:{{#replace:{{{技能|}}}|，|,}},{{#replace:{{{血脉技能|}}}|，|,}}|,|@|{{#set:所有技能=@}}|}}{{#arraymap:{{{主属性|}}},{{{2属性|}}}|,|@|{{#set:属性=@}}|}}{{#arraymap:{{#replace:{{#rreplace:{{{技能|}}}|/[:：][A-Za-z0-9]+/|}}|，|,}},{{#replace:{{{血脉技能|}}}|，|,}},{{#replace:{{{可学技能石|}}}|，|,}}|,|@|{{#set:需求技能序列=@}}}}<div class="isla_rocom_sprite visible-lg visible-md">
+<div class="rocom_sprite_layout_1">
+<div class="rocom_sprite_grament">
+<div class="rocom_sprite_temp_left">
+{{#ask:[[分类:精灵]][[精灵编号::{{精灵编号|{{{精灵名称|冬羽雀}}}}}]]
+|?上一个序号
+|template=精灵/上一个
+|headers=hide
+|format=template
+|mainlabel=-
+}}</div>
+<div class="rocom_sprite_temp_right">
+{{#ask:[[分类:精灵]][[精灵编号::{{精灵编号|{{{精灵名称|冬羽雀}}}}}]]
+|?下一个序号
+|template=精灵/下一个
+|headers=hide
+|format=template
+|mainlabel=-
+}}</div>
+<div class="rocom_sprite_grament_name font-mainfeiziti">
+<p>{{精灵编号|{{{精灵名称|冬羽雀}}}}} {{{精灵名称|迪莫}}}</p>
+</div>
+<div class="rocom_sprite_grament_attributes font-fzltyjt">
+<li>
+[[文件:图标_宠物_属性_{{{主属性|光}}}.png|link=]]
+<div class="rocom_sprite_grament_attributes_text">
+<p>{{{主属性|光}}}</p>
+</div>
+</li>
+{{#if: {{{2属性|}}} |
+<li>
+[[文件:图标_宠物_属性_{{{2属性|}}}.png|link=]]
+<div class="rocom_sprite_grament_attributes_text">
+<p>{{{2属性|}}}</p>
+</div>
+</li>
+| }}
+</div>
+<div class="rocom_sprite_grament_img">
+<li id="receptor_grament_list_1" style="{{#if:{{{宠物立绘形态|是}}}|transform:scaleX(-1)|}}">
+[[文件:页面_宠物_立绘_{{{精灵名称|冬羽雀}}}{{#if:{{{地区形态名称}}}|（{{{地区形态名称|本来的样子}}}）|}}_1.png|link=]]
+</li>
+<li id="receptor_grament_list_2" style="display: none;>
+{{#if:{{{是否有异色|}}}|[[文件:页面_宠物_立绘_{{{精灵名称|冬羽雀}}}{{#if:{{{地区形态名称}}}|（{{{地区形态名称|本来的样子}}}）|}}_异色_1.png|link=]]}}
+</li>
+<li id="receptor_grament_list_3" style="display: none;">{{精灵模板果实|{{{精灵名称|冬羽雀}}}{{#if:{{{地区形态名称|本来的样子}}}|-{{{地区形态名称|本来的样子}}}|}}}}</li>
+<li id="receptor_grament_list_4" style="display: none;">{{精灵模板蛋|{{{精灵名称|冬羽雀}}}{{#if:{{{地区形态名称|本来的样子}}}|-{{{地区形态名称|本来的样子}}}|}}}}</li>
+</div>
+<div class="rocom_sprite_grament_list">
+<li class="rocom_sprite_grament_botton">
+[[文件:界面_宠物_本体.png|link=]]
+</li>
+<li class="rocom_sprite_grament_botton">
+[[文件:界面_宠物_异色.png|link=]]
+</li>
+<li class="rocom_sprite_grament_botton">
+[[文件:界面_宠物_果实.png|link=]]
+</li>
+<li class="rocom_sprite_grament_botton">
+[[文件:界面_宠物_宠物蛋.png|link=]]
+</li>
+</div>
+</div>
+<div class="rocom_sprite_info">
+<div class="rocom_sprite_info_title font-mainfeiziti">
+<p style="margin-right:20px;">[[文件:图标_宠物_资质_种族.png|30px|link=]]种族值</p>
+<p>{{#expr: {{{生命|108}}}+{{{速度|120}}}+{{{物攻|67}}}+{{{魔攻|74}}}+{{{物防|71}}}+{{{魔防|71}}}}}</p>
+</div>
+<div class="rocom_sprite_info_qualification font-fzltyjt">
+<li>
+<div class="rocom_sprite_info_qualification_icon">
+[[文件:图标_宠物_资质_生命.png|link=]]
+</div>
+<p class="rocom_sprite_info_qualification_name">生命</p>
+<div class="rocom_sprite_info_qualification_background">
+<div class="rocom_sprite_info_qualification_schedule" style="width: calc( {{#ifexpr: {{{生命|108}}} > 200 | 0.3 | 0.5 }} * {{{生命|108}}}% );"></div>
+</div>
+<p class="rocom_sprite_info_qualification_value">{{{生命|108}}}</p>
+</li>
+<li>
+<div class="rocom_sprite_info_qualification_icon">
+[[文件:图标_宠物_资质_物攻.png|link=]]
+</div>
+<p class="rocom_sprite_info_qualification_name">物攻</p>
+<div class="rocom_sprite_info_qualification_background">
+<div class="rocom_sprite_info_qualification_schedule" style="width: calc( {{#ifexpr: {{{生命|108}}} > 200 | 0.3 | 0.5 }} * {{{物攻|67}}}% );"></div>
+</div>
+<p class="rocom_sprite_info_qualification_value">{{{物攻|67}}}</p>
+</li>
+<li>
+<div class="rocom_sprite_info_qualification_icon">
+[[文件:图标_宠物_资质_魔攻.png|link=]]
+</div>
+<p class="rocom_sprite_info_qualification_name">魔攻</p>
+<div class="rocom_sprite_info_qualification_background">
+<div class="rocom_sprite_info_qualification_schedule" style="width: calc( {{#ifexpr: {{{生命|108}}} > 200 | 0.3 | 0.5 }} * {{{魔攻|74}}}% );"></div>
+</div>
+<p class="rocom_sprite_info_qualification_value">{{{魔攻|74}}}</p>
+</li>
+<li>
+<div class="rocom_sprite_info_qualification_icon">
+[[文件:图标_宠物_资质_物防.png|link=]]
+</div>
+<p class="rocom_sprite_info_qualification_name">物防</p>
+<div class="rocom_sprite_info_qualification_background">
+<div class="rocom_sprite_info_qualification_schedule" style="width: calc( {{#ifexpr: {{{生命|108}}} > 200 | 0.3 | 0.5 }} * {{{物防|71}}}% );"></div>
+</div>
+<p class="rocom_sprite_info_qualification_value">{{{物防|71}}}</p>
+</li>
+<li>
+<div class="rocom_sprite_info_qualification_icon">
+[[文件:图标_宠物_资质_魔防.png|link=]]
+</div>
+<p class="rocom_sprite_info_qualification_name">魔防</p>
+<div class="rocom_sprite_info_qualification_background">
+<div class="rocom_sprite_info_qualification_schedule" style="width: calc( {{#ifexpr: {{{生命|108}}} > 200 | 0.3 | 0.5 }} * {{{魔防|71}}}% );"></div>
+</div>
+<p class="rocom_sprite_info_qualification_value">{{{魔防|71}}}</p>
+</li>
+<li>
+<div class="rocom_sprite_info_qualification_icon">
+[[文件:图标_宠物_资质_速度.png|link=]]
+</div>
+<p class="rocom_sprite_info_qualification_name">速度</p>
+<div class="rocom_sprite_info_qualification_background">
+<div class="rocom_sprite_info_qualification_schedule" style="width: calc( {{#ifexpr: {{{生命|108}}} > 200 | 0.3 | 0.5 }} * {{{速度|120}}}% );"></div>
+</div>
+<p class="rocom_sprite_info_qualification_value">{{{速度|120}}}</p>
+</li>
+</div>
+<div class="rocom_sprite_info_physique">
+<li>
+<div class="rocom_sprite_info_physique_icon">
+[[文件:图标_宠物_体质_身高.png|link=]]
+</div>
+<p>{{#arraymap:{{{体型|50,60}}}|,|@|{{#arraymap:@|，|@0|@0|-}}|-}}<p class="font-runeregular">M</p></p>
+</li>
+<li>
+<div class="rocom_sprite_info_physique_icon">
+[[文件:图标_宠物_体质_体重.png|link=]]
+</div>
+<p>{{#arraymap:{{{重量|100，200}}}|,|@|{{#arraymap:@|，|@0|@0|-}}|-}}<p class="font-runeregular">KG</p></p>
+</li>
+</div>
+<div class="rocom_sprite_bgcontent_box" style="color:#fff;display: flex;justify-content: space-between;">
+<p>精灵分布:{{{分布地区|}}}</p><p>{{{精灵类型|草猫精灵}}}</p>
+</div>
+<div class="rocom_sprite_info_content font-fzltyjt">
+<p>{{{精灵描述|似乎不会发生进化。充满勇气的伙伴，有一种熟悉缺又神秘的感觉。在特殊魔力的影响下，会改变自身的身体构造。}}}</p>
+</div>
+</div>
+</div>
+<div class="rocom_sprite_layout_2">
+<div class="rocom_sprite_characteristic">
+<div class="rocom_sprite_temp_characteristic_box">
+<p class="rocom_sprite_temp_characteristic_text font-mainfeiziti">特性</p>
+<div class="rocom_sprite_info_characteristic_content">
+<div class="rocom_sprite_info_characteristic_content_icon">
+[[文件:图标_宠物_特性_{{{特性|最好的伙伴}}}.png|link=|{{{特性|最好的伙伴}}}]]
+</div>
+<p class="rocom_sprite_info_characteristic_title font-mainfeiziti">{{{特性|最好的伙伴}}}</p>
+<p class="rocom_sprite_info_characteristic_text font-fzltyjt">{{{特性描述|每学会一个不同系别的技能，攻防提升5%}}}</p>
+</div>
+</div>
+<div class="rocom_sprite_temp_attribute_box" style="display:block">
+{{精灵/个体属性|{{{初始生命|100}}}|{{{初始速度|120}}}|{{{初始物攻|20}}}|{{{初始物防|15}}}|{{{初始魔攻|20}}}|{{{初始魔防|25}}}}}
+</div>
+</div>
+<div class="rocom_sprite_temp_evolve_rightBox">
+{{进化|{{{精灵名称|丢丢}}}{{#if:{{{地区形态名称|草地附近的样子}}}|（{{{地区形态名称|草地附近的样子}}}）|}}}}
+{{#if:{{{进化条件|待补充}}}|<div class="font-mainfeiziti" style="display:flex;align-items: center;margin:0 auto;">进化条件:<p class="rocom_evolution_data">{{{进化条件|待补充}}}</p></div>|}}
+{{精灵/克制|{{{主属性|火}}}|{{#if:{{{2属性|草}}}|{{{2属性|草}}}|}}}}
+</div></div>
+<div class="rocom_sprite_skill_tabBox">
+{{选项卡
+|标题1=精灵技能
+|内容1=
+<div class="rocom_sprite_skill_skillBox">
+{{#arraydefine:技能解锁等级|{{#replace:{{{技能解锁等级|1,1,1,7,9,11,13,16,19,22,27,30,32,34,36,40,42,47,48}}}|，|,}}|,}}
+{{#arraydefine:技能|{{#replace:{{{技能|猛烈撞击,闪光,防御,魔法增效,光球,火焰箭,力量增效,棘突,潮涌,超导,闪光冲击,漫反射,冰爪,热砂,念力膨胀,放晴,过曝,光刃,折射}}}|，|,}}|,}}
+{{#arraymap:{{#replace:{{{技能|猛烈撞击,闪光,防御,魔法增效,光球,火焰箭,力量增效,棘突,潮涌,超导,闪光冲击,漫反射,冰爪,热砂,念力膨胀,放晴,过曝,光刃,折射}}}|，|,}}|,|@1|
+{{精灵/技能
+|前缀={{#arrayindex:技能解锁等级|{{#arraysearch:技能|@1}}|}}
+|属性={{#show:@1|?属性}}
+|技能名称={{#show:@1|?技能名称}}
+|耗能={{#show:@1|?耗能}}
+|技能类别={{#show:@1|?技能类别}}
+|威力={{#show:@1|?威力}}
+|效果={{#show:@1|?效果}}
+}}
+| }}
+</div>
+|标题2=血脉技能
+|内容2=
+<div class="rocom_sprite_skill_skillBox">
+{{#arraymap:{{#replace:{{{血脉技能|迫近攻击,汲取,炎枪,水弹枪,闪光,岩土暴击,碎冰击,龙吼,引雷,溶解液,飞断,技巧打击,啄击,飞吻,背袭,灾厄,钢钻,星河扭曲}}}|，|,}}|,|@1|
+{{精灵/技能
+|前缀=
+|属性={{#show:@1|?属性}}
+|技能名称={{#show:@1|?技能名称}}
+|耗能={{#show:@1|?耗能}}
+|技能类别={{#show:@1|?技能类别}}
+|威力={{#show:@1|?威力}}
+|效果={{#show:@1|?效果}}
+}}
+| }}
+</div>
+|标题3=可学技能石
+|内容3=
+<div class="rocom_sprite_skill_skillBox">
+{{#arraymap:{{#replace:{{{可学技能石|迫近攻击,汲取,炎枪,水弹枪,闪光,岩土暴击,碎冰击,龙吼,引雷,溶解液,飞断,技巧打击,啄击,飞吻,背袭,灾厄,钢钻,星河扭曲}}}|，|,}}|,|@1|
+{{精灵/技能
+|前缀=
+|属性={{#show:@1|?属性}}
+|技能名称={{#show:@1|?技能名称}}
+|耗能={{#show:@1|?耗能}}
+|技能类别={{#show:@1|?技能类别}}
+|威力={{#show:@1|?威力}}
+|效果={{#show:@1|?效果}}
+}}
+| }}
+</div>
+}}
+</div>
+<div class="rocom_sprite_temp_classGrow_box" style="display:none;">
+{{选项卡
+|标题1=精灵课题
+|内容1=
+{{精灵课题|{{{精灵名称|月牙雪熊}}}|{{{图鉴课题|捕捉1只精灵
+使用3/6次闪光
+使用3/6次水刃
+使用3/6次闪燃}}}|{{{主属性|火}}}|{{{2属性|草}}}|{{{课题技能石|种皮爆裂}}}}}
+|标题2=成长素材
+|内容2=
+{{精灵/突破|{{{主属性|火}}}|{{{成长素材|天使草}}}|{{#if:{{{2属性|草}}}|{{{2属性|草}}}|}}}}
+}}
+</div>
+</div>
+<div class="isla_rocom_sprite visible-sm visible-xs">
+<div class="rocom_sprite_layout_1">
+<div class="rocom_sprite_grament">
+<div class="rocom_sprite_temp_left">{{#ask:[[分类:精灵]][[精灵编号::{{精灵编号|{{{精灵名称|冬羽雀}}}}}]]|?上一个序号|template=精灵/上一个|headers=hide|format=template|mainlabel=-}}</div>
+<div class="rocom_sprite_temp_right">{{#ask:[[分类:精灵]][[精灵编号::{{精灵编号|{{{精灵名称|冬羽雀}}}}}]]|?下一个序号|template=精灵/下一个|headers=hide|format=template|mainlabel=-}}</div>
+<div class="rocom_sprite_grament_name font-mainfeiziti"><p>NO{{精灵编号|{{{精灵名称|冬羽雀}}}}}.{{{精灵名称|迪莫}}}</p></div>
+<div class="rocom_sprite_grament_attributes font-fzltyjt">
+<li>[[文件:图标_宠物_属性_{{{主属性|光}}}.png|link=]]<div class="rocom_sprite_grament_attributes_text"><p>{{{主属性|光}}}</p></div></li>
+{{#if: {{{2属性|}}} |<li>[[文件:图标_宠物_属性_{{{2属性|}}}.png|link=]]<div class="rocom_sprite_grament_attributes_text"><p>{{{2属性|}}}</p></div></li>| }}</div>
+<div class="rocom_sprite_grament_img">
+<li id="receptor_grament_list_1" style="{{#if:{{{宠物立绘形态|是}}}|transform:scaleX(-1)|}}">[[文件:页面_宠物_立绘_{{{精灵名称|冬羽雀}}}{{#if:{{{地区形态名称}}}|（{{{地区形态名称|本来的样子}}}）|}}_1.png|link=]]</li>
+<li id="receptor_grament_list_2" style="display: none;>{{#if:{{{是否有异色|}}}|[[文件:页面_宠物_立绘_{{{精灵名称|冬羽雀}}}{{#if:{{{地区形态名称}}}|（{{{地区形态名称|本来的样子}}}）|}}_异色_1.png|link=]]}}</li>
+<li id="receptor_grament_list_3" style="display: none;">{{精灵模板果实|{{{精灵名称|冬羽雀}}}{{#if:{{{地区形态名称|本来的样子}}}|-{{{地区形态名称|本来的样子}}}|}}}}</li>
+<li id="receptor_grament_list_4" style="display: none;">{{精灵模板蛋|{{{精灵名称|冬羽雀}}}{{#if:{{{地区形态名称|本来的样子}}}|-{{{地区形态名称|本来的样子}}}|}}}}</li>
+</div>
+<div class="rocom_sprite_grament_list">
+<li class="rocom_sprite_grament_botton">[[文件:界面_宠物_本体.png|link=]]</li>
+<li class="rocom_sprite_grament_botton">[[文件:界面_宠物_异色.png|link=]]</li>
+<li class="rocom_sprite_grament_botton">[[文件:界面_宠物_果实.png|link=]]</li>
+<li class="rocom_sprite_grament_botton">[[文件:界面_宠物_宠物蛋.png|link=]]</li>
+</div>
+</div>
+<div class="rocom_sprite_info">
+<div class="rocom_sprite_info_title font-mainfeiziti">
+<p style="margin-right:20px;">[[文件:图标_宠物_资质_种族.png|30px|link=]]种族值</p><p>{{#expr: {{{生命|108}}}+{{{速度|120}}}+{{{物攻|67}}}+{{{魔攻|74}}}+{{{物防|71}}}+{{{魔防|71}}}}}</p></div>
+<div class="rocom_sprite_info_qualification font-fzltyjt">
+<li><div class="rocom_sprite_info_qualification_icon">[[文件:图标_宠物_资质_生命.png|link=]]</div><p class="rocom_sprite_info_qualification_name">生命</p><div class="rocom_sprite_info_qualification_background"><div class="rocom_sprite_info_qualification_schedule" style="width: calc( {{#ifexpr: {{{生命|108}}} > 200 | 0.3 | 0.5 }} * {{{生命|108}}}% );"></div></div><p class="rocom_sprite_info_qualification_value">{{{生命|108}}}</p></li>
+<li><div class="rocom_sprite_info_qualification_icon">[[文件:图标_宠物_资质_物攻.png|link=]]</div><p class="rocom_sprite_info_qualification_name">物攻</p><div class="rocom_sprite_info_qualification_background"><div class="rocom_sprite_info_qualification_schedule" style="width: calc( {{#ifexpr: {{{生命|108}}} > 200 | 0.3 | 0.5 }} * {{{物攻|67}}}% );"></div></div><p class="rocom_sprite_info_qualification_value">{{{物攻|67}}}</p></li>
+<li><div class="rocom_sprite_info_qualification_icon">[[文件:图标_宠物_资质_魔攻.png|link=]]</div><p class="rocom_sprite_info_qualification_name">魔攻</p><div class="rocom_sprite_info_qualification_background"><div class="rocom_sprite_info_qualification_schedule" style="width: calc( {{#ifexpr: {{{生命|108}}} > 200 | 0.3 | 0.5 }} * {{{魔攻|74}}}% );"></div></div><p class="rocom_sprite_info_qualification_value">{{{魔攻|74}}}</p></li>
+<li><div class="rocom_sprite_info_qualification_icon">[[文件:图标_宠物_资质_物防.png|link=]]</div><p class="rocom_sprite_info_qualification_name">物防</p><div class="rocom_sprite_info_qualification_background"><div class="rocom_sprite_info_qualification_schedule" style="width: calc( {{#ifexpr: {{{生命|108}}} > 200 | 0.3 | 0.5 }} * {{{物防|71}}}% );"></div></div><p class="rocom_sprite_info_qualification_value">{{{物防|71}}}</p></li>
+<li><div class="rocom_sprite_info_qualification_icon">[[文件:图标_宠物_资质_魔防.png|link=]]</div><p class="rocom_sprite_info_qualification_name">魔防</p><div class="rocom_sprite_info_qualification_background"><div class="rocom_sprite_info_qualification_schedule" style="width: calc( {{#ifexpr: {{{生命|108}}} > 200 | 0.3 | 0.5 }} * {{{魔防|71}}}% );"></div></div><p class="rocom_sprite_info_qualification_value">{{{魔防|71}}}</p></li>
+<li><div class="rocom_sprite_info_qualification_icon">[[文件:图标_宠物_资质_速度.png|link=]]</div><p class="rocom_sprite_info_qualification_name">速度</p><div class="rocom_sprite_info_qualification_background"><div class="rocom_sprite_info_qualification_schedule" style="width: calc( {{#ifexpr: {{{生命|108}}} > 200 | 0.3 | 0.5 }} * {{{速度|120}}}% );"></div></div><p class="rocom_sprite_info_qualification_value">{{{速度|120}}}</p></li>
+</div>
+<div class="rocom_sprite_info_physique">
+<li><div class="rocom_sprite_info_physique_icon">[[文件:图标_宠物_体质_身高.png|link=]]</div><p>{{#arraymap:{{{体型|50,60}}}|,|@|{{#arraymap:@|，|@0|@0|-}}|-}}<p class="font-runeregular">M</p></p></li>
+<li><div class="rocom_sprite_info_physique_icon">[[文件:图标_宠物_体质_体重.png|link=]]</div><p>{{#arraymap:{{{重量|100，200}}}|,|@|{{#arraymap:@|，|@0|@0|-}}|-}}<p class="font-runeregular">KG</p></p></li>
+</div>
+<div class="rocom_sprite_bgcontent_box" style="color:#fff;display: flex;justify-content: space-between;"><p>精灵分布:{{{分布地区|}}}</p><p>{{{精灵类型|草猫精灵}}}</p></div>
+<div class="rocom_sprite_info_content font-fzltyjt"><p>{{{精灵描述|似乎不会发生进化。充满勇气的伙伴，有一种熟悉缺又神秘的感觉。在特殊魔力的影响下，会改变自身的身体构造。}}}</p></div></div></div>
+<div class="rocom_sprite_layout_2">
+<div class="rocom_sprite_characteristic">
+<div class="rocom_sprite_temp_characteristic_box">
+<p class="rocom_sprite_temp_characteristic_text font-mainfeiziti">特性</p>
+<div class="rocom_sprite_info_characteristic_content">
+<div class="rocom_sprite_info_characteristic_content_icon">[[文件:图标_宠物_特性_{{{特性|最好的伙伴}}}.png|link=|{{{特性|最好的伙伴}}}]]</div>
+<p class="rocom_sprite_info_characteristic_title font-mainfeiziti">{{{特性|最好的伙伴}}}</p>
+<p class="rocom_sprite_info_characteristic_text font-fzltyjt">{{{特性描述|每学会一个不同系别的技能，攻防提升5%}}}</p>
+</div>
+</div>
+<div class="rocom_sprite_temp_attribute_box" style="display:block">{{精灵/个体属性|{{{初始生命|100}}}|{{{初始速度|120}}}|{{{初始物攻|20}}}|{{{初始物防|15}}}|{{{初始魔攻|20}}}|{{{初始魔防|25}}}}}</div></div>
+<div class="rocom_sprite_temp_evolve_rightBox">{{进化|{{{精灵名称|丢丢}}}{{#if:{{{地区形态名称|草地附近的样子}}}|（{{{地区形态名称|草地附近的样子}}}）|}}}}{{精灵/克制|{{{主属性|火}}}|{{#if:{{{2属性|草}}}|{{{2属性|草}}}|}}}}
+</div>
+</div>
+<div class="rocom_sprite_skill_tabBox">
+{{选项卡
+|标题1=精灵技能
+|内容1=
+<div class="rocom_sprite_skill_skillBox">
+{{#arraydefine:技能解锁等级|{{#replace:{{{技能解锁等级|1,1,1,7,9,11,13,16,19,22,27,30,32,34,36,40,42,47,48}}}|，|,}}|,}}
+{{#arraydefine:技能|{{#replace:{{{技能|猛烈撞击,闪光,防御,魔法增效,光球,火焰箭,力量增效,棘突,潮涌,超导,闪光冲击,漫反射,冰爪,热砂,念力膨胀,放晴,过曝,光刃,折射}}}|，|,}}|,}}
+{{#arraymap:{{#replace:{{{技能|猛烈撞击,闪光,防御,魔法增效,光球,火焰箭,力量增效,棘突,潮涌,超导,闪光冲击,漫反射,冰爪,热砂,念力膨胀,放晴,过曝,光刃,折射}}}|，|,}}|,|@1|
+{{精灵/技能
+|前缀={{#arrayindex:技能解锁等级|{{#arraysearch:技能|@1}}|}}
+|属性={{#show:@1|?属性}}
+|技能名称={{#show:@1|?技能名称}}
+|耗能={{#show:@1|?耗能}}
+|技能类别={{#show:@1|?技能类别}}
+|威力={{#show:@1|?威力}}
+|效果={{#show:@1|?效果}}
+}}
+| }}
+</div>
+|标题2=血脉技能
+|内容2=
+<div class="rocom_sprite_skill_skillBox">
+{{#arraymap:{{#replace:{{{血脉技能|迫近攻击,汲取,炎枪,水弹枪,闪光,岩土暴击,碎冰击,龙吼,引雷,溶解液,飞断,技巧打击,啄击,飞吻,背袭,灾厄,钢钻,星河扭曲}}}|，|,}}|,|@1|
+{{精灵/技能
+|前缀=
+|属性={{#show:@1|?属性}}
+|技能名称={{#show:@1|?技能名称}}
+|耗能={{#show:@1|?耗能}}
+|技能类别={{#show:@1|?技能类别}}
+|威力={{#show:@1|?威力}}
+|效果={{#show:@1|?效果}}
+}}
+| }}
+</div>
+|标题3=可学技能石
+|内容3=
+<div class="rocom_sprite_skill_skillBox">
+{{#arraymap:{{#replace:{{{可学技能石|迫近攻击,汲取,炎枪,水弹枪,闪光,岩土暴击,碎冰击,龙吼,引雷,溶解液,飞断,技巧打击,啄击,飞吻,背袭,灾厄,钢钻,星河扭曲}}}|，|,}}|,|@1|
+{{精灵/技能
+|前缀=
+|属性={{#show:@1|?属性}}
+|技能名称={{#show:@1|?技能名称}}
+|耗能={{#show:@1|?耗能}}
+|技能类别={{#show:@1|?技能类别}}
+|威力={{#show:@1|?威力}}
+|效果={{#show:@1|?效果}}
+}}
+| }}
+</div>
+}}
+</div>
+<div class="rocom_sprite_temp_classGrow_box" style="display:none;">
+{{选项卡
+|标题1=精灵课题
+|内容1=
+{{精灵课题|{{{精灵名称|月牙雪熊}}}|{{{图鉴课题|捕捉1只精灵
+使用3/6次闪光
+使用3/6次水刃
+使用3/6次闪燃}}}|{{{主属性|火}}}|{{{2属性|草}}}|{{{课题技能石|种皮爆裂}}}}}
+|标题2=成长素材
+|内容2=
+{{精灵/突破|{{{主属性|火}}}|{{{成长素材|天使草}}}|{{#if:{{{2属性|草}}}|{{{2属性|草}}}|}}}}
+}}
+</div>
+</div>
+{{#Widget:Dendrite rocom sprite.js}}
+{{#css:
+.isla_rocom_sprite.visible-sm,.isla_rocom_sprite.visible-xs {
+    padding: 10px;
+}
+.visible-sm .rocom_sprite_layout_1,
+.visible-xs .rocom_sprite_layout_1,
+.visible-sm .rocom_sprite_layout_2,
+.visible-xs .rocom_sprite_layout_2{
+    flex-direction: column;
+}
+.visible-sm .rocom_sprite_grament,
+.visible-xs .rocom_sprite_grament {
+    border-top: 1px solid #292b2e;
+    border-left: 1px solid #292b2e;
+    border-right: 1px solid #292b2e;
+}
+.visible-sm .rocom_sprite_grament,
+.visible-xs .rocom_sprite_grament,
+.visible-sm .rocom_sprite_info,
+.visible-xs .rocom_sprite_info {
+    width: 100%;
+    padding: 20px;
+}
+.visible-sm .rocom_sprite_grament_img li,
+.visible-xs .rocom_sprite_grament_img li {
+    height: 100%;
+    padding: 20px;
+}
+.visible-sm .rocom_sprite_grament_list,
+.visible-xs .rocom_sprite_grament_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,20%);
+    gap: 5px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+.visible-sm .rocom_sprite_grament_list li,
+.visible-xs .rocom_sprite_grament_list li,
+.visible-sm .rocom_sprite_grament_list li img,
+.visible-xs .rocom_sprite_grament_list li img {
+    width:auto;
+    height:auto;
+    margin:0;
+}
+.visible-sm .rocom_sprite_characteristic,
+.visible-sm .rocom_sprite_characteristic {
+    width: 100%;
+    padding: 20px 10px 0px 10px;
+}
+.visible-sm .rocom_sprite_temp_attribute_box,
+.visible-xs .rocom_sprite_temp_attribute_box {
+    margin: 10px 0 10px;
+}
+.visible-sm .rocom_sprite_temp_evolve_rightBox,
+.visible-xs .rocom_sprite_temp_evolve_rightBox {
+    border-left: 1px solid #292b2e;
+    border-right: 1px solid #292b2e;
+    border-bottom: 1px solid #292b2e;
+}
+.visible-sm .rocom_sprite_temp_attributesText_box,
+.visible-xs .rocom_sprite_temp_attributesText_box {
+display: grid;
+    align-items: center;
+    justify-content: flex-start;
+    grid-template-columns: repeat(auto-fill,30%);
+}
+.visible-sm .rocom_sprite_temp_attributes_box,
+.visible-xs .rocom_sprite_temp_attributes_box,
+.visible-sm .rocom_sprite_temp_attributesText_box p,
+.visible-xs .rocom_sprite_temp_attributesText_box p,
+.visible-sm .rocom_sprite_temp_evolve_rightBox,
+.visible-xs .rocom_sprite_temp_evolve_rightBox,
+.visible-sm .rocom_sprite_layout_3 > div:nth-child(2),
+.visible-xs .rocom_sprite_layout_3 > div:nth-child(2),
+.visible-sm ul.tabbernav li a,.visible-sm ul.tabbernav li.tabberactive a,
+.visible-xs ul.tabbernav li a,.visible-xs ul.tabbernav li.tabberactive a {
+    width: 100%;
+}
+.visible-sm .rocom_sprite_layout_3,
+.visible-xs .rocom_sprite_layout_3,
+.visible-sm .rocom_sprite_restrain,
+.visible-xs .rocom_sprite_restrain {
+    padding:10px;
+}
+.visible-sm .rocom_sprite_skill_skillBox,
+.visible-xs .rocom_sprite_skill_skillBox {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(1,100%);
+}
+.visible-sm .rocom_sprite_skill_box,
+.visible-xs .rocom_sprite_skill_box {
+    width: 100%;
+    margin: 0;
+}
+.visible-sm .rocom_sprite_skill_tabBox ul.tabbernav,
+.visible-xs .rocom_sprite_skill_tabBox ul.tabbernav {
+    display: grid;
+    grid-template-columns: repeat(10,10%);
+    width: 100%;
+    margin: 0;
+}
+.visible-sm ul.tabbernav li,
+.visible-xs ul.tabbernav li {
+    margin: 0;
+}
+.visible-sm .rocom_sprite_skill_tabBox ul.tabbernav li:nth-child(1),
+.visible-xs .rocom_sprite_skill_tabBox ul.tabbernav li:nth-child(1),
+.visible-sm .rocom_sprite_skill_tabBox ul.tabbernav li:nth-child(3),
+.visible-xs .rocom_sprite_skill_tabBox ul.tabbernav li:nth-child(3) {
+    grid-column: span 3;
+}
+.visible-sm .rocom_sprite_skill_tabBox ul.tabbernav li:nth-child(5),
+.visible-xs .rocom_sprite_skill_tabBox ul.tabbernav li:nth-child(5) {
+    grid-column: span 4;
+}
+.visible-sm .rocom_sprite_skill_tabBox ul.tabbernav wbr,
+.visible-xs .rocom_sprite_skill_tabBox ul.tabbernav wbr {
+    display:none;
+}
+
+.isla_rocom_sprite *{
+ text-decoration: none;
+ list-style-type: none;
+}
+.rocom_sprite_layout_1{
+ display: flex;
+ border-radius: 72px 36px 36px 72px;
+ background-color: #292b2e;
+}
+.rocom_sprite_layout_2{
+ display: flex;
+ margin-top: 24px;
+ justify-content: space-between;
+ background-color:#292B2E;
+ border-radius:72px;
+ min-height:360px;
+}
+.rocom_sprite_layout_3{
+width:100%;
+ padding: 5px 24px 0px 24px;
+ display:flex;
+ align-items:center;
+ flex-wrap:wrap;
+}
+.rocom_sprite_grament{
+ display: flex;
+ width: 60%;
+ padding: 36px;
+ border-radius: 36px;
+ background-color: #f2f2f2;
+ flex-direction: column;
+ align-items: center;
+ position:relative;
+}
+.rocom_sprite_info{
+ width: 40%;
+ padding: 36px;
+ border-radius: 0px 36px 36px 0px;
+background-size:cover;
+}
+.rocom_sprite_topic{
+ width: 50%;
+}
+.rocom_sprite_topic li{
+ display: flex;
+}
+.rocom_sprite_development{
+ width: 50%;
+}
+.rocom_sprite_info_part_1{
+ display: flex;
+ align-items: center;
+}
+.rocom_sprite_info_part_1 p{
+ font-size: 30px;
+ font-weight: bold;
+}
+.rocom_sprite_info_part_2{
+ display: flex;
+}
+.rocom_sprite_info_part_3 p{
+ margin: 0px;
+ font-size: 18px;
+ color: #f3eedf;
+}
+.rocom_sprite_info_attributes img{
+ width: 32px;
+ height: 32px;
+ margin-right: 6px;
+}
+.rocom_sprite_info_attributes p{
+ margin: 0px;
+ font-size: 18px;
+ font-weight: bold;
+ color: #f3eedf;
+}
+.rocom_sprite_skill_parameter{
+ display: flex;
+}
+.rocom_sprite_skill_parameter_pp{
+ display: flex;
+ margin-right: 12px;
+}
+.rocom_sprite_skill_parameter_damage{
+ display: flex;
+}
+.rocom_sprite_skill_parameter_damage img{
+ width: 16px;
+ height: 16px;
+}
+.rocom_sprite_grament_img{
+position:relative;
+}
+.rocom_sprite_grament_img p{
+ display: flex;
+ justify-content: center;
+}
+.rocom_sprite_grament_img img{
+ width: 60%;
+ height: auto;
+ margin: 0px 20%;
+}
+.rocom_sprite_grament_img li{
+height:375px;
+}
+.rocom_sprite_temp_left,
+.rocom_sprite_temp_right{
+position:absolute;
+z-index:99;
+}
+.rocom_sprite_temp_left{
+    top: 250px;
+    left: 50px;
+}
+.rocom_sprite_temp_right{
+    top: 250px;
+    left: 600px;
+}
+.rocom_sprite_grament_name{
+ font-size: 20px;
+}
+.rocom_sprite_grament_attributes{
+ display: flex;
+ align-items: center;
+}
+.rocom_sprite_grament_attributes li{
+ display: flex;
+ width: 96px;
+ height: 32px;
+ margin: 0px 24px;
+ border-radius: 32px;
+ background-color: #353235;
+}
+.rocom_sprite_grament_attributes img{
+ width: 32px;
+ height: 32px;
+}
+.rocom_sprite_grament_attributes_text{
+ width: 64px;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+}
+.rocom_sprite_grament_attributes_text p{
+ text-align: center;
+ margin:0;
+ color: #f2f2f2;
+}
+.rocom_sprite_grament_list{
+ display: flex;
+}
+.rocom_sprite_grament_list li{
+ width: 64px;
+ height: 64px;
+ margin: 0px 24px;
+}
+.rocom_sprite_grament_list li:hover{
+ border-radius: 12px;
+ background-color: rgba(0, 0, 0, 0.3);
+}
+.rocom_sprite_grament_list img{
+ width: 54px;
+ height: 54px;
+ margin: 6px;
+}
+.rocom_sprite_info_title p{
+ font-size: 28px;
+ color: #ffc65f;
+}
+.rocom_sprite_info_qualification li{
+ display: flex;
+ margin: 8px 0px;
+ align-items:center;
+}
+.rocom_sprite_info_qualification_icon img{
+ width: 16px;
+ margin-right: 8px;
+ height: auto;
+}
+.rocom_sprite_info_qualification_name{
+ width: 48px;
+ margin: 0px;
+ font-family:'FZLTYJT';
+ color: #c1c1c1;
+}
+.rocom_sprite_info_qualification_background{
+ position: relative;
+ width: calc( 100% - 144px );
+ height: 14px;
+ margin: 0px 12px;
+ border-radius: 24px;
+ background-color: #1e1f21;
+ z-index: 0;
+}
+.rocom_sprite_info_qualification_schedule{
+ position: relative;
+ height: 100%;
+ border-radius: 15px;
+ background:linear-gradient(to left, #ddd, #ddd);
+ z-index: 1;
+}
+.rocom_sprite_info_qualification_value{
+ width: 48px;
+ margin: 0px;
+ font-family:'MIANFEIZITI';
+ color: #c1c1c1;
+ font-size:18px;
+}
+.rocom_sprite_info_content{
+ margin-top: 24px;
+}
+.rocom_sprite_info_content p{
+ margin: 0px;
+ font-size: 14px;
+ color: #ddd;
+}
+.rocom_sprite_info_physique{
+ display: flex;
+ margin-top: 24px;
+ border-bottom: 2px solid #f2f2f2;
+ justify-content: space-evenly;
+}
+.rocom_sprite_info_physique li{
+ display: flex;
+}
+.rocom_sprite_info_physique_icon{
+ width: 24px;
+ margin-right: 24px;
+}
+.rocom_sprite_info_physique_icon img{
+ width: 20px;
+ height: auto;
+}
+.rocom_sprite_info_physique p{
+ font-size: 15px;
+ font-family:FZLTYJT;
+ color: #f2f2f2;
+}
+.rocom_sprite_characteristic{
+ width: 40%;
+ min-height: 64px;
+ padding: 50px 24px 0px 10px;
+ border-radius: 36px;
+ background-color: #292B2E;
+ background-size:cover;
+ background-position:center;
+}
+.rocom_sprite_temp_characteristic_box{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+.rocom_sprite_info_characteristic_title{
+ margin: 0px;
+ margin-bottom: 6px;
+ font-size: 17px;
+ color: #F3F3F3;
+}
+.rocom_sprite_info_characteristic_text{
+ margin: 0px;
+ color: #b9bbc1;
+ width:95%;
+}
+.rocom_sprite_temp_characteristic_text{
+color:#fff;
+    margin-right: 25px;
+}
+.rocom_sprite_restrain{
+ width: 100%;
+ min-height: 64px;
+ padding: 24px;
+ display:flex;
+ align-items:center;
+}
+.rocom_sprite_temp_restrain_box{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.rocom_sprite_temp_characteristic_text,
+.rocom_sprite_temp_evolve_text,
+.rocom_sprite_temp_restrain_text{
+    writing-mode: vertical-lr;
+    font-size: 17px;
+}
+
+.rocom_sprite_temp_restrain_box div{
+width:40%;
+}
+.rocom_sprite_restrain p{
+ margin: 0px;
+ color: #353235;
+}
+.rocom_sprite_skill{
+ display: flex;
+ padding: 24px;
+ border-radius: 36px;
+ background-color: #f2f2f2;
+ flex-direction: column;
+}
+.rocom_sprite_skill li{
+ display: flex;
+}
+.rocom_sprite_skill_name{
+ width: 128px;
+}
+.rocom_sprite_skill_name p{
+ font-weight: bold;
+}
+.rocom_sprite_skill_damage{
+ width: 128px;
+}
+.rocom_sprite_skill_damage p{
+ font-weight: bold;
+}
+.rocom_sprite_skill_type{
+ width: 128px;
+}
+.rocom_sprite_skill_type p{
+ font-weight: bold;
+}
+.rocom_sprite_skill_content p{
+ font-weight: bold;
+}
+.rocom_sprite_info_characteristic_content{
+width:100%;
+}
+.rocom_sprite_info_characteristic_content_icon{
+    float: left;
+    position: relative;
+    top: -5px;
+    margin-right: 15px;
+}
+.rocom_sprite_info_characteristic_content_icon img{
+width:70px;
+height:70px;
+}
+.rocom_sprite_info_title{
+display:flex;
+}
+.rocom_sprite_skill_skillBox{
+background:#f2f2f2;
+padding:16px;
+border-radius:25px;
+margin-top:16px;
+display:flex;
+flex-wrap:wrap;
+justify-content:flex-start;
+}
+.rocom_sprite_skill_skillBox p{
+display:none;
+}
+.rocom_sprite_skill_tabBox{
+    background-color: #f2f2f2;
+    border-radius: 36px;
+    margin-top:25px;
+}
+.tabber .tabbertab{
+border:none;
+}
+ul.tabbernav{
+border-bottom:none;
+font-family:'MIANFEIZITI';
+font-weight:normal;
+}
+ul.tabbernav li a{
+border:none;
+background:#f2f2f2;
+transition:background 0.5s ease-out;
+border-radius:15px;
+}
+ul.tabbernav li{
+margin:15px 0px 0px 25px;
+border-radius:15px;
+position:relative;
+}
+ul.tabbernav li a:link{
+color:#515563;
+font-size:16px;
+}
+ul.tabbernav li.tabberactive a:hover,
+ul.tabbernav li a:hover{
+background:#BFBEBF;
+border-radius:15px;
+border-bottom:none;
+}
+ul.tabbernav li.tabberactive a{
+    background: #313435;
+    color: #f2f2f2;
+    border-radius: 12px;
+    border-bottom:none;
+}
+ul.tabbernav li::before{
+content:"";
+position:absolute;
+width:20px;
+height:20px;
+left:10px;
+top:4px;
+}
+ul.tabbernav li a,
+ul.tabbernav li.tabberactive a{
+    display:block;
+    width:120%;
+    text-align:end;
+    height:30px;
+    line-height:30px;
+    padding:0 10px;
+}
+.rocom_sprite_temp_evolve_rightBox{
+width:70%;
+background-color:#f2f2f2;
+border-radius:36px;
+display:flex;
+flex-wrap:wrap;
+}
+.rocom_sprite_temp_classGrow_box{
+    background-color: #f2f2f2;
+    border-radius: 36px;
+    margin-top:25px;
+}
+.rocom_sprite_temp_attribute_box{
+margin-top:45px;
+}
+}}

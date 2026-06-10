@@ -157,14 +157,24 @@ def _pet_to_extracted(parsed: Dict[str, Any], source_path: str) -> Dict[str, Any
         facts.append({"key": "region", "value": parsed["region"], "evidence": "分布地区"})
     if parsed.get("evolution"):
         facts.append({"key": "evolution", "value": parsed["evolution"], "evidence": "进化条件"})
+    if parsed.get("form"):
+        facts.append({"key": "form", "value": parsed["form"], "evidence": f"精灵形态={parsed['form']}"})
+    if parsed.get("form_name"):
+        facts.append({"key": "form_name", "value": parsed["form_name"], "evidence": f"地区形态名称={parsed['form_name']}"})
 
     from scripts.lib_luoke_parser import slugify_zh
-    slug = slugify_zh(parsed["name"])
+    base_slug = slugify_zh(parsed["name"])
+    # 异形态: 拼上 form_name pinyin 作区分(避免冲突)
+    form_name = parsed.get("form_name")
+    if form_name:
+        slug = f"{base_slug}-{slugify_zh(form_name)}"
+    else:
+        slug = base_slug
 
     return {
         "entity_type": "pet",
         "slug": slug,
-        "title": parsed["name"],
+        "title": parsed["name"] + (f"({form_name})" if form_name else ""),
         "aliases": [],
         "summary": parsed.get("description", "")[:80],
         "facts": facts,
