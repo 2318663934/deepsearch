@@ -1,0 +1,46 @@
+---
+title: 移形之镜
+type: item
+slug: yi-xing-zhi-jing
+aliases: []
+sources:
+- raw\luoke\bilibili-wiki\2026-06-10\rocom_E7A7BBE5BDA2E4B98BE9959C.wikitext
+confidence: 0.95
+confidence_reason: 'B 站 wiki 物品信息模板结构化解析 | 硬规则校准: 无调整'
+created: '2026-06-10T18:58:39+08:00'
+updated: '2026-06-10T18:58:39+08:00'
+last_verified: '2026-06-10T18:58:39+08:00'
+status: verified
+version: 1
+---
+
+有着魔法气息的镜子
+
+## 事实
+### rarity
+- **值**: 蓝
+- **原文依据**: rarity=蓝
+
+### main_category
+- **值**: 家具
+- **原文依据**: main_category=家具
+
+### sub_category
+- **值**: 家具
+- **原文依据**: sub_category=家具
+
+### use
+- **值**: 有着魔法气息的镜子
+- **原文依据**: use=有着魔法气息的镜子
+
+### source
+- **值**: 家园获得
+- **原文依据**: source=家园获得
+
+### icon
+- **值**: 1001101
+- **原文依据**: icon=1001101
+
+### version
+- **值**: 0.2
+- **原文依据**: version=0.2
