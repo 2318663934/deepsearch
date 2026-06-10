@@ -7,9 +7,9 @@ sources:
 - raw\luoke\bilibili-wiki\2026-06-10\rocom_E7AD9BE7AEA1E5A594E6B581.wikitext
 confidence: 0.95
 confidence_reason: 'B 站 wiki 技能模板结构化解析 | 硬规则校准: 无调整'
-created: '2026-06-10T12:29:11+08:00'
-updated: '2026-06-10T12:29:11+08:00'
-last_verified: '2026-06-10T12:29:11+08:00'
+created: '2026-06-10T15:06:53+08:00'
+updated: '2026-06-10T15:06:53+08:00'
+last_verified: '2026-06-10T15:06:53+08:00'
 status: verified
 version: 1
 ---
