@@ -196,11 +196,46 @@ def parse_skill_wikitext(wikitext: str) -> Optional[Dict[str, Any]]:
 # ---------------------------------------------------------------------------
 
 
+ROMAN_NUMERALS = {
+    # 罗马数字 全角 + 半角 大写 + 小写 共 24 个
+    "Ⅰ": "one", "Ⅱ": "two", "Ⅲ": "three", "Ⅳ": "four", "Ⅴ": "five",
+    "Ⅵ": "six", "Ⅶ": "seven", "Ⅷ": "eight", "Ⅸ": "nine", "Ⅹ": "ten",
+    "Ⅺ": "eleven", "Ⅻ": "twelve",
+    "ⅰ": "one", "ⅱ": "two", "ⅲ": "three", "ⅳ": "four", "ⅴ": "five",
+    "ⅵ": "six", "ⅶ": "seven", "ⅷ": "eight", "ⅸ": "nine", "ⅹ": "ten",
+    "ⅺ": "eleven", "ⅻ": "twelve",
+    # ASCII 罗马数字(全大写或全小写)
+    "I": "one", "II": "two", "III": "three", "IV": "four", "V": "five",
+    "VI": "six", "VII": "seven", "VIII": "eight", "IX": "nine", "X": "ten",
+    "XI": "eleven", "XII": "twelve",
+    "i": "one", "ii": "two", "iii": "three", "iv": "four", "v": "five",
+    "vi": "six", "vii": "seven", "viii": "eight", "ix": "nine", "x": "ten",
+    "xi": "eleven", "xii": "twelve",
+}
+
+
+def _preprocess_for_slugify(name: str) -> str:
+    """slugify 前的预处理:把罗马数字/特殊符号转成拼音可识别的字。
+
+    用 regex word boundary,避免"III"被"III"→"three"和"I"分别替换的双重命中。
+    """
+    # 按长度倒序(先长后短,避免短 key 吃掉长 key 的前缀)
+    for k in sorted(ROMAN_NUMERALS.keys(), key=len, reverse=True):
+        v = ROMAN_NUMERALS[k]
+        # 用 \b 对 ASCII 字符,用普通 replace 对 unicode
+        if k.isascii():
+            name = re.sub(rf"\b{re.escape(k)}\b", v, name)
+        else:
+            name = name.replace(k, v)
+    return name
+
+
 def slugify_zh(name: str) -> str:
     """中文名 → 拼音 slug(无外部依赖回退)。
 
     优先 pypinyin,失败回退 unicode 转义序列。
     """
+    name = _preprocess_for_slugify(name)
     try:
         from pypinyin import lazy_pinyin
 

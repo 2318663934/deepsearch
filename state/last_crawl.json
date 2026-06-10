@@ -929,5 +929,12 @@
     "saved_to": "raw\\luoke\\bilibili-wiki\\2026-06-09\\rocom_E5A49AE781B5.wikitext",
     "bytes": 766,
     "message": ""
+  },
+  "moegirl-baike:https://mzh.moegirl.org.cn/%E6%B4%9B%E5%85%8B%E7%8E%8B%E5%9B%BD%EF%BC%9A%E4%B8%96%E7%95%8C": {
+    "last_crawled": "2026-06-10T10:31:04",
+    "status": "ok",
+    "saved_to": "raw\\luoke\\moegirl-baike\\2026-06-10\\E6B49BE5858BE78E8BE59BBDEFBC9AE4B896E7958C.txt",
+    "bytes": 48381,
+    "message": ""
   }
 }
