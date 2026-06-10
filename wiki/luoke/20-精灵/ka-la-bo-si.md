@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:37:58+08:00'
-updated: '2026-06-10T10:37:58+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:37:58+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 据传说卡拉波斯曾经是一个仙子，因为误会诅咒过一位公主，被诅咒反噬后变为纺锤的模样。一次最多能够拉出7000米纺线。当体内的蛋白质耗尽的时候，它们就不会再进行任何

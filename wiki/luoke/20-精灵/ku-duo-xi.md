@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:21+08:00'
-updated: '2026-06-10T10:39:21+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:21+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 兼具岩石的稳固与钢铁的坚韧，身上带有厚重的泥土气味，推测是因为习惯在地底休眠所致。能够利用磁场的力量发动攻击，但也会在特殊磁场的影响下动弹不得，因此总是在人烟稀

@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:41+08:00'
-updated: '2026-06-10T10:41:41+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:41:41+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 虽然长着小巧而可爱的翅膀，但是不用来煽动飞行,完全是凭借自身的魔法浮空，似乎能与洛克心灵相通。

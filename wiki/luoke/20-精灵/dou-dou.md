@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:31+08:00'
-updated: '2026-06-10T10:41:31+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:41:31+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 体内充满轻质气体，骨骼与肌肉结构都很轻，因此可以在空中漂浮活动。它通过换气调节气体量与分布，来控制自己上浮或下沉。

@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:01+08:00'
-updated: '2026-06-10T10:41:01+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:41:01+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 绒绒多在夜间活动，触角能感知星光，体表覆盖着细密的短绒，能吸附少量蕴含星光的细微粉末。偶尔主动靠近洛克，以柔软的身体轻蹭对方，习性黏人，是温顺的小型毛绒精灵。

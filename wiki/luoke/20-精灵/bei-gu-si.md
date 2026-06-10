@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:20+08:00'
-updated: '2026-06-10T10:41:20+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:41:20+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 能够通过头顶的蒸汽猜出贝古斯的心情，对于它们而言，不同的心情需要消耗不同数量的矿石。“它是安静的，像座山一样，守候在这里，亘古不变，然而它又是有生命的，内心之中

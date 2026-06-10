@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:50+08:00'
-updated: '2026-06-10T10:41:50+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:41:50+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 它对洛克族异常友好，面对温暖的抚摸和拥抱也从不抗拒。传说它们是最早与洛克建立契约的种族之一，耳朵的轮廓正像星之链在契约双方之间勾勒出的形状。

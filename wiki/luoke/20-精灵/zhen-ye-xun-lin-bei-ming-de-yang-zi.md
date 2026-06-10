@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:36+08:00'
-updated: '2026-06-10T10:41:36+08:00'
+updated: '2026-06-10T10:57:08+08:00'
 last_verified: '2026-06-10T10:41:36+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 来去如风，极少能看到它们的身影。“所谓的规则像是藤蔓，又好像荆棘。被缠上时使人烦躁，被刺伤时让人疼痛。但规则也有如树干，在支撑着森林的生命 ——所谓自由，亦是如

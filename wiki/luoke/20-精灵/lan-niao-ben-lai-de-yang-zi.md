@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:12+08:00'
-updated: '2026-06-10T10:39:12+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:12+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 眼神锐利，有着绅士般冷静而又端庄的非凡气质，让它在贵族当中颇有人气。胸腹绒羽形成稳定的隔热层，能在强风中维持体温，拥有较强的耐力。

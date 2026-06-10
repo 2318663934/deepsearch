@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:37:32+08:00'
-updated: '2026-06-10T10:37:32+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:37:32+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 在对决中常常使用夸张的姿态让对手退却，体内另一股意志会让它在关键时刻保持一条底线——它并不以伤害为乐，只汲取自己必要的尖叫。尊重对手，十分有礼貌。

@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:14+08:00'
-updated: '2026-06-10T10:39:14+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:39:14+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 如果感觉岩石的缝隙中有目光注视着你，那很可能就是布是石。身体非常坚硬，喜欢成群结队地斜坡上滚下来，也许只有它们能感受这种快乐吧。

@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:41+08:00'
-updated: '2026-06-10T10:40:41+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:40:41+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 总是一副亲切愉悦的样子，备受小洛克们的喜欢，但似乎在没人的时候它们不会展现出一丁点生气。曾经不分昼夜持续观测一年，且让样本知道自己被观测，期间样本呈现愉悦的状态

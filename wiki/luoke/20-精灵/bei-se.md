@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:20+08:00'
-updated: '2026-06-10T10:41:20+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:41:20+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 拥有坚硬而沉重的外壳，靠石头和木头补充提供能量，在能量短缺的时候会靠睡觉度过。“它是坚硬的，它永远不会破碎。可当你狠心地对待它，它终究会伤心地沉睡。”

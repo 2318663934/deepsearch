@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:10+08:00'
-updated: '2026-06-10T10:38:10+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:38:10+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 幼年期较长，主要靠嗅闻、聆听和头上的叶子触角获取信息。头顶毛发会散发出爆米花的香味，偶尔引来其他精灵。它们之间用互闻头顶代表问候。

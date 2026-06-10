@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:36+08:00'
-updated: '2026-06-10T10:39:36+08:00'
+updated: '2026-06-10T10:57:08+08:00'
 last_verified: '2026-06-10T10:39:36+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 经常在有太阳的时候浮在水面上，晒过太阳之后皮肤表面能够分泌出一种充满芳香味道的物质，有促进伤口愈合的作用。生命力十分顽强，即使受了严重的外伤也能迅速愈合。

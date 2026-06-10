@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:37:42+08:00'
-updated: '2026-06-10T10:37:42+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:37:42+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 第一、绝对不放过任何争执！第二、绝对不能因为睡过头晚到现场！第三、绝对要公正裁判！第四、绝对要在被双方驱逐之前做出判决。——《公平鸽的守则》

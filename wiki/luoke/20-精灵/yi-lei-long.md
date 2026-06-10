@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:37:39+08:00'
-updated: '2026-06-10T10:37:39+08:00'
+updated: '2026-06-10T10:57:08+08:00'
 last_verified: '2026-06-10T10:37:39+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 幼年的小龙喜欢在雨天调皮捣蛋，充满水分的环境令它们十分活跃，在水里游得飞快，小洛克抓也抓不住它们。

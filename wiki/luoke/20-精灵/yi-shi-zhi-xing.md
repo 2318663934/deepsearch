@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:37:36+08:00'
-updated: '2026-06-10T10:37:36+08:00'
+updated: '2026-06-10T10:57:08+08:00'
 last_verified: '2026-06-10T10:37:36+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 曾被误认为是雕像，但却有意识和情绪。传说它的身体上镶嵌的宝石象征三种元素。被认为是完美平衡的象征，有研究证明它能够感知或预测时间的流动。

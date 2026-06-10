@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:26+08:00'
-updated: '2026-06-10T10:40:26+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:40:26+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 体型暴涨，皮肤化作流动的红、蓝、黄三色漩涡，情绪高涨时随时像泼墨般炸开。它用触手当画笔，在空中乱甩墨汁，留下大片狂野的色块。

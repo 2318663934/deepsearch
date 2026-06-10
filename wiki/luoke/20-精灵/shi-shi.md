@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:52+08:00'
-updated: '2026-06-10T10:40:52+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:40:52+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 古老的种族，似乎和现在的精灵们很少交流，但对洛克族十分友好。地系部族掌握建造之术后的创造的第一个物种。在古代也被用作计量单位，一个石石约等于三十千克。

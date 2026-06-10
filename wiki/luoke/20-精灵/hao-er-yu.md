@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:09+08:00'
-updated: '2026-06-10T10:38:09+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:38:09+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 拥有中空结构的尾巴，空气和水流过的时候会发出小号一样响亮的声音。非常喜欢社交的生物，经常举办盛大的音乐会，不同的小号精灵会轮流展示自己的音乐才华，创造出令人惊叹

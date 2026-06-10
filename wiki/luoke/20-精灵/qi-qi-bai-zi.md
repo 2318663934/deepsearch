@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:50+08:00'
-updated: '2026-06-10T10:39:50+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:50+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 “黄金时代地系部族大多无法运用魔力，但他们有着独特的智慧和精湛的技艺。地系精灵王教他们使用建造之术，地系部族用黑色矿物做出了棋子精灵，用以娱乐。”——《黄金时代

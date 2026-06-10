@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:56+08:00'
-updated: '2026-06-10T10:41:56+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:41:56+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 不知道为什么在野外遇到它们的时候，它们一直在哼歌，断断续续的小调不清楚是什么曲子，但非常洗脑。使用复杂的声音和曲调进行交流，它们哼的歌里面包含了想要传递给对方的

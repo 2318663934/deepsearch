@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:59+08:00'
-updated: '2026-06-10T10:40:59+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:40:59+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 绒毛里储存着温和的火系能量，抱在怀里就像一个小暖炉，身体散发出煎药的香味。它特别喜欢照顾受伤的精灵，会用温暖的鼻息轻轻吹拂伤口，伤口就不痛了。

@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:17+08:00'
-updated: '2026-06-10T10:41:17+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:41:17+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 即便在寒冷的冬天也是独来独往，从不聚在一起取暖，太冷的时候会把脚放在尾巴上。尾巴尖处有两个腺体，危险时能迅速喷射毒液，会用尾巴缠住对手释放毒素的同时使其无法逃走

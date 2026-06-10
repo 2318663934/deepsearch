@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:04+08:00'
-updated: '2026-06-10T10:38:04+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:38:04+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 期末时期的图书馆，每当古卷执政官从书架间缓缓现身，它周围的位置总被围得水泄不通，它的古卷如臂膀般展开，书页无声翻动，精准停在学生们最需要的章节上。“不要抗拒，作

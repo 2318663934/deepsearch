@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:44+08:00'
-updated: '2026-06-10T10:40:44+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:40:44+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 它们进食较少，通过经常睡觉来维持体内养分的平衡。只有在海水退潮时才偶尔会出现在沙滩上，在醒着的时候才会立起来，每天大概只有五分之一的时间是醒着的。

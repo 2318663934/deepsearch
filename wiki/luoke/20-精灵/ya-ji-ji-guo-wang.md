@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:42:05+08:00'
-updated: '2026-06-10T10:42:05+08:00'
+updated: '2026-06-10T10:57:08+08:00'
 last_verified: '2026-06-10T10:42:05+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 啪嗒啪嗒，鸭吉吉国王来了。那边的，别看怀表了，让时间听国王的；这边的毛太蓬松了，站紧实一点，别挡着国王的道了。嗯？还有你，既然来了我们鸭吉吉王国，记得要给过路费

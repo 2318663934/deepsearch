@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:41+08:00'
-updated: '2026-06-10T10:39:41+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:41+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 刚刚经历换角，松果模样的角脱落，身上的针叶变得锋利，逐渐觉醒领地意识。换角的过程中不要贸然靠近，不然会被踢出几米远。被踢的时候可以闻到它们身上带着森林中泥土和青

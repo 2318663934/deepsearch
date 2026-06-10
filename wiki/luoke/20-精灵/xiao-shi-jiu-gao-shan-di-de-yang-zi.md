@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:04+08:00'
-updated: '2026-06-10T10:39:04+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:04+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 只能勉强顶破头部的壳，剩余的蛋壳会陪伴小狮鹫度过幼年时期，能够抵御高山的严寒。皮肤表面覆盖嫩黄的绒毛，有保温发热的作用。

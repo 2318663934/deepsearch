@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:37:57+08:00'
-updated: '2026-06-10T10:37:57+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:37:57+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 锁定气味后会贴着沙面短促冲刺，并在奔跑间不断吐舌更新，顺着风向与沙面追踪。尾巴卷着的枝条能敲击沙地，这种清脆节奏是它们发出的威吓。

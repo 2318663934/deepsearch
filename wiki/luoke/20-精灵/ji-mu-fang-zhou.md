@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:37+08:00'
-updated: '2026-06-10T10:39:37+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:37+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 努力观察着所有洛克，曾经因为什么而变得快乐。它默默地把这些瞬间记录下来，尝试动手改造自己，用机械系的魔法制作成「心脏」，希望能够模拟感受到洛克从心底感受到的快乐

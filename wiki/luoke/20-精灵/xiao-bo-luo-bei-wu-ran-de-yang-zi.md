@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:25+08:00'
-updated: '2026-06-10T10:40:25+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:40:25+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 外壳光泽度进一步提高，热爱一切有光泽的表面，它会在礁石上打磨抛光外壳，也会主动打磨同伴，让壳面更光滑。高光滑度的外壳能减少杂质的附着，维持行动效率，也会让它们很

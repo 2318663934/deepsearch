@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:34+08:00'
-updated: '2026-06-10T10:38:34+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:38:34+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 “又有了新的发现，多菇丁埋地时，是在通过菌丝体往地下传播信号，向其他菇精灵发出指令，它们信号的语言结构和古文字非常相似，也许它们的历史远比洛克以为的要早得多。”

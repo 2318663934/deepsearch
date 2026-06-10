@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:11+08:00'
-updated: '2026-06-10T10:38:11+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:38:11+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 每只减肥猫都会遇到它命中注定的小蛇，和小蛇一起可以开开心心的运动。没人见过没有小蛇朋友的减肥猫，可能是孤单一只猫根本没办法坚持下去。

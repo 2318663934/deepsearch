@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:55+08:00'
-updated: '2026-06-10T10:38:55+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:38:55+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 拥有能分泌毒液的特殊腺体，能够通过背部空心管状的骨棘发射毒液，致使猎物晕厥。毒液会散发出腐臭的气味，有精灵或洛克靠近查看味道来源时，会猛然跃起扑击。

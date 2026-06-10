@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:27+08:00'
-updated: '2026-06-10T10:39:27+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:39:27+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 绒毛长而纤细，每个洛克小时候都曾把家里打扫清洁的捕尘长绒当作魔法扫帚骑着玩，然后被家长揍一顿，而家长顺手拿起的武器也是捕尘长绒，但是它们喜欢被洛克需要。

@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:27+08:00'
-updated: '2026-06-10T10:39:27+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:27+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 同伴之间经常会打架，用头或者用拳头对撞。每撞一下都会闪着电光。大多数拉特沉默寡言，但正义感十足，拉特们会出手帮助遇到麻烦的洛克和精灵。

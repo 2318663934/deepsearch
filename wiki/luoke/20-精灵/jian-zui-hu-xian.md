@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:10+08:00'
-updated: '2026-06-10T10:39:10+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:10+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 尖嘴狐仙能通过感知大地的温度变化来预测农时。当它摇着尾巴经过农田时，尾巴扇动的气流会形成特殊的暖湿环流，让田地在寒冷的初春也能保持适宜作物生长的温度。

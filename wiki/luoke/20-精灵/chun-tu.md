@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:31+08:00'
-updated: '2026-06-10T10:39:31+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:39:31+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 耳朵的皮肤呈透明玻璃状，触感柔软，内部可以储藏更多的露水。总是细心地做着准备，可以把自己和身边的同伴都照顾得很好，经常用手中的四叶草为其他精灵同伴遮雨。

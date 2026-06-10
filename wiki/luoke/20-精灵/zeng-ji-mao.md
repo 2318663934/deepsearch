@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:30+08:00'
-updated: '2026-06-10T10:38:30+08:00'
+updated: '2026-06-10T10:57:08+08:00'
 last_verified: '2026-06-10T10:38:30+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 学习了名为“无氧法术”的迷之魔法，身形也因为练习“无氧法术”而发生了变化。崇尚质朴的力量，即便学习“无氧法术”，也是为了通过魔法来提升自己的武力。

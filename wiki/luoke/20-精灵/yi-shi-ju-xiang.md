@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:37:37+08:00'
-updated: '2026-06-10T10:37:37+08:00'
+updated: '2026-06-10T10:57:08+08:00'
 last_verified: '2026-06-10T10:37:37+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 经过时间的洗礼，有些残缺的痕迹，是谜一般的存在，与其相关的研究记录十分少。但相反的这个种族似乎对洛克族十分了解和亲近。“也许生命会消失，从人们的记忆中淡忘，但文

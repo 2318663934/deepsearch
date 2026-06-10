@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:20+08:00'
-updated: '2026-06-10T10:38:20+08:00'
+updated: '2026-06-10T10:57:08+08:00'
 last_verified: '2026-06-10T10:38:20+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 幼体的圆眼蜘蛛并不太能织网捕食，多以青草，树果为食。复眼获取信息范围极大，速度极快，即便是独眼，圆眼蜘蛛获取信息速度远超过洛克族100倍。

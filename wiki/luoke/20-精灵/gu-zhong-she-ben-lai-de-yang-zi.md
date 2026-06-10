@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:06+08:00'
-updated: '2026-06-10T10:38:06+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:38:06+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 通常低伏身体，隐藏在草丛中，只露出尾巴发出咚咚咚的轻响，吸引好奇的精灵过来。其尾部的结构可以在摇晃时发出咚咚的鼓声，据说玄玉岛的洛克以此为灵感，制作出了某种广受

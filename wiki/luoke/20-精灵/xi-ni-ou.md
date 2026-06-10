@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:10+08:00'
-updated: '2026-06-10T10:38:10+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:38:10+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 骨骼天生比较脆，需要经常吸食淤泥，泥巴里面含有它们骨骼所需的物质。如果摄入不足，它们的关节会发炎，走起路来可能容易摔倒。吻部尚未完全发育，偶尔会被泥巴噎住。

@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:43+08:00'
-updated: '2026-06-10T10:39:43+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:43+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 格兰球的花瓣持续生长与更替，老化花瓣会化作鳞片般的护甲。护甲上黏附诸多致痒花粉，它们热衷于边笑边蹭其他精灵。但洛克研究学者经观察其表情和动作发现，它们坏笑时鳞片

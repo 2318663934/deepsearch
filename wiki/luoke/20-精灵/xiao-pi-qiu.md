@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:05+08:00'
-updated: '2026-06-10T10:39:05+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:05+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 浑身散发着紫色的微光，有时会在夜晚拿出珍藏的星星，为迷途的旅人照亮归途。得益于柔软的身体结构，能够将不稳定的星光能量储存在体内，据说星星的亮度代表着存储能量的强

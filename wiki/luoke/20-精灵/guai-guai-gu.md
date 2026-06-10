@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:37:34+08:00'
-updated: '2026-06-10T10:37:34+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:37:34+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 羽毛有很好的疏水性，可以毫不费力地浮在水面上，浮着的时候怔怔地看着水面，并不是在发呆，而是在检查自己的美丽，小小的乖乖鹄很早就已经意识到了美丽与优雅的重要性。

@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:51+08:00'
-updated: '2026-06-10T10:39:51+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:51+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 “曾经有洛克试图用黑子的外壳打造行军的铠甲，却在淬火瞬间听见棋子内部传来低沉的声音，黑暗中工匠们的影子被炉火吞噬，所有想要拆解棋子的工匠都遭遇了不幸。”——《黄

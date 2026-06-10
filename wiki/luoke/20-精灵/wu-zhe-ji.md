@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:12+08:00'
-updated: '2026-06-10T10:40:12+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:40:12+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 极其发达健壮的双臂是它们的标志性特征，手部演变为锋利的钙化物质。这一分支舍弃了种族遗传下来的火焰魔法，堂堂正正地用双手和踢腿打败敌人。

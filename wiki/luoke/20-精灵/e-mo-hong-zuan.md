@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:26+08:00'
-updated: '2026-06-10T10:39:26+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:39:26+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 喜欢在洞穴的暗处歇息，会提前布好精细且带有剧毒的网守株待兔。步足末端布满危险的剧毒，尖锐而坚硬的触足既能用作进攻的矛，也能用作防御的盾。

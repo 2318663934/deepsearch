@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:20+08:00'
-updated: '2026-06-10T10:39:20+08:00'
+updated: '2026-06-10T10:57:08+08:00'
 last_verified: '2026-06-10T10:39:20+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 夜幕的星光之下，这些奇妙的生灵在观测星空，思考并记录时会发出像唱歌一样的声音。它们就像在歌唱宇宙，赞颂复苏，诉说星河的曼妙与知识的无常。但是非常胆小，每当其他生

@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:41+08:00'
-updated: '2026-06-10T10:39:41+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:41+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 身上总是有些湿润，带着森林中泥土和青草的味道。季节更换，它身上的树叶变得翠绿，松果因为成熟而爆裂。当冒险者们再次与它打招呼时，需要小心，不然会被羊蹄踹出几米远。

@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:18+08:00'
-updated: '2026-06-10T10:40:18+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:40:18+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 能将钢铁之力积蓄于双爪中，使出蓄力重击，威力十足。以地底的粗矿为食，精炼过的钢铁对它而言似乎有着不同寻常的风味。在它出没的地方，常有铁锅失窃。

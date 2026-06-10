@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:15+08:00'
-updated: '2026-06-10T10:39:15+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:39:15+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 头部开始晶体化，触感冰凉。能缓慢吸收周围热量，使自身温度维持在较低水平。头顶的白色绒球对温度变化很敏锐，能帮助它判断环境冷热。

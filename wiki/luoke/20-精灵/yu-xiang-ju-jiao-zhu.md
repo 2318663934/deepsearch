@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:07+08:00'
-updated: '2026-06-10T10:41:07+08:00'
+updated: '2026-06-10T10:57:08+08:00'
 last_verified: '2026-06-10T10:41:07+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 颜色鲜艳美丽，尾部丝囊中的液体有剧毒，织出的蜘蛛网散发异香。依靠体毒和利刺能轻易捕获猎物，从不群居，个体之间都保持一定距离，互不侵犯。

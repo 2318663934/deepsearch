@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:37:42+08:00'
-updated: '2026-06-10T10:37:42+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:37:42+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 前肢能够对三倍体型大小的昆虫精灵造成重创，食量极大。似乎是通过液压结构控制节肢和口器，弹出的速度极快，肉眼很难看清楚。需要吃大量食物来维持节肢力量。

@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:22+08:00'
-updated: '2026-06-10T10:40:22+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:40:22+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 喜欢用绿色的共生藻打扮自己，光合色素和粘液让珊瑚枝呈现百变的造型。它对光照与水质非常敏感，需要在浅水、光线充足的地方晒足日光浴，获得维持活力所需的能量，否则，可

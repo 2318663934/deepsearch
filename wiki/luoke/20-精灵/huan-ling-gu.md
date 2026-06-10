@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:18+08:00'
-updated: '2026-06-10T10:39:18+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:18+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 头顶的触角比隐藏在伞盖下的面目更能够表达出心情，悄无声息地飘来飘去，通常出现在后半夜。在森林深处大量聚集，散发着淡淡荧光，会吸收周围植物和小型动物的情绪。

@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:13+08:00'
-updated: '2026-06-10T10:38:13+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:38:13+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 拥有两条漂亮的大尾巴，虽然无法飞翔，但是抓着大尾巴可以滑翔一段距离，滑翔时身体散发出香香的味道，是因为这个种族普遍有些恐高，紧张的时候会释放舒缓神经的信息素，为

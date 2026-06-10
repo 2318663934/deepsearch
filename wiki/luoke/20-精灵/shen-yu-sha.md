@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:54+08:00'
-updated: '2026-06-10T10:40:54+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:40:54+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 暴雨时，它将雨水储藏在身体中；干旱降至，它在半空挥舞翼膜，水分升空化作雾墙，再聚成雨云。“这一路上，跌跌撞撞，有时快乐，有时候感伤，可是它依然坚强，哪怕真的没有

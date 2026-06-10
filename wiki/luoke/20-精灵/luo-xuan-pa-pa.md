@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:17+08:00'
-updated: '2026-06-10T10:41:17+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:41:17+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 它们立志成为机械系精灵维修专员，曾有大批战损的机械系精灵奇迹般地恢复健康，排着队回到原来生活的地方，这背后默默付出的正是不起眼的螺旋帕帕。

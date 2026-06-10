@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:48+08:00'
-updated: '2026-06-10T10:39:48+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:48+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 咻咻咻！听到“喵呜”一声的小洛克们请立刻拿出课本做好，魔法学院开课了！请牢记以下守则：请勿在课堂上投喂助教，请勿拉扯助教的尾巴，请勿对助教发出“嘬嘬嘬”等不尊敬

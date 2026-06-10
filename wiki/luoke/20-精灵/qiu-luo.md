@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:18+08:00'
-updated: '2026-06-10T10:41:18+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:41:18+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 胸口的星星状器官暖烘烘的，天冷的时候裘洛们都会把前爪揣在胸口取暖。曾经有洛克贸然地接触了裘洛的尾巴，皮肤变得红肿疼痛，足足半年之后才好转痊愈。

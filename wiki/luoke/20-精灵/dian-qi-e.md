@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:44+08:00'
-updated: '2026-06-10T10:40:44+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:40:44+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 常成群扎堆出现来汲取更充沛的电能量，在寒冷区域居民的传说里，电企鹅大量聚集往往预示极端天气将至，当地还有个习俗——如果遇到雷暴天气，就把电企鹅放在房顶上，可以避

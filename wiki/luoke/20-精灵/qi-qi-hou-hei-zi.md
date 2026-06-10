@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:52+08:00'
-updated: '2026-06-10T10:39:52+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:52+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 “黄金时代崩解后不知多久，黑子开始失眠。它们不再在日出时准点沉睡，而是继续在废土上继续巡逻。没有族人可守，它们便去围着倒塌的遗迹转圈，被认为是一种刻板行为。”—

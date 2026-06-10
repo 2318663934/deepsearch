@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:21+08:00'
-updated: '2026-06-10T10:38:21+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:38:21+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 喜欢群居的团结者，圣代甜甜诞生时就生有两颗冰淇淋球，相生相伴，两颗冰淇淋球口味性格不同却能一直融洽相处。据说，杨桃和巧克力的香气能防止过度兴奋，清爽又提神。

@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:16+08:00'
-updated: '2026-06-10T10:39:16+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:16+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 头顶的独角锋利又坚硬，但不蕴含魔法，脱落下来的独角最早被洛克用来制作匕首。“它眼中看到的都是黑白的，它的世界没有色彩，单一的世界却让它有了执着的信念和忠诚的心。

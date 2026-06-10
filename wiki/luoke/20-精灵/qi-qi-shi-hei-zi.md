@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:53+08:00'
-updated: '2026-06-10T10:39:53+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:53+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 “在深夜，黑色棋子会跟在洛克身后排着队列，跟着移动。因此，在民间有洛克传言，深夜千万别碰黑色棋子，它们会把影子吃掉。实际上，那只是它们守护族人的本能而已。”——

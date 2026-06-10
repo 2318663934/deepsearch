@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:37:35+08:00'
-updated: '2026-06-10T10:37:35+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:37:35+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 身上带着书本和油墨的味道，看起来小小的，其实比想象中重很多。常与同伴交换藏书，偶尔遇到疑惑的地方，会用书使劲砸自己的头，希望用这种办法让知识快点进入身体。

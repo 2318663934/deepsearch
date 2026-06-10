@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:14+08:00'
-updated: '2026-06-10T10:38:14+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:38:14+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 看到洛克就想展示刚学的魔法。可惜魔力还不够，变得不太好，偶尔还有可能失败，表演失败之后它会钻进帽子里面反思，过一会儿又探出脑袋继续尝试。

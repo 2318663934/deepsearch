@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:31+08:00'
-updated: '2026-06-10T10:40:31+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:40:31+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 弱小的家伙为了伙伴却愿意勇敢向前！光羽圣殿的门扉悄然开启，沐浴在圣光之力的启迪中，澎湃的力量汹涌而来。“它的思绪已沉醉在无垠的天际中，这片蓝天便是它魂牵梦绕的地

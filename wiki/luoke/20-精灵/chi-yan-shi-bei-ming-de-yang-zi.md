@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:34+08:00'
-updated: '2026-06-10T10:40:34+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:40:34+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 人们的正义之心化为实体，形成熊熊烈焰，最终照亮城市中每一个阴暗的角落。邪恶见到这光芒会四处遁逃，而市民们得以乘光前行。——《魔法学院都市安全法》

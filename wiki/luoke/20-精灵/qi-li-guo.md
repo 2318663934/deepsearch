@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:38+08:00'
-updated: '2026-06-10T10:38:38+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:38:38+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 头顶结出了橙红色的果实，散发出甜腻的香味，小鸟精灵可能会被吸引。但贸然接近是得不到好果子吃的，它分泌的糖胶不仅黏还有毒，无声拒绝着每一个不速之客。

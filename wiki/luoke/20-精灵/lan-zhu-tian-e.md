@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:14+08:00'
-updated: '2026-06-10T10:41:14+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:41:14+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 有强烈美意识的种族，时常梳理羽毛，用珍珠来打扮自己。优雅的举止和良好的外表是向同伴传递自身健康强壮的信号，拥有的珍珠数量也决定了自身在种群中的地位。

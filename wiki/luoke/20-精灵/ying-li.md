@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:22+08:00'
-updated: '2026-06-10T10:39:22+08:00'
+updated: '2026-06-10T10:57:08+08:00'
 last_verified: '2026-06-10T10:39:22+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 总是弓着身子，脊椎特化为毒刺弹射装置，用来发射尾巴上的尖刺。体内另外储存了几十根可再生的空心毒刺，通过弹射加压能以每秒10发的速度喷射。

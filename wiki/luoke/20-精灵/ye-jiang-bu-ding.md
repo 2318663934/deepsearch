@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:54+08:00'
-updated: '2026-06-10T10:39:54+08:00'
+updated: '2026-06-10T10:57:08+08:00'
 last_verified: '2026-06-10T10:39:54+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 椰浆布丁负责降温与保鲜，它能在体表形成一层很薄的冷凝膜，使自身在温暖环境中不易软化变形。它常出现在有人维护的洁净水源附近，并更愿意与洛克共存，阴凉的室内能提高它

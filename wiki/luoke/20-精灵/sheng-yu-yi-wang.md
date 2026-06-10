@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:26+08:00'
-updated: '2026-06-10T10:38:26+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:38:26+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 庇佑这片纯粹的净土，是拥有强大力量之后背负的使命。从上古壁画中得知尘封的过往，它寻求力量，发自内心地想要保护现在的一切。“张开圣洁的羽翼，为同伴抵挡风雨，便是它

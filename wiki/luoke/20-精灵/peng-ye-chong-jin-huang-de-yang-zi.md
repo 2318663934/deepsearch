@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:15+08:00'
-updated: '2026-06-10T10:41:15+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:41:15+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 必要时能借助鞘翅短暂地在空中滑行，从一处树冠滑到另一处枝丫。它经常在风力带动下被动迁移，偶尔被风刮走很远，落稳后呆住好一会才能意识到周围环境已经变了。

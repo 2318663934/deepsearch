@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:11+08:00'
-updated: '2026-06-10T10:41:11+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:41:11+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 “你知道吗？菇菇丁早已建立了广阔的地下王国，它们的菌丝体蔓延到整片森林，链接着许多土壤，将沾染了星星魔法碎屑的砂土和木头转化为魔法力量，循环利用，它们才是这片森

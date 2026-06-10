@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:23+08:00'
-updated: '2026-06-10T10:40:23+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:40:23+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 如果看到水域里冒出许多体表有短刺的精灵，那是海盔虫在呼吸。它们不会主动攻击，刺又短又圆润，如果用手摸它们的刺，会感觉到被轻轻扎了一下，并不会很疼。

@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:06+08:00'
-updated: '2026-06-10T10:39:06+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:06+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 体表的短绒进化为蓬松且带有黏性的长绒，能够吸附并储存更多星光粉末，直接触摸的话，会感到轻微刺痛。它们吸附的粉末最终在体内融合，驱动体内组织发生解离和重塑，当能量

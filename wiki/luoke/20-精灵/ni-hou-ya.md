@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:20+08:00'
-updated: '2026-06-10T10:40:20+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:40:20+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 一口就能吞下比自己还重的淤泥，皮肤表面也有了吸收淤泥的能力，淤泥硬壳能有效保护它们脆弱的骨骼。有的时候不小心把小体型的精灵邻居吸到嘴巴里，会赶紧吐出来，连连道歉

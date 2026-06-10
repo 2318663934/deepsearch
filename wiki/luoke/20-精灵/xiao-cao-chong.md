@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:07+08:00'
-updated: '2026-06-10T10:39:07+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:07+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 果树分叉越多的地方，越容易找到他们，常常被误认为是未熟的青葡萄。肤表黏糊糊的，睡觉时缩成一团挂在树上。常观察到许多只挤在一起，目前推测是畏寒的原因。

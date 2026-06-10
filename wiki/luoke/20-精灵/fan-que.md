@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:37:46+08:00'
-updated: '2026-06-10T10:37:46+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:37:46+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 和普通的鸟精灵看起来差不多，小小的，连叫声都不怎么响亮，只是独自站在崖石上，每天扑扇几下翅膀，比昨天多飞出一点点距离。 “走自己最平凡的路，按照自己的意志行动，

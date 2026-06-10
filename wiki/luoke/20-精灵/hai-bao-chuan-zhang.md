@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:24+08:00'
-updated: '2026-06-10T10:40:24+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:40:24+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 由聪慧且经验丰富的海豹战士进化而来，拥有极强的领地意识。这一物种对征服由极端的渴望，认为其他精灵都要臣服于它们。会指挥手下的海豹战士战斗。

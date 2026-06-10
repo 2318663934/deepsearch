@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:26+08:00'
-updated: '2026-06-10T10:41:26+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:41:26+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 表皮变得更厚实，需要消耗大量的能量和水分来合成紫色色素。这种头上有紫色花苞的蹦蹦草们偶尔有群体聚集的行为倾向，是为了减少个体受光面积，维持身体湿度。

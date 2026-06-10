@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:34+08:00'
-updated: '2026-06-10T10:39:34+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:34+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 当知识积累到一定程度，曜星光便会和星辰共鸣，化身暮星辰。一颗星辰寂灭，一颗星辰升起。涌起的黑洞已然吞噬了它的心灵。无穷无尽的冰冷与空洞啊——但是它依然在等待，等

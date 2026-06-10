@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:04+08:00'
-updated: '2026-06-10T10:38:04+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:38:04+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 “盗贼撬开了书库的大门，随后就被黑暗中什么沉重的打击在空中划出了一道抛物线。然后落荒而逃，并且拒绝再次到访这里，并且嘴里一直嘟囔着：知识就是力量”——某冒险者叙

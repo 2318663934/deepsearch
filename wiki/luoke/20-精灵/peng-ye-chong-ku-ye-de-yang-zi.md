@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:15+08:00'
-updated: '2026-06-10T10:41:15+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:41:15+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 身体结构发生进一步退化，储水能力几乎退化到没有，皮肤质感像纸一样薄，像晒缩的果干一样皱。杂质污染让其他精灵不敢再靠近，这似乎意外地保护了它们的安全。

@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:59+08:00'
-updated: '2026-06-10T10:41:59+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:41:59+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 在恶劣的环境中，它们形成了低能耗、高防御的行为逻辑，整天处于倦怠状态，其躯体收缩与舒展时，会有细微的气流振动，听起来就像低低的叹息声。

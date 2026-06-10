@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:23+08:00'
-updated: '2026-06-10T10:41:23+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:41:23+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 手中的果实能将吸收的光能转化为能量，因此日照时间越长，果实积累的能量就越高。据野外观察记录，在日光、月光或特定魔法光环境下成熟的蹦蹦果，会呈现出明显不同的果香味

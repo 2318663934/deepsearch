@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:42:09+08:00'
-updated: '2026-06-10T10:42:09+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:42:09+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 夜晚总是在看星星，长久地观察星空和白天不停地思考，似乎让它们拥有了占卜的能力。偶尔会看到有小洛克拿着可可果去拜托黑猫巫师帮忙预测期末考试题。

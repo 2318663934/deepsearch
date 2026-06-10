@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:37:34+08:00'
-updated: '2026-06-10T10:37:34+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:37:34+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 尾巴里储存着强大的魔力，能够释放一种特殊的雪魔法，保护越冬作物免受冻害、消灭土壤中害虫，如果在冬天的农田里看到九尾狐出现，就知道明年一定会丰收。

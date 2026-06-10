@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:53+08:00'
-updated: '2026-06-10T10:40:53+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:40:53+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 高山地的环境更加寒冷，高山的狮鹫家族在这里演化出能抵抗寒冷的身体结构，身上的羽毛除了用于飞行的硬羽之外，还有大量绒毛，这种绒毛疏水抗风极其厚实，小洛克使劲吹都吹

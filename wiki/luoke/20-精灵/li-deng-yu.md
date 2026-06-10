@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:37:47+08:00'
-updated: '2026-06-10T10:37:47+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:37:47+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 独居生物，个体之间保持距离，互不侵犯。常常自言自语，狂笑乱跳。据研究它们头顶的灯内有百万只以上的发光菌，肉眼很难观察。每只菌似乎都有独立意识，能够和本体进行沟通

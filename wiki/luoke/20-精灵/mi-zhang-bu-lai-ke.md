@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:30+08:00'
-updated: '2026-06-10T10:41:30+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:41:30+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 迷嶂布莱克的体型与山脉规模正相关，其骨骼密度可达普通岩石矿物的3倍以上，且骨骼内部存在类似“蜂窝结构”的减重设计——这种结构能在保持高承重能力的同时，减轻自身体

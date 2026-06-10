@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:58+08:00'
-updated: '2026-06-10T10:41:58+08:00'
+updated: '2026-06-10T10:57:08+08:00'
 last_verified: '2026-06-10T10:41:58+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 进化后嗓门大得惊人，更加渴望被听到，想让所有洛克都听见自己的声音。同类碰面时会争抢谁先拿麦，双方轮流对着吼，谁的声音更大谁就赢。有研究员曾记录到两只音碟吼对峙了

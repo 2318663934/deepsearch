@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:32+08:00'
-updated: '2026-06-10T10:41:32+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:41:32+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 耳朵已经发育完全，上面的亲水性凸起​​和​​疏水性凹槽能更好地吸附水珠，对干旱的适应性极强。后肢和前爪更加发达，在洞穴里能规避天敌与地形障碍。

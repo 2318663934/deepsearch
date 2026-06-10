@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:19+08:00'
-updated: '2026-06-10T10:40:19+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:40:19+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 每当它听见动感的旋律，体内电流便会随着节奏起伏变化，头顶电球忽闪忽闪照亮回家的路。波普鹿用尾巴打出轻缓的节拍，是它在表达愉快的心情。

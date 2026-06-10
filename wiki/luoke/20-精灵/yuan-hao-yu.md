@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:20+08:00'
-updated: '2026-06-10T10:38:20+08:00'
+updated: '2026-06-10T10:57:08+08:00'
 last_verified: '2026-06-10T10:38:20+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 会专门去矿物质丰富的水域，通过吸收矿物质来调整背部结构，达到调音的目的。群居，每天早上起来一齐练声，巨大的合奏声能唤醒周围水域的所有生物，喜欢安静的精灵们不愿意

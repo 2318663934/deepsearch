@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:37:39+08:00'
-updated: '2026-06-10T10:37:39+08:00'
+updated: '2026-06-10T10:57:08+08:00'
 last_verified: '2026-06-10T10:37:39+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 苔藓常把眼睛遮住，因此它对细微动作的反应显得迟钝。若有洛克替它把苔藓梳理开，它会明显变得开心。进食后体型会短暂膨大一圈，随后再慢慢恢复原状。

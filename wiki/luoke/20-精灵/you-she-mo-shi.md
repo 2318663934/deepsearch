@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:26+08:00'
-updated: '2026-06-10T10:40:26+08:00'
+updated: '2026-06-10T10:57:08+08:00'
 last_verified: '2026-06-10T10:40:26+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 会被聪明的洛克吸引，对知识的崇拜无以复加，愿意用任何自己所拥有的事物来交换知识。它们拥有修长柔软的尾巴，据说尾巴尖端可以打开远古的知识之门。

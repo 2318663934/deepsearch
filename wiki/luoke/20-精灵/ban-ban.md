@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:28+08:00'
-updated: '2026-06-10T10:39:28+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:39:28+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 和噜噜家族是远亲，但几乎从不联系，即使是同种族的斑斑们互相之间也并不亲近。从蛋里孵出来之后就非常独立了，经常迈着毛茸茸的小腿，挥着小小的翅膀巡视领地，十分高傲。

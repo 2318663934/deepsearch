@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:24+08:00'
-updated: '2026-06-10T10:39:24+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:39:24+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 身体里似乎装满了坏心思，很轻松就能从试图抓住它的洛克手中挣脱。会三五成群地从洛克手上抢走东西，把东西丢下之后嘻嘻哈哈地飞走。如果惹怒它们的话，会气呼呼地撞向洛克

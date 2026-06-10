@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:49+08:00'
-updated: '2026-06-10T10:40:49+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:40:49+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 为了保证寒冷环境下头部温暖，头顶布满柔软的绒毛，偶尔依偎在一起取暖的时候，用喙梳理同伴的头毛，有一种猜测是为了取暖所以才会把喙伸进同伴的头毛里。

@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:46+08:00'
-updated: '2026-06-10T10:39:46+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:46+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 执着于进行腿法训练，能够在瞬间发动数次踢击。得益于发达的腿部肌肉，在奔跑时有着极强的爆发力，乐于向遇见的一切生物发起竞速挑战。

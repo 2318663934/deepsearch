@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:03+08:00'
-updated: '2026-06-10T10:41:03+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:41:03+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 总是扫描寻找着什么，明明对洛克抱有极大的好奇，但是因为其机器守则限制，只能和洛克保持在一个不远不近的距离。“既可靠又实用，深得洛克们青睐，是您寻物时的不二之选。

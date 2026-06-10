@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:35+08:00'
-updated: '2026-06-10T10:41:35+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:41:35+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 有着圆滚滚的身躯，小小的翅膀还无法熟练飞翔，却能和愿力发生共鸣，从而获得力量。“和伙伴在一起的安全感连美食都不能替代。即使有时候像个小跟屁虫也无所谓。”

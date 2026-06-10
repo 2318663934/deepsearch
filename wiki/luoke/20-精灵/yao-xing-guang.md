@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:35+08:00'
-updated: '2026-06-10T10:39:35+08:00'
+updated: '2026-06-10T10:57:08+08:00'
 last_verified: '2026-06-10T10:39:35+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 越来越多的行星汇聚在它们身侧，从星辰的辐照微波中，它们能横跨时间，读出数亿年的知识与奥妙。每当它们转动身体周围的行星，可以改变月相，转变天气，传闻如果有洛克在它

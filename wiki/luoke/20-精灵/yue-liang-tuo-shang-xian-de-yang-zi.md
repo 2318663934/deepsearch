@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:36+08:00'
-updated: '2026-06-10T10:39:36+08:00'
+updated: '2026-06-10T10:57:08+08:00'
 last_verified: '2026-06-10T10:39:36+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 皮肤比矿石还要坚硬，经常在有太阳的时候浮在水面上，晒过太阳之后皮肤表面能够分泌出一种蕴含毒系魔法的物质，但对某些精灵有治愈作用，大约是一种以毒攻毒的手段。

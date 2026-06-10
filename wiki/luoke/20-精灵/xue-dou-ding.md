@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:55+08:00'
-updated: '2026-06-10T10:41:55+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:41:55+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 出生后被父母放置在雪窝里，进食补充的能量会在冬眠时令身躯快速成长。大手大脚的雪豆丁习惯于翻滚着移动。思维直接，比较容易发脾气，可以抚摸脑袋令其冷静。

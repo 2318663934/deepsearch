@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:37:31+08:00'
-updated: '2026-06-10T10:37:31+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:37:31+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 雪山生活的丢丢，它们会用舌尖短促地舔一下霜层或新雪，补充水分，动作很短很快，以免舌头被冻伤。体表的温度下降很快，需要不停地移动和进食来维持体温。

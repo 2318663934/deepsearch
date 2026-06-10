@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:01+08:00'
-updated: '2026-06-10T10:39:01+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:01+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 草原晴天的微风里，常传来细碎噼啪——那是小星光在甩鬃毛，它们似乎总是处于炸毛的状态，其实是毛发里的电流导致的。它们从来不怕打雷，长长的尾巴能起到导电的作用，被雷

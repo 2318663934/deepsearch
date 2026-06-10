@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:11+08:00'
-updated: '2026-06-10T10:41:11+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:41:11+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 与果树是互利共生关系，在果树之间采蜜的同时完成授粉。尾部的花朵是虹吸式进食器官，能够用来吸取和储存花粉，是访花昆虫中最重要的种群。

@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:00+08:00'
-updated: '2026-06-10T10:38:00+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:38:00+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 手里拿的是生长着果实的枝条，既是武器也是乐器，需要时还能解解嘴馋。战斗像舞蹈一样，用细长灵活的舌头和尾巴表演，让人眼花缭乱。

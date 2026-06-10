@@ -136,7 +136,8 @@ def load_all_wiki(product: Optional[str] = None) -> Dict[str, WikiFile]:
         if not root.exists():
             continue
         for md in root.rglob("*.md"):
-            rel = str(md.relative_to(WIKI_ROOT))
+            # 统一为 POSIX 正斜杠(Windows 默认反斜杠会导致 referenced/indexed/key 不匹配)
+            rel = str(md.relative_to(WIKI_ROOT)).replace("\\", "/")
             if rel.startswith("99-待审核"):
                 # 待审核目录是临时区，不纳入 lint 主体（但矛盾检查可以纳入）
                 pass
@@ -237,30 +238,58 @@ def check_contradictions(files: Dict[str, WikiFile]) -> List[Alert]:
 
 
 def check_orphans(files: Dict[str, WikiFile]) -> List[Alert]:
-    """孤立页：不被 related 引用、不被索引列出。"""
+    """孤立页：不被 related 引用、不被任何索引页列出、不在任何子目录内。
+
+    规则:
+    - 子目录 CLAUDE.md 视为该子目录所有文件的索引(子目录内文件均非孤立)
+    - 任意 `*/CLAUDE.md` body 中以 `code` 包裹的 `subdir/slug.md` 视为列出
+    - 任意 frontmatter `related` 字段视为引用
+    """
     alerts: List[Alert] = []
-    # 1) 收集所有 related 引用
+    # 统一 key 为 POSIX 正斜杠
+    def _norm(p: str) -> str:
+        return p.replace("\\", "/")
+
+    # 1) 收集所有 related 引用(归一化 + 加 product 前缀)
     referenced: Set[str] = set()
-    for wf in files.values():
+    for rel, wf in files.items():
+        product_prefix = rel.split("/", 1)[0] if "/" in rel else ""
         rels = wf.fm.get("related") or []
         if isinstance(rels, list):
             for r in rels:
-                referenced.add(str(r))
-    # 2) 收集索引页提到的（00-索引/CLAUDE.md 的内容）
-    index_path = "00-索引/CLAUDE.md"
+                r = _norm(str(r))
+                if product_prefix and not r.startswith(product_prefix + "/") and "/" in r:
+                    r = f"{product_prefix}/{r}"
+                referenced.add(r)
+
+    # 2) 收集所有 *CLAUDE.md 索引页 body 提到的
     indexed: Set[str] = set()
-    if index_path in files:
-        idx_body = files[index_path].body
-        # 提取形如 `subdir/slug.md` 的提及
-        for m in re.finditer(r"`([\w\-]+/[\w\-]+\.md)`", idx_body):
-            indexed.add(m.group(1))
+    subdir_covered: Set[str] = set()  # 被子目录 CLAUDE.md 覆盖的子目录
+    for rel, wf in files.items():
+        if not rel.endswith("CLAUDE.md"):
+            continue
+        product_prefix = rel.split("/", 1)[0] if "/" in rel else ""
+        subdir = rel.rsplit("/", 1)[0] if "/" in rel else ""
+        if subdir:
+            subdir_covered.add(subdir)
+        for m in re.finditer(r"`([\w\-]+/[\w\-]+\.md)`", wf.body):
+            r = m.group(1)
+            if product_prefix and not r.startswith(product_prefix + "/"):
+                r = f"{product_prefix}/{r}"
+            indexed.add(r)
+
     # 3) 检查
     for rel, wf in files.items():
         if rel.startswith("99-待审核"):
             continue
-        if rel == index_path:
+        if rel.endswith("CLAUDE.md"):
+            continue  # 索引页本身不算孤立
+        rel_norm = _norm(rel)
+        # 子目录被 CLAUDE.md 覆盖 → 子目录所有页非孤立
+        subdir = rel.rsplit("/", 1)[0] if "/" in rel else ""
+        if subdir in subdir_covered:
             continue
-        if rel not in referenced and rel not in indexed:
+        if rel_norm not in referenced and rel_norm not in indexed:
             alerts.append(Alert(
                 level="info", category="orphan", path=rel,
                 message="未被 related 引用，也未被索引列出",

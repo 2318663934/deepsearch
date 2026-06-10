@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:36+08:00'
-updated: '2026-06-10T10:41:36+08:00'
+updated: '2026-06-10T10:57:08+08:00'
 last_verified: '2026-06-10T10:41:36+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 角上覆盖的鳞片脱水后自然开裂成树枝状，在森林中极其灵活地穿梭，极少被洛克持续观测到。它们拥有修长的身体和轻盈的骨骼结构，奔跑迅速。

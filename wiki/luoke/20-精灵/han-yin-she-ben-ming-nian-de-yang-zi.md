@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:56+08:00'
-updated: '2026-06-10T10:38:56+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:38:56+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 因玄玉岛的传统节日元宵而生，身体脆脆的，有面点的焦香。以洛克贝为食，会在元宵节摇动尾巴上的拨浪鼓，给洛克们发放洛克贝，得到的小洛克会有一年的好运。“棉花灯唻，照

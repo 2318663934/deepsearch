@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:14+08:00'
-updated: '2026-06-10T10:41:14+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:41:14+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 它的身体构造至今难以完全解释：体内几乎都是水，身体被一层透明的膜包裹住，里面的液体非常轻。飞行时，由于压力变化或者风势太大，液体有时会漏出来。

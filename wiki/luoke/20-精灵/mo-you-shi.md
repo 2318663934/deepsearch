@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:30+08:00'
-updated: '2026-06-10T10:38:30+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:38:30+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 不同于章鱼精灵，它们因为蕴含幽系能量，皮肤已经褪成苍白的颜色，头足里面藏着墨囊，装着它们收集来的颜料。经常藏在厚厚的画纸中间休息。

@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:46+08:00'
-updated: '2026-06-10T10:40:46+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:40:46+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 可以熟练地在画中与画外穿梭，十分热心肠，喜欢交朋友，经常为认识的画做保养，轻轻吹走灰尘，灰尘太多可能令它一直打喷嚏。但这并不会成为它们的阻碍。

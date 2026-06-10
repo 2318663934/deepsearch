@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:01+08:00'
-updated: '2026-06-10T10:41:01+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:41:01+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 进化后它们仍然毛绒绒、行动更显优雅敏捷。战斗时旋转腾挪如轻快战舞，发光的尾巴拖出一缕光丝带。它们警惕性极高，只需将尾巴贴地，便能感知远处的动静。

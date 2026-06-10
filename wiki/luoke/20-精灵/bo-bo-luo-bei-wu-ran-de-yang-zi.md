@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:20+08:00'
-updated: '2026-06-10T10:40:20+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:40:20+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 经常栖息于浅水中，不太拥有对海浪的冲击的能力，它的外壳下在水流长年累月的打磨中逐渐变得光滑，移动时更不易被水流与碎石卡住，能在浅水灵活穿行。

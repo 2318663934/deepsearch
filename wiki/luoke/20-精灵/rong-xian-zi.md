@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:00+08:00'
-updated: '2026-06-10T10:41:00+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:41:00+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 完全发育成型，翅脉中内部流动着体液，横脉与纵脉交汇处形成规整的星形花纹，蕴含强烈的星光能量。胸节与携粉足极度膨大，布满致密的长绒，能牢牢黏附超多光系魔法粉末，这

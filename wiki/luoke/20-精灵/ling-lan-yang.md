@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:38+08:00'
-updated: '2026-06-10T10:41:38+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:41:38+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 白天会懒洋洋地趴在草原上休息，主要在早晨和黄昏行动，一般会脱离种群独自生活。跳跃力惊人，在山坡上如履平地，从100米的高度一跃而下也没事。

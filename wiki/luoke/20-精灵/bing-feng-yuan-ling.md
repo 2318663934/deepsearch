@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:37:44+08:00'
-updated: '2026-06-10T10:37:44+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:37:44+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 缔结契约的向往更明显，甚至会主动靠近潜在契约者，似乎由冰元素和某种尚不清楚的物质构成，推测这部分来自强烈的信念和精神力，使它们的契约更稳定、也更难被外力改变。

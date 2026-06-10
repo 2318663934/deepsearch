@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:23+08:00'
-updated: '2026-06-10T10:39:23+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:23+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 不休的守护者，用无私烈焰凌驾于契约之上，绝对正义才是支持这烈焰的力量源泉。“让我见识看看吧，你的正义之心”它们的的神态仿佛这样说。

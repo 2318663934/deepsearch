@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:42:03+08:00'
-updated: '2026-06-10T10:42:03+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:42:03+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 巨大的翅膀能够给予敌人强有力的打击，旋转时更能提高打击效率。物理攻击和魔法攻击都很擅长，翅膀中蕴含着巨量魔力，翅膀内侧的脉络中是魔力流转的痕迹。

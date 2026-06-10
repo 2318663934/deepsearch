@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:15+08:00'
-updated: '2026-06-10T10:39:15+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:15+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 非常偶然的情况下发现它们殴打自己身上闪烁着的微光的提线。提线中流动着强大魔力，以此来操纵结构精巧的木质结构身体，看似十分脆弱，但在幻系魔力的支撑下，有着令人意想

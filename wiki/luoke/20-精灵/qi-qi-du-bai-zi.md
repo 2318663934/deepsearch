@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:51+08:00'
-updated: '2026-06-10T10:39:51+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:51+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 “黄金时代过去后，棋棋开始了流浪，保护族人的遗痕行为一直在影响着它们，它们会主动寻找人文聚落，试图融入洛克的社会。也有部分出现在野外，这些野生的棋棋手感不如家养

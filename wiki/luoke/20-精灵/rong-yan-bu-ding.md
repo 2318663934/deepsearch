@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:38+08:00'
-updated: '2026-06-10T10:40:38+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:40:38+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 熔岩布丁负责增温与成熟，它体内的活性物质能促进糖分增多，在丰收季节，洛克常带着它们在可可果林区活动，帮助可可果形成更明显的甜香气味，洛克也常把它们的活跃视作可可

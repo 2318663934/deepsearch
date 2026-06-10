@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:57+08:00'
-updated: '2026-06-10T10:38:57+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:38:57+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 仍然有些闲不住，但它正在学着克制，想蹦的时候就抛球，把冲动转化到了抛球中。不过偶尔还是会忍不住，球抛着抛着身体就跟着飞了出去。

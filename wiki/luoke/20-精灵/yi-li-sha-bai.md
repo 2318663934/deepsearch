@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:37:37+08:00'
-updated: '2026-06-10T10:37:37+08:00'
+updated: '2026-06-10T10:57:08+08:00'
 last_verified: '2026-06-10T10:37:37+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 将翅膀作为武器，被它攻击过的地方都会留下火焰燎烤的痕迹，但同时也会烤焦自己。在进食过急或精神紧张的的情况下比较容易消化不良，身体的分泌物也是易燃物。

@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:32+08:00'
-updated: '2026-06-10T10:40:32+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:40:32+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 自己不能发光，但背部覆盖着镜面般的鳞片，蜷缩成球就可以把微小的光芒反射成绚烂的闪光。拥有很多的爱，常常兴奋地滚向最近的洛克！想在闪光中跳跃，想一起共舞一辈子！

@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:52+08:00'
-updated: '2026-06-10T10:39:52+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:52+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 “棋棋的祖先们曾与地系族人相伴而生，地系部族周围多蛮兽。白天棋棋们陷入沉睡，被当作孩子的玩具，在聚落里四处滚动。夜晚则遵循着古老的指令，纷纷醒来守护着部族，替人

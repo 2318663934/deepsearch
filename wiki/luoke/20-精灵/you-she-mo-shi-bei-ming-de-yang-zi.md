@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:27+08:00'
-updated: '2026-06-10T10:40:27+08:00'
+updated: '2026-06-10T10:57:08+08:00'
 last_verified: '2026-06-10T10:40:27+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 炫彩的羽翼显示出它们与天空城有着不为人知的渊源。它是知识的守护者，也是智慧的卫士，传闻它们最初的使命早已失败，所以它们仍在守望，守望古老预言的认证，或是一段新的

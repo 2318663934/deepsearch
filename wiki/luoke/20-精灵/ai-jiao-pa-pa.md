@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:50+08:00'
-updated: '2026-06-10T10:40:50+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:40:50+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 足较短，翻倒后很难再顺利站起来。野外发现的矮脚爬爬里面十个有八个正在努力翻身。因为可爱的外表而受到许多小洛克的喜爱，但受惊时会咬人，致使王国只能贴出告示，警告大

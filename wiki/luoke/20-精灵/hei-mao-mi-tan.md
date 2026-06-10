@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:42:09+08:00'
-updated: '2026-06-10T10:42:09+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:42:09+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 拥有了在黑暗夜空中穿行的能力，据说它们能读取宇宙中所有星光的讯息，预知即将发生的危机。小洛克常常发现，当黑猫密探突然变得异常安静时，往往预示着某种变故即将来临。

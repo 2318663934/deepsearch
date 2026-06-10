@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:37:55+08:00'
-updated: '2026-06-10T10:37:55+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:37:55+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 有少量报告称见到过如此奇异的精灵。似乎看一眼都会感觉到刺痛。身形大过鸟类，尖刺利过刀刃。已经无法找到虫体本身。它们再也不用担心保护自己的问题了，反而是别的生物需

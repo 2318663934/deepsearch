@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:56+08:00'
-updated: '2026-06-10T10:41:56+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:41:56+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 传说霜翼领主会在冬季的末尾巡视领地，当它最后一次掠过雪线，天空便不再下雪——所有雪花都被它收进了冰蓝色的羽翼。只需一次振翅，零下五十度的寒潮便顺着羽脉倾泻，瞬间

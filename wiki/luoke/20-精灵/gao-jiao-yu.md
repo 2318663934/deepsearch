@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:42:02+08:00'
-updated: '2026-06-10T10:42:02+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:42:02+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 拥有较大的脑容量，是运筹帷幄的猎手，坚硬的帽形结构有良好的散热性，会用巨大的头部和双翅在水面上围出一片阴影，以此吸引喜欢在阴凉处生活的水生生物，静待着来乘凉的鱼

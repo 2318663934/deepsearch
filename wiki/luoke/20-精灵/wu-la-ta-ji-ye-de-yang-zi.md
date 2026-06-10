@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:37:32+08:00'
-updated: '2026-06-10T10:37:32+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:37:32+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 天冷的时候是它们最喜欢的恶作剧时刻，偷偷用冰冷的爪子塞进小洛克的脖子里。当能量溢满之后，同伴之间会互相投掷蕴含冰系魔法的冷笑话，看上去就像在打雪仗。

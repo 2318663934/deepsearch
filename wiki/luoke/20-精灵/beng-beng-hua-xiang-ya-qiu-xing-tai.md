@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:26+08:00'
-updated: '2026-06-10T10:41:26+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:41:26+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 巨大的白色花冠多在月光下绽放，它们喜欢夜间相对凉爽的环境，其花粉在夜间会释放微弱荧光，在月光下吸引夜行性精灵完成授粉。花瓣在日出前会闭合，规避日间的干旱与高温。

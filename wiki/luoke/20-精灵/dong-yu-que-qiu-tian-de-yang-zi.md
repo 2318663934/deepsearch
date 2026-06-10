@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:37:44+08:00'
-updated: '2026-06-10T10:37:44+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:37:44+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 这段时期它们的食量明显上升，精力异常旺盛，因为摄入了足够的营养而长出有光泽的硬羽，常与同伴展开追逐游戏，以此锻炼长途飞行所需的耐力。

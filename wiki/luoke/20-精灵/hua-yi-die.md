@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:08+08:00'
-updated: '2026-06-10T10:41:08+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:41:08+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 原本的尾巴脱落后变成手中的花朵，似乎蕴含着魔法能量，能当作魔杖使用。冬日寒冷的雨夜里，成千上万的花衣蝶聚集在枯树上休息，清晨又四散飞走，如同花开一夜的蜃景。

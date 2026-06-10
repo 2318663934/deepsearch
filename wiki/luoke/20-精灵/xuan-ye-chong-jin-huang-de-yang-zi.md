@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:29+08:00'
-updated: '2026-06-10T10:39:29+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:29+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 常挂在树上栖息，不仔细观察的话很难发现它们的踪迹。以类似树叶而闻名，颜色、形状，叶脉、叶梗，甚至是破损处也都非常相似。白天多保持静止，风起时会轻微摇晃，让自己更

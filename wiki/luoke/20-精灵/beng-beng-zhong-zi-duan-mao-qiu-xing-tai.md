@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:24+08:00'
-updated: '2026-06-10T10:41:24+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:41:24+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 体内90%都是储水组织，体表的蜡质层能高效转化光能，并将多余水分锁在体内。经过连续日晒后，身体会微微散发出清甜的瓜果香气，这种挥发性物质有一定抗菌和防晒的功能。

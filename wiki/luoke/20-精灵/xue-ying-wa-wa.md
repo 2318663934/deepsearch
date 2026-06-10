@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:51+08:00'
-updated: '2026-06-10T10:41:51+08:00'
+updated: '2026-06-10T10:57:08+08:00'
 last_verified: '2026-06-10T10:41:51+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 进化后头部绒毛完全脱落，褪去的绒毛承载着进化前的回忆，被制作成一个毛绒娃娃。毛绒娃娃如果能抵御一个严冬就可以获得生命，过程中需要雪影娃娃的悉心养护。

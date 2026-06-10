@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:42:08+08:00'
-updated: '2026-06-10T10:42:08+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:42:08+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 喜怒无常，几乎不进入睡眠，浅眠的时候如果监测到周围的危险会变得非常暴躁。检测后发现其处于灵魂残缺的状态，身体中流转的大量高阶魔法，猜测这些高阶魔法是用来填充缺失

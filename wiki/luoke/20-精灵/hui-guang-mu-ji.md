@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:28+08:00'
-updated: '2026-06-10T10:41:28+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:41:28+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 经常对着空气练习，有洛克靠近时会立刻启动表演程序。有时显得笨拙不够善解人意，如果小洛克曾因为它的笑话而微笑，它可以不眠不休追着小洛克讲三天三夜的笑话，然后直接昏

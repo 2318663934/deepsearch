@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:38+08:00'
-updated: '2026-06-10T10:39:38+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:38+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 似乎是一种非常古老的机械系造物，用处不详。身体结构精巧，拨弄它头顶的天线，会让它变得十分愉快，甚至能断断续续地播放音乐。“方方正正，顶天立地，做人亦该如此。"

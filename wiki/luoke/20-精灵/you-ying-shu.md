@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:20+08:00'
-updated: '2026-06-10T10:39:20+08:00'
+updated: '2026-06-10T10:57:08+08:00'
 last_verified: '2026-06-10T10:39:20+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 左手和右手似乎有独自的想法，在黑暗中看起来就像三只精灵。虽然伪装拙劣到谁都能看穿的程度，但依旧喜欢伪装成普通树木的样子，跟在洛克身后，但是对洛克并没有恶意。

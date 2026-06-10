@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:04+08:00'
-updated: '2026-06-10T10:39:04+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:04+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 它们生活在寒冷的水域，会用头顶的晶体吸收空气里的电能量。当能量充足时，晶体表面会浮现细碎的亮纹和电光。偏爱暴雪与打雷的天气，风雪越大、雷声越近，它们越活跃。

@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:06+08:00'
-updated: '2026-06-10T10:38:06+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:38:06+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 曾经玄玉岛上妖兽横行，粮食短缺，洛克先人们做了一条盘绕的面蛇，代表着对这一年丰收的期望。面蛇受到多年的供奉后化为精灵，和洛克共度时艰。在玄玉岛风调雨顺后，它们收

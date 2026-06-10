@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:40+08:00'
-updated: '2026-06-10T10:39:40+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:40+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 如果察觉到小洛克踏入森林，它们会把角塞在树杈中间伪装松果，诱使小洛克靠近观察。被林间露水打湿的话它们会结伴去晒太阳，晒太阳的时候会散发香香的味道。

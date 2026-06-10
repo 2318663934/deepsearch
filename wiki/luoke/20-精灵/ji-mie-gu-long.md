@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:55+08:00'
-updated: '2026-06-10T10:38:55+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:38:55+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 当被从土层里挖出来的时候，它们正在一无所知地睡觉。别看它们脆弱得好像一脚会散架，但埋了亿万年的矿物硬度堪比钻石。“它总是对着镜子思考，幻想自己当年活着时候的样子

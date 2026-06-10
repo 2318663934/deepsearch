@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:02+08:00'
-updated: '2026-06-10T10:41:02+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:41:02+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 生活在高海拔地区，演化出了茂密而厚实的皮毛，不仅能抵御雪山的寒冷，还能阻挡普通的攻击。叶片状绒毛的结构与远古时期的植物相似，能够吸收阳光来为自己供给能量，借此熬

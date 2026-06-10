@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:47+08:00'
-updated: '2026-06-10T10:40:47+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:40:47+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 在月亮升起来之后活动，某些特定时间会散发出微弱光芒，与某些弱小的夜行生物存在共生关系。光能量在每根毛发中沿“之”字形向身体内部传输，可以完好无损地传输到体内，存

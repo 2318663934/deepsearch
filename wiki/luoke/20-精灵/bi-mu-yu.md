@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:34+08:00'
-updated: '2026-06-10T10:41:34+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:41:34+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 栖息在水边的浅滩，橘色的长脚使得它们非常适合涉水行走，喜欢捕食昆虫和甲壳类动物，其眼神如同寒星般锐利冷峻，会左右轻轻扇动翅膀，溅起阵阵涟漪，模仿弱小生物游动，吸

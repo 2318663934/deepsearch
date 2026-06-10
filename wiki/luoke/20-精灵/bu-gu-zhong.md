@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:37:30+08:00'
-updated: '2026-06-10T10:37:30+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:37:30+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 曾因机械禁令被大量屠杀，现在数量稀少，也更加胆小，求生本能让它们逃跑速度极快，遇到危险时，它们会加速或减慢时钟指针的转动从而短暂地影响到局部时间的流逝。和黄金时

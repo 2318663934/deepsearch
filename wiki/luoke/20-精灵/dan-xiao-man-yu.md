@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:06+08:00'
-updated: '2026-06-10T10:41:06+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:41:06+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 以强力放电而闻名的精灵，种族中的鳗鱼们似乎对自己的知名度一无所知。常常畏首畏尾，即使是非常弱小的对手，也能令它们战战兢兢。曾有胆小鳗鱼假死晕倒在浅滩上，原因是一

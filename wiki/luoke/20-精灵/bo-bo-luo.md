@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:20+08:00'
-updated: '2026-06-10T10:40:20+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:40:20+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 经常频繁抖动身体，推测是缓解外壳生长带来的不适感。它们常集体排成一列迎向海浪，借助外壳的结构消解冲击。浪头拍来时会张口吸入送上门的食物，连很硬的东西也能消化。

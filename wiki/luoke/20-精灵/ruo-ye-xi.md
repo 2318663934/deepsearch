@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:10+08:00'
-updated: '2026-06-10T10:41:10+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:41:10+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 若叶蜥爱好和平，是热带雨林中的低调隐士，遇事不对便先遁走，这一习性使其练就了超强的脚力。它们在树丛间滑行，却很少有洛克可以跟随它们的脚步，分辨它们隐匿在哪片树叶

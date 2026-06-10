@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:25+08:00'
-updated: '2026-06-10T10:40:25+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:40:25+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 深蓝鲸们喜欢贴着水面游泳，会跳出水面，和来往船只嬉戏，遇到危险时，可以把头部冰柱发射出去。种群之间通过歌声和口哨声交流，不论距离多远，互相之间的声音都能传达到。

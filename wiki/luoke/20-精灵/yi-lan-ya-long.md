@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:37:38+08:00'
-updated: '2026-06-10T10:37:38+08:00'
+updated: '2026-06-10T10:57:08+08:00'
 last_verified: '2026-06-10T10:37:38+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 当它舒展躯体时，水流沿鳞片纹路均匀铺展，使其外形兼具威慑力与神圣感，威严而不可侵犯。“在龙系精灵的历史中起到了关键的作用，一直默默地付出，很少有人知道它的存在。

@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:51+08:00'
-updated: '2026-06-10T10:39:51+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:51+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 “最初只有黑色棋子，后来地系工匠意外发现了光之水晶，打造了白色的棋子。黑白子交替轮班，互不相见，却共同守护地系部族。它们换班对峙时，不同棋子有各自的行走规则，逐

@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:42:04+08:00'
-updated: '2026-06-10T10:42:04+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:42:04+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 它头部几乎没有视力，主要靠嘴感受气流来调整方向，偶尔会在地表横冲直撞。吼叫时会带动口中的吊钟形花朵震动，发出阵阵钟声。它们和同伴间通过这些声响，彼此交流。

@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:45+08:00'
-updated: '2026-06-10T10:40:45+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:40:45+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 整个咩咩非常蓬松，每一根蓬松的毛都带电，稍微靠近它就要被静电“哔哩”一下。释放能量之后会进入低电量状态，低电量时会没精打采并吃很多。

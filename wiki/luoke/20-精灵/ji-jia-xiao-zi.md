@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:38+08:00'
-updated: '2026-06-10T10:39:38+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:38+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 只在有需要的时候出现，每当齿轮小子遭遇危机，就会化身机甲，严格按照程序执行正义。危机解除后，会重新变回齿轮小子。偶尔会迟到但但是却从不会缺席，就像正义一样。

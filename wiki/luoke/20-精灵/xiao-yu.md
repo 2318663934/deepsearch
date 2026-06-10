@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:08+08:00'
-updated: '2026-06-10T10:39:08+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:08+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 小鹬有着灰白色的羽毛，孱弱的双翼还无法驾驭风的力量，但可以依靠尚为柔软的皮甲结构进行短暂的滑翔。虽然幼小却已经懂得在划过水面时溅起水花，吸引鱼虾露头，有时能收获

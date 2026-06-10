@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:57+08:00'
-updated: '2026-06-10T10:41:57+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:41:57+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 古老物种在漫长的时间里发生演化，曾经独自栖息在安静与黑暗里面，偶尔靠敲击山石的回音和其他个体沟通。这让它们对声音无比敏感和渴望，它们拥有坚定的心，一直等到可以在

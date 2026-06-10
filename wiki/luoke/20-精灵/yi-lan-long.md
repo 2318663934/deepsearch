@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:37:38+08:00'
-updated: '2026-06-10T10:37:38+08:00'
+updated: '2026-06-10T10:57:08+08:00'
 last_verified: '2026-06-10T10:37:38+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 修长的尾鳍在空气中划过会留下水雾的痕迹，水雾持续存在形成云朵。观测显示，伊兰亚龙停留超过半小时的区域，降雨概率提升67%。干旱季节时，它们会主动迁往缺水的农田上

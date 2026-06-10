@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:00+08:00'
-updated: '2026-06-10T10:39:00+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:00+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 胆量极小的猫科精灵，曾因极少被观测记录，被王国记录为已灭绝的物种。翼膜上的眼状图案可以吓退大多数天敌，遇到敌人会张开双臂一动不动地站着，一直到对方离开或者自己昏

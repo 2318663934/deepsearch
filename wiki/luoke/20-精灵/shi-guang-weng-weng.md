@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:16+08:00'
-updated: '2026-06-10T10:38:16+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:38:16+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 “经实验发现，它们对日光没有反应，其腹部含有特殊的器官，只对光系能量产生反应。因此，存放光水晶时需派遣光系精灵巡逻，混淆它们的感应。”“光系精灵一同发出抗议，要

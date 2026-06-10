@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:37:46+08:00'
-updated: '2026-06-10T10:37:46+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:37:46+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 身形变成了梭形，修长的尾羽薄而宽，能把横着吹来的山风悄悄转成向上的托力。研究院测过它的风阻系数，低得离谱，但凡鹰自己好像并不在意这些数据。它飞得很稳，不快不慢，

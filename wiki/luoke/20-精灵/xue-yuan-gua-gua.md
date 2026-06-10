@@ -9,10 +9,14 @@ sources:
 confidence: 0.95
 confidence_reason: '原文为结构化Wiki模板，信息完整且精确，包含属性、技能、背景故事等核心字段，无推断内容。 | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:54+08:00'
-updated: '2026-06-10T10:38:54+08:00'
+updated: '2026-06-10T10:57:08+08:00'
 last_verified: '2026-06-10T10:38:54+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 学院呱呱是一只来自玄玉岛的兔兔精灵，最终形态。它怀揣对魔法和知识的渴望进入魔法学院，因咒语难学而勤奋学习。主属性为武，特性为“留学生”，全技能能耗+2且可学习全部攻击技能石。

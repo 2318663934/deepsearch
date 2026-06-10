@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:57+08:00'
-updated: '2026-06-10T10:40:57+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:40:57+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 踏着流星而来的信使，在洛克族里传闻对着它们说话有概率可以梦想成真。它们总是很着急，在夜幕下如同一道道银针般穿行，谁让这世间的许愿总是太多、太多了呢。

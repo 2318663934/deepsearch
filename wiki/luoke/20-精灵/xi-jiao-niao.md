@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:42+08:00'
-updated: '2026-06-10T10:40:42+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:40:42+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 足部又软又嫩，相当虚弱无力。双眼的视觉暂未发育完全，偶尔被毛发遮挡视野。研究推测其毛发承担了主要感官的功能，在看不清的时候也可以通过毛发的感光功能，早早隐藏好自

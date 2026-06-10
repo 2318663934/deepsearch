@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:33+08:00'
-updated: '2026-06-10T10:38:33+08:00'
+updated: '2026-06-10T10:57:06+08:00'
 last_verified: '2026-06-10T10:38:33+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 似乎是一种非常古老的机械系造物，用处不详。热爱社交，尤其喜欢和其他种族的幼体玩耍。喜欢歌唱和舞蹈，但普遍不擅长舞蹈，容易摔倒。

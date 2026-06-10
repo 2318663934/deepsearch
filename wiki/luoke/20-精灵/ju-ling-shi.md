@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:13+08:00'
-updated: '2026-06-10T10:39:13+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:13+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 从大地获取强大的能量，可以使用地系魔法操纵土壤石头。常常收集一些土壤，石块作为零食，喜欢边讲故事边嚼石头，洛克族的孩子们偶尔会躲在旁边偷偷听它们讲故事。

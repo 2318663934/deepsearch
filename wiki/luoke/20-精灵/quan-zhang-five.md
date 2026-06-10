@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:43:44+08:00'
-updated: '2026-06-10T10:43:44+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:43:44+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 在充满斗争与冲突的时代中诞生的精灵，背负着工匠们的意志、行动与他们所点燃的第一把火。在诞生之初能向周围的机械精灵发出统一指令，它们能协调队列、分配任务，让贵族看

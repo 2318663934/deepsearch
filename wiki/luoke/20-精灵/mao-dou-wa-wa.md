@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:17+08:00'
-updated: '2026-06-10T10:39:17+08:00'
+updated: '2026-06-10T10:57:07+08:00'
 last_verified: '2026-06-10T10:39:17+08:00'
 status: verified
 version: 1
+related:
+- 20-精灵/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
 ---
 
 头部浓密柔软的绒毛负责锁住热量，形成高效的保暖屏障，减少温度流失，兜帽形态的头部结构也可以有效防风。同种族喜欢聚集在一起，贴着脑袋，发热保暖。可能因为这种地缘因
