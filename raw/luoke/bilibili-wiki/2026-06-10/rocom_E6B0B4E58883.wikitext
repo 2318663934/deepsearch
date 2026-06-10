@@ -1,0 +1,13 @@
+{{技能信息
+|技能名称=水刃
+|属性=水
+|技能类别=物攻
+|耗能=4
+|威力=115
+|效果=造成物伤，应对状态：本技能能耗永久-3。
+|描述=''把深海最硬的一截浪，削成无声的小刀。''
+<table style="border-collapse: separate; border-spacing: 15px 0; text-align: center;">
+<tr><td></td></tr>
+</table><tr><td>'''S2赛季调整：</td><td>&nbsp;'''造成物伤，应对状态：本技能能耗永久-4改为-3</td></tr>
+|技能版本=0.2
+}}

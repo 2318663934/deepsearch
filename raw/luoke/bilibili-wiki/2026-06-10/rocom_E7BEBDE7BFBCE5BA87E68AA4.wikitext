@@ -1,0 +1,14 @@
+{{技能信息
+|技能名称=羽翼庇护
+|属性=翼
+|技能类别=防御
+|耗能=2
+|威力=0
+|效果=减伤70%，应对攻击：自己获得连击数+2。
+|描述=
+<table style="border-collapse: separate; border-spacing: 15px 0; text-align: center;">
+<tr><td></td></tr>
+</table><tr><td>'''S2赛季调整：</td><td>&nbsp;技能能耗3一2，减伤70%，应对攻击:自己获得连击数
++3->+2</td></tr>
+|技能版本=0.2
+}}

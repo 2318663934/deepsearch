@@ -1,0 +1,13 @@
+{{技能信息
+|技能名称=咆哮
+|属性=普通
+|技能类别=状态
+|耗能=1
+|威力=0
+|效果=敌方获得物攻-60%，速度-60。
+|描述=
+<table style="border-collapse: separate; border-spacing: 15px 0; text-align: center;">
+<tr><td></td></tr>
+</table><tr><td>'''S2赛季调整：</td><td>&nbsp;敌方获得物攻-130--60%，速度-60</td></tr>
+|技能版本=0.2
+}}

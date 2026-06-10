@@ -143,8 +143,8 @@ def find_existing_page(entity_type: str, slug: str, product: str = "wangzhe") ->
     """根据 product + entity_type + slug 找既有 wiki 页。"""
     type_to_dir = {
         "hero": "20-英雄", "pet": "20-精灵",
-        "skill": "30-技能机制", "mechanism": "30-技能机制",
-        "item": "40-道具",
+        "skill": "30-技能", "mechanism": "30-技能",
+        "item": "40-道具", "clothing": "40-服装",
         "quest": "50-任务",
         "map": "60-地图",
         "overview": "10-产品概述",

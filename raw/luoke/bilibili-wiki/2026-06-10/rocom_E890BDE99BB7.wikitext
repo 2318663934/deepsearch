@@ -1,0 +1,13 @@
+{{技能信息
+|技能名称=落雷
+|属性=电
+|技能类别=魔攻
+|耗能=3
+|威力=35
+|效果=造成魔伤，每次入场，本技能威力永久+40。
+|描述=
+<table style="border-collapse: separate; border-spacing: 15px 0; text-align: center;">
+<tr><td></td></tr>
+</table><tr><td>'''S2赛季调整：</td><td>&nbsp;技能能耗4一3，威力100一35，造成魔伤，每次入场，本技能威力永久+20-+40</td></tr>
+|技能版本=0.1
+}}

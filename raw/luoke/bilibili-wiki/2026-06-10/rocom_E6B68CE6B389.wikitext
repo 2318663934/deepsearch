@@ -1,0 +1,13 @@
+{{技能信息
+|技能名称=涌泉
+|属性=水
+|技能类别=魔攻
+|耗能=6
+|威力=90
+|效果=造成魔伤，本技能能耗每-1，威力+10。
+|描述=
+<table style="border-collapse: separate; border-spacing: 15px 0; text-align: center;">
+<tr><td></td></tr>
+</table><tr><td>'''S2赛季调整：</td><td>&nbsp;威力60一90，造成魔伤，本技能能耗每-1，威力+10</td></tr>
+|技能版本=0.2
+}}

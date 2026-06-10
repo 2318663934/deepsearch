@@ -1,0 +1,13 @@
+{{技能信息
+|技能名称=感染病
+|属性=毒
+|技能类别=魔攻
+|耗能=4
+|威力=110
+|效果=造成魔伤，若击败敌方则将中毒转化为中毒印记。
+|描述=
+<table style="border-collapse: separate; border-spacing: 15px 0; text-align: center;">
+<tr><td></td></tr>
+</table><tr><td>'''S2赛季调整：</td><td>&nbsp;威力85一110，造成魔伤，若击败敌方则将中毒转化为中毒印记</td></tr>
+|技能版本=0.2
+}}

@@ -1,0 +1,13 @@
+{{技能信息
+|技能名称=触底强击
+|属性=普通
+|技能类别=魔攻
+|耗能=4
+|威力=95
+|效果=造成魔伤，使用后若能量耗尽，本次技能威力+120。
+|描述=
+<table style="border-collapse: separate; border-spacing: 15px 0; text-align: center;">
+<tr><td></td></tr>
+</table><tr><td>'''S2赛季调整：</td><td>&nbsp;技能能耗3一4，威力65一95，造成魔伤，使用后若能量耗尽，本次技能威力+120</td></tr>
+|技能版本=0.2
+}}

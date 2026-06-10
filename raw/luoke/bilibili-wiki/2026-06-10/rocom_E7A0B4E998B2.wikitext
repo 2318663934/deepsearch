@@ -1,0 +1,13 @@
+{{技能信息
+|技能名称=破防
+|属性=武
+|技能类别=状态
+|耗能=2
+|威力=0
+|效果=敌方获得双防-70%，应对防御：额外使被应对技能冷却2回合。
+|描述=
+<table style="border-collapse: separate; border-spacing: 15px 0; text-align: center;">
+<tr><td></td></tr>
+</table><tr><td>'''S2赛季调整：</td><td>&nbsp;技能能耗3一2，敌方获得双防-130一-70%，应对防御:额外使被应对技能冷却2回合</td></tr>
+|技能版本=0.2
+}}

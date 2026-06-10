@@ -1,0 +1,13 @@
+{{技能信息
+|技能名称=甜心续航
+|属性=萌
+|技能类别=状态
+|耗能=3
+|威力=0
+|效果=自己和敌方获得萌化：回复40%生命。
+|描述=
+<table style="border-collapse: separate; border-spacing: 15px 0; text-align: center;">
+<tr><td></td></tr>
+</table><tr><td>'''S2赛季调整：</td><td>&nbsp;技能能耗3，自己和敌方获得萌化:回复40%生命和4一0能量</td></tr>
+|技能版本=0.2
+}}

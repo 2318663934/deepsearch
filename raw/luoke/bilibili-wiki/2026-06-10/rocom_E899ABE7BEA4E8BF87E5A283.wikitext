@@ -1,0 +1,13 @@
+{{技能信息
+|技能名称=虫群过境
+|属性=虫
+|技能类别=物攻
+|耗能=3
+|威力=30
+|效果=造成物伤，2连击。己方队伍获得1次奉献：获得连击数+1。
+|描述=
+<table style="border-collapse: separate; border-spacing: 15px 0; text-align: center;">
+<tr><td></td></tr>
+</table><tr><td>'''S2赛季调整：</td><td>&nbsp;技能能耗5一3，威力45一30，造成物伤，2连击。己方队伍获得1次奉献:获得连击数+1</td></tr>
+|技能版本=0.2
+}}

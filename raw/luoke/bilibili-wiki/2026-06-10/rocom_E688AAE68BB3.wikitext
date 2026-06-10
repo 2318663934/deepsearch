@@ -1,0 +1,13 @@
+{{技能信息
+|技能名称=截拳
+|属性=武
+|技能类别=物攻
+|耗能=3
+|威力=85
+|效果=造成物伤，应对状态：额外造成打断，回复该技能能耗的能量。
+|描述=
+<table style="border-collapse: separate; border-spacing: 15px 0; text-align: center;">
+<tr><td></td></tr>
+</table><tr><td>'''S2赛季调整：</td><td>&nbsp;威力90一85，造成物伤，应对状态:额外造成打断，回复该技能能耗的能量</td></tr>
+|技能版本=0.2
+}}

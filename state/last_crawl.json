@@ -936,5 +936,12 @@
     "saved_to": "raw\\luoke\\moegirl-baike\\2026-06-10\\E6B49BE5858BE78E8BE59BBDEFBC9AE4B896E7958C.txt",
     "bytes": 48381,
     "message": ""
+  },
+  "bilibili-wiki:https://wiki.biligame.com/rocom/%E6%9C%8D%E8%A3%85%E5%9B%BE%E9%89%B4": {
+    "last_crawled": "2026-06-10T11:38:44",
+    "status": "ok",
+    "saved_to": "raw\\luoke\\bilibili-wiki\\2026-06-10\\rocom_E69C8DE8A385E59BBEE989B4.wikitext",
+    "bytes": 3940,
+    "message": ""
   }
 }

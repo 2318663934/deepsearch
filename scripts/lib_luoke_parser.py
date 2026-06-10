@@ -22,6 +22,8 @@ from typing import Any, Dict, List, Optional
 
 PET_TEMPLATE = "精灵信息/兼容"
 SKILL_TEMPLATE = "技能信息"
+ITEM_TEMPLATE = "物品信息"
+QUEST_TEMPLATE = "任务信息"
 
 PET_EXPECTED_FIELDS = [
     "精灵名称", "精灵形态", "地区形态名称", "精灵初阶名称", "是否有异色",
@@ -33,6 +35,14 @@ PET_EXPECTED_FIELDS = [
 
 SKILL_EXPECTED_FIELDS = [
     "技能名称", "属性", "技能类别", "耗能", "威力", "效果", "描述", "技能版本",
+]
+
+ITEM_EXPECTED_FIELDS = [
+    "物品名称", "稀有度", "主分类", "次分类", "用途", "描述", "来源", "icon", "道具版本",
+]
+
+QUEST_EXPECTED_FIELDS = [
+    "任务序号", "任务分类", "任务名称", "任务地点", "任务描述", "任务奖励", "任务图片", "任务备注", "任务归属",
 ]
 
 
@@ -191,6 +201,56 @@ def parse_skill_wikitext(wikitext: str) -> Optional[Dict[str, Any]]:
     }
 
 
+def parse_item_wikitext(wikitext: str) -> Optional[Dict[str, Any]]:
+    """解析 {{物品信息|...}},返回标准化 dict。"""
+    raw = parse_template_params(wikitext, ITEM_TEMPLATE)
+    if not raw:
+        return None
+
+    name = raw.get("物品名称")
+    if not name:
+        return None
+
+    return {
+        "entity_type": "item",
+        "name": name,
+        "rarity": raw.get("稀有度"),
+        "main_category": raw.get("主分类"),
+        "sub_category": raw.get("次分类"),
+        "use": raw.get("用途"),
+        "description": raw.get("描述"),
+        "source": raw.get("来源"),
+        "icon": raw.get("icon"),
+        "version": raw.get("道具版本"),
+        "raw_fields": raw,
+    }
+
+
+def parse_quest_wikitext(wikitext: str) -> Optional[Dict[str, Any]]:
+    """解析 {{任务信息|...}},返回标准化 dict。"""
+    raw = parse_template_params(wikitext, QUEST_TEMPLATE)
+    if not raw:
+        return None
+
+    name = raw.get("任务名称")
+    if not name:
+        return None
+
+    return {
+        "entity_type": "quest",
+        "name": name,
+        "quest_id": raw.get("任务序号"),
+        "category": raw.get("任务分类"),
+        "location": raw.get("任务地点"),
+        "description": raw.get("任务描述"),
+        "reward": raw.get("任务奖励"),
+        "image": raw.get("任务图片"),
+        "note": raw.get("任务备注"),
+        "owner": raw.get("任务归属"),
+        "raw_fields": raw,
+    }
+
+
 # ---------------------------------------------------------------------------
 # slugify
 # ---------------------------------------------------------------------------
@@ -234,6 +294,10 @@ def slugify_zh(name: str) -> str:
     """中文名 → 拼音 slug(无外部依赖回退)。
 
     优先 pypinyin,失败回退 unicode 转义序列。
+
+    多音字消歧:如果拼音后 slug 字符数 < 8(短 slug 易撞车),
+    追加原 name 首个汉字的 unicode hex 后 4 位做 disambiguation。
+    例: "冲击" → chong-ji(8 字符,不需要加); "虫击" → chong-ji(8 字符,加 866b)
     """
     name = _preprocess_for_slugify(name)
     try:
@@ -242,6 +306,13 @@ def slugify_zh(name: str) -> str:
         s = "-".join(lazy_pinyin(name)).lower()
         s = re.sub(r"[^a-z0-9-]", "-", s)
         s = re.sub(r"-+", "-", s).strip("-")
+        # 短 slug(<=8 字符)易撞车,加 unicode 末 4 位 disambiguation
+        if s and len(s) <= 8 and name:
+            # 取 name 中第一个非 ASCII 字符的 hex 后 4 位
+            for ch in name:
+                if not ch.isascii():
+                    s = f"{s}-{ch.encode('utf-8').hex()[-4:]}"
+                    break
         return s or "unknown"
     except ImportError:
         # 回退:取每个中文字符 unicode 码点的 hex 后 4 位

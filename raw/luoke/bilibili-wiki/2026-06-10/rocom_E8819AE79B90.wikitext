@@ -1,0 +1,13 @@
+{{技能信息
+|技能名称=聚盐
+|属性=草
+|技能类别=状态
+|耗能=3
+|威力=0
+|效果=2连击，每次连击自己回复8%生命，使用后本技能连击数永久+1。
+|描述=
+<table style="border-collapse: separate; border-spacing: 15px 0; text-align: center;">
+<tr><td></td></tr>
+</table><tr><td>'''S2赛季调整：</td><td>&nbsp;2连击，每次连击自己回复5%一8%生命，使用后本技能连击数永久+1(不再恢复能量)</td></tr>
+|技能版本=0.2
+}}

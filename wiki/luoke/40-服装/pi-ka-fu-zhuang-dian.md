@@ -4,6 +4,7 @@ type: mechanism
 slug: pi-ka-fu-zhuang-dian
 aliases:
 - 皮卡服装店
+- 服装图鉴
 sources:
 - raw\luoke\bilibili-wiki\2026-06-10\rocom_E69C8DE8A385E59BBEE989B4.wikitext
 - raw/luoke/bilibili-wiki/2026-06-10/rocom_E69C8DE8A385E59BBEE989B4.wikitext

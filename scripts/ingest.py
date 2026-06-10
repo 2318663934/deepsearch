@@ -41,11 +41,12 @@ CONFIDENCE_REVIEW = 0.4
 ENTITY_TYPE_TO_DIR = {
     "hero": "20-英雄",      # 王者:英雄
     "pet": "20-精灵",       # 洛克:精灵(对应王者荣耀英雄)
-    "skill": "30-技能机制",  # 通用
-    "mechanism": "30-技能机制",  # 通用
+    "skill": "30-技能",     # 通用:技能(个体技能)
+    "mechanism": "30-技能", # 通用:技能机制描述
     "item": "40-道具",      # 洛克:道具
     "quest": "50-任务",     # 洛克:任务
     "map": "60-地图",       # 洛克:地图/地区
+    "clothing": "40-服装",  # 洛克:服装(皮卡服装店等)
     "overview": "10-产品概述",
     "stub": "99-待审核",
 }
@@ -203,6 +204,50 @@ def _skill_to_extracted(parsed: Dict[str, Any], source_path: str) -> Dict[str, A
         "sources": [source_path],
         "confidence": 0.95,
         "confidence_reason": "B 站 wiki 技能模板结构化解析",
+    }
+
+
+def _item_to_extracted(parsed: Dict[str, Any], source_path: str) -> Dict[str, Any]:
+    """把 parse_item_wikitext 输出包装成 ingest schema。"""
+    facts: List[Dict[str, str]] = []
+    for k in ("rarity", "main_category", "sub_category", "use", "description", "source", "icon", "version"):
+        v = parsed.get(k)
+        if v:
+            facts.append({"key": k, "value": v, "evidence": f"{k}={v}"})
+    from scripts.lib_luoke_parser import slugify_zh
+    slug = slugify_zh(parsed["name"])
+    return {
+        "entity_type": "item",
+        "slug": slug,
+        "title": parsed["name"],
+        "aliases": [],
+        "summary": parsed.get("description", "")[:80] or parsed.get("use", "")[:80],
+        "facts": facts,
+        "sources": [source_path],
+        "confidence": 0.95,
+        "confidence_reason": "B 站 wiki 物品信息模板结构化解析",
+    }
+
+
+def _quest_to_extracted(parsed: Dict[str, Any], source_path: str) -> Dict[str, Any]:
+    """把 parse_quest_wikitext 输出包装成 ingest schema。"""
+    facts: List[Dict[str, str]] = []
+    for k in ("quest_id", "category", "location", "description", "reward", "note", "owner"):
+        v = parsed.get(k)
+        if v:
+            facts.append({"key": k, "value": v, "evidence": f"{k}={v}"})
+    from scripts.lib_luoke_parser import slugify_zh
+    slug = slugify_zh(parsed["name"])
+    return {
+        "entity_type": "quest",
+        "slug": slug,
+        "title": parsed["name"],
+        "aliases": [],
+        "summary": parsed.get("description", "")[:80],
+        "facts": facts,
+        "sources": [source_path],
+        "confidence": 0.95,
+        "confidence_reason": "B 站 wiki 任务信息模板结构化解析",
     }
 
 
@@ -399,7 +444,10 @@ def ingest_one(
     print("  [1/3] 抽取中...")
     extracted: Optional[Dict[str, Any]] = None
     if product == "luoke" and "bilibili" in str(raw_path):
-        from scripts.lib_luoke_parser import parse_pet_wikitext, parse_skill_wikitext
+        from scripts.lib_luoke_parser import (
+            parse_pet_wikitext, parse_skill_wikitext,
+            parse_item_wikitext, parse_quest_wikitext,
+        )
 
         rel_path = str(raw_path.relative_to(_PROJECT_ROOT))
         # 先按 entity_type_override 决定走哪条解析,否则按顺序试
@@ -408,14 +456,25 @@ def ingest_one(
             parsed = parse_pet_wikitext(raw_text)
         elif entity_type_override == "skill":
             parsed = parse_skill_wikitext(raw_text)
+        elif entity_type_override == "item":
+            parsed = parse_item_wikitext(raw_text)
+        elif entity_type_override == "quest":
+            parsed = parse_quest_wikitext(raw_text)
         else:
-            parsed = parse_pet_wikitext(raw_text) or parse_skill_wikitext(raw_text)
+            parsed = (parse_pet_wikitext(raw_text) or parse_skill_wikitext(raw_text)
+                       or parse_item_wikitext(raw_text) or parse_quest_wikitext(raw_text))
         if parsed:
             et = parsed.get("entity_type", "stub")
             if et == "pet":
                 extracted = _pet_to_extracted(parsed, rel_path)
             elif et == "skill":
                 extracted = _skill_to_extracted(parsed, rel_path)
+            elif et == "item":
+                extracted = _item_to_extracted(parsed, rel_path)
+            elif et == "quest":
+                extracted = _quest_to_extracted(parsed, rel_path)
+            else:
+                extracted = None
             print(f"  [parser] bilibili SMW 解析成功: type={et}, name={parsed.get('name')}")
         else:
             print("  [parser] SMW 模板未命中,回退 LLM 抽取")
@@ -442,6 +501,11 @@ def ingest_one(
 
     # 3. 决定落点
     print("  [3/3] 落盘...")
+    # entity_type 和 slug 都强制覆盖(避免 LLM 误用产品 slug)
+    if entity_type_override:
+        extracted["entity_type"] = entity_type_override
+    if slug_override:
+        extracted["slug"] = slug_override
     fm = _build_frontmatter(extracted, str(raw_path.relative_to(_PROJECT_ROOT)))
     body = _build_body(extracted)
     md = _render_markdown(fm, body)

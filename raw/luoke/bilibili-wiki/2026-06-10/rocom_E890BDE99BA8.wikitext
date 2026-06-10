@@ -1,0 +1,13 @@
+{{技能信息
+|技能名称=落雨
+|属性=水
+|技能类别=状态
+|耗能=5
+|威力=0
+|效果=将天气改为雨天，持续8回合。
+|描述=
+<table style="border-collapse: separate; border-spacing: 15px 0; text-align: center;">
+<tr><td>天气「雨天」:双方水系技能威力+75%</td></tr>
+</table><tr><td>'''S2赛季调整：</td><td>&nbsp;将天气改为雨天，持续8回合。天气「雨天」:双方水系技能威力+50%一+75%</td></tr>
+|技能版本=0.1
+}}

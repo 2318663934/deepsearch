@@ -1,0 +1,13 @@
+{{技能信息
+|技能名称=淬火
+|属性=火
+|技能类别=防御
+|耗能=2
+|威力=0
+|效果=减伤80%，应对攻击：下次攻击技能威力翻倍。
+|描述=
+<table style="border-collapse: separate; border-spacing: 15px 0; text-align: center;">
+<tr><td></td></tr>
+</table><tr><td>'''S2赛季调整：</td><td>&nbsp;技能能耗4一2，减伤80%，应对攻击:下次攻击技能威力翻倍</td></tr>
+|技能版本=0.2
+}}
