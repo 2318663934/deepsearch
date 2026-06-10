@@ -1,0 +1,44 @@
+---
+title: 古旧的银币
+type: item
+slug: gu-jiu-de-yin-bi
+aliases: []
+sources:
+- raw\luoke\bilibili-wiki\2026-06-10\rocom_E58FA4E697A7E79A84E993B6E5B881.wikitext
+confidence: 0.95
+confidence_reason: 'B 站 wiki 物品信息模板结构化解析 | 硬规则校准: 无调整'
+created: '2026-06-10T18:52:24+08:00'
+updated: '2026-06-10T18:52:24+08:00'
+last_verified: '2026-06-10T18:52:24+08:00'
+status: verified
+version: 1
+---
+
+并不是任何一种已知货币
+
+## 事实
+### rarity
+- **值**: 蓝
+- **原文依据**: rarity=蓝
+
+### main_category
+- **值**: 重要
+- **原文依据**: main_category=重要
+
+### sub_category
+- **值**: 兑换代币
+- **原文依据**: sub_category=兑换代币
+
+### use
+- **值**: 罕见的银币，已经磨损斑驳，就说可以投入某种机器来兑换物品。
+- **原文依据**: use=罕见的银币，已经磨损斑驳，就说可以投入某种机器来兑换物品。
+
+### description
+- **值**: 并不是任何一种已知货币
+- **原文依据**: description=并不是任何一种已知货币
+
+### source
+- **值**: 小游戏获得
+力量测试仪获得
+- **原文依据**: source=小游戏获得
+力量测试仪获得
