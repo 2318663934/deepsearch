@@ -1,0 +1,428 @@
+"""
+ui/app.py — Flask web app: 产品知识库浏览 UI
+
+阶段 A 路由:
+  GET  /                                  -> 产品列表
+  GET  /product/<name>                    -> 产品详情(子目录列表)
+  GET  /product/<name>/<subdir>           -> 子目录列表
+  GET  /product/<name>/<subdir>/<slug>    -> 单个 md 详情
+  GET  /review                            -> 99-待审核 全局列表
+
+启动:
+  python -m scripts.ui_app
+  (默认 http://127.0.0.1:5000)
+"""
+from __future__ import annotations
+
+import argparse
+import datetime as dt
+import re
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Tuple
+
+import markdown
+import yaml
+from flask import Flask, abort, render_template_string, request, url_for
+
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent
+WIKI_ROOT = _PROJECT_ROOT / "wiki"
+
+# 已知产品白名单(避免遍历未知目录)
+KNOWN_PRODUCTS = ["wangzhe", "luoke"]
+
+app = Flask(__name__)
+
+
+# ---------------------------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------------------------
+
+
+def _split_fm(text: str) -> Tuple[Dict[str, Any], str]:
+    """分离 YAML frontmatter 和 body, 错误时返回空 fm。"""
+    if not text.startswith("---\n"):
+        return {}, text
+    m = re.search(r"\n---\n", text[4:])
+    if not m:
+        return {}, text
+    fm_text = text[4 : 4 + m.start()]
+    body = text[4 + m.end() + 1 :]
+    try:
+        fm = yaml.safe_load(fm_text) or {}
+    except Exception:
+        fm = {}
+    return fm, body
+
+
+def _list_subdirs(product: str) -> List[Path]:
+    """列出产品下所有子目录(按中文章号前缀排序)。"""
+    root = WIKI_ROOT / product
+    if not root.exists():
+        return []
+    return sorted([p for p in root.iterdir() if p.is_dir()], key=lambda x: x.name)
+
+
+def _list_files(product: str, subdir: str) -> List[Dict[str, Any]]:
+    """列出子目录下所有 .md 文件, 提取 frontmatter。"""
+    root = WIKI_ROOT / product / subdir
+    if not root.exists():
+        return []
+    out = []
+    for md in sorted(root.glob("*.md")):
+        text = md.read_text(encoding="utf-8", errors="ignore")
+        fm, _ = _split_fm(text)
+        out.append({
+            "rel_path": f"{product}/{subdir}/{md.name}",
+            "name": md.stem,
+            "title": fm.get("title", md.stem),
+            "slug": fm.get("slug", ""),
+            "type": fm.get("type", ""),
+            "confidence": fm.get("confidence"),
+            "score": fm.get("score"),
+            "updated": fm.get("updated", ""),
+        })
+    return out
+
+
+def _read_md(product: str, subdir: str, slug: str) -> Tuple[Dict[str, Any], str, str]:
+    """读单个 md 文件, 返回 (fm, body, source_path)。"""
+    md = WIKI_ROOT / product / subdir / f"{slug}.md"
+    if not md.exists() or not md.is_file():
+        abort(404)
+    text = md.read_text(encoding="utf-8", errors="ignore")
+    fm, body = _split_fm(text)
+    return fm, body, str(md.relative_to(_PROJECT_ROOT))
+
+
+def _render_md(body: str) -> str:
+    """渲染 markdown body 为 HTML。"""
+    md = markdown.Markdown(
+        extensions=["fenced_code", "tables", "toc"],
+        output_format="html",
+    )
+    return md.convert(body)
+
+
+def _product_stats(product: str) -> Dict[str, int]:
+    """统计产品下实体数。"""
+    root = WIKI_ROOT / product
+    if not root.exists():
+        return {}
+    stats = {}
+    for sub in _list_subdirs(product):
+        n = sum(1 for _ in sub.glob("*.md") if not _.name.startswith("CLAUDE"))
+        stats[sub.name] = n
+    return stats
+
+
+def _get_product_display_name(product: str) -> str:
+    """返回产品的中文显示名(简单映射)。"""
+    return {"wangzhe": "王者荣耀", "luoke": "洛克王国世界"}.get(product, product)
+
+
+# ---------------------------------------------------------------------------
+# 模板(用 {{ content_html|safe }} 占位)
+# ---------------------------------------------------------------------------
+
+BASE_TEMPLATE = """
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <title>知识库 — {{ product_display }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="topbar">
+    <a href="{{ url_for('index') }}"><h1>📚 知识库</h1></a>
+    <nav>
+      <a href="{{ url_for('index') }}">产品</a>
+      <a href="{{ url_for('review') }}">99-待审 ({{ pending_count }})</a>
+    </nav>
+  </header>
+  <main>
+    {{ content_html|safe }}
+  </main>
+  <footer><p>deepsearch — 知识库系统 | {{ now }}</p></footer>
+</body>
+</html>
+"""
+
+
+def _count_pending() -> int:
+    """统计全局 99-待审 文件数。"""
+    n = 0
+    for p in WIKI_ROOT.rglob("99-待审核/*.md"):
+        n += 1
+    return n
+
+
+def _base_ctx(product: Optional[str] = None) -> Dict[str, Any]:
+    """公共模板变量。"""
+    return {
+        "now": dt.datetime.now().strftime("%Y-%m-%d %H:%M"),
+        "pending_count": _count_pending(),
+        "product_display": _get_product_display_name(product) if product else "全部",
+    }
+
+
+# ---------------------------------------------------------------------------
+# 路由(用 Python f-string 构建 content_html, 然后传给 BASE 模板)
+# ---------------------------------------------------------------------------
+
+
+@app.route("/")
+def index():
+    """产品列表。"""
+    products = []
+    for p in KNOWN_PRODUCTS:
+        root = WIKI_ROOT / p
+        if not root.exists():
+            continue
+        stats = _product_stats(p)
+        total = sum(stats.values())
+        products.append({
+            "name": p,
+            "display": _get_product_display_name(p),
+            "total": total,
+            "subdirs": stats,
+        })
+
+    sub_items = ""
+    for p in products:
+        sub_list = "".join(
+            f"<li>{sub}: {n}</li>"
+            for sub, n in p["subdirs"].items()
+        )
+        sub_items += f"""
+        <a class="product-card" href="/product/{p['name']}">
+          <h3>{p['display']}</h3>
+          <p class="slug">{p['name']}</p>
+          <p class="count">累计实体: <strong>{p['total']}</strong></p>
+          <ul class="subdir-list">{sub_list}</ul>
+        </a>
+        """
+
+    content_html = f"""
+    <h2>产品列表</h2>
+    <div class="product-grid">{sub_items}</div>
+    """
+
+    return render_template_string(
+        BASE_TEMPLATE,
+        content_html=content_html,
+        **_base_ctx(None),
+    )
+
+
+@app.route("/product/<name>")
+def product(name: str):
+    """产品详情: 子目录 + 统计。"""
+    if name not in KNOWN_PRODUCTS:
+        abort(404)
+    subdirs = _list_subdirs(name)
+    stats = _product_stats(name)
+    total = sum(stats.values())
+
+    tiles = "".join(
+        f"""
+        <li>
+          <a href="/product/{name}/{sub.name}">
+            <strong>{sub.name}</strong>
+            <span class="badge">{stats.get(sub.name, 0)}</span>
+          </a>
+        </li>
+        """
+        for sub in subdirs
+    )
+
+    content_html = f"""
+    <h2>{_get_product_display_name(name)}</h2>
+    <p class="slug">slug: {name}</p>
+    <p>累计实体: <strong>{total}</strong></p>
+    <h3>子目录</h3>
+    <ul class="subdir-tiles">{tiles}</ul>
+    """
+
+    return render_template_string(
+        BASE_TEMPLATE,
+        content_html=content_html,
+        **_base_ctx(name),
+    )
+
+
+@app.route("/product/<name>/<subdir>")
+def subdir(name: str, subdir: str):
+    """子目录详情: 实体列表。"""
+    if name not in KNOWN_PRODUCTS:
+        abort(404)
+    files = _list_files(name, subdir)
+    if not files:
+        abort(404)
+
+    rows = "".join(
+        f"""
+        <tr>
+          <td><a href="/product/{name}/{subdir}/{f['name']}">{f['title']}</a></td>
+          <td>{f['type']}</td>
+          <td>{("%.2f" % f['confidence']) if f['confidence'] is not None else ''}</td>
+          <td class="muted">{(f['updated'] or '')[:10]}</td>
+        </tr>
+        """
+        for f in files
+    )
+
+    content_html = f"""
+    <h2>{_get_product_display_name(name)} / {subdir}</h2>
+    <p>{len(files)} 个实体</p>
+    <table class="entity-table">
+      <thead>
+        <tr><th>title</th><th>type</th><th>confidence</th><th>updated</th></tr>
+      </thead>
+      <tbody>{rows}</tbody>
+    </table>
+    """
+
+    return render_template_string(
+        BASE_TEMPLATE,
+        content_html=content_html,
+        **_base_ctx(name),
+    )
+
+
+@app.route("/product/<name>/<subdir>/<slug>")
+def entity(name: str, subdir: str, slug: str):
+    """单实体详情: frontmatter + markdown body 渲染。"""
+    if name not in KNOWN_PRODUCTS:
+        abort(404)
+    fm, body, source_path = _read_md(name, subdir, slug)
+    rendered = _render_md(body)
+
+    fm_rows = "".join(
+        f"<tr><th>{k}</th><td>{v}</td></tr>"
+        for k, v in fm.items()
+    )
+
+    score = fm.get("score")
+    if score is not None:
+        score_html = f'<span class="score-value">{"★" * int(score)}{"☆" * (5 - int(score))} ({score}/5)</span>'
+    else:
+        score_html = '<span class="score-value">暂无评分</span>'
+
+    content_html = f"""
+    <h2>{fm.get('title', slug)}</h2>
+    <p class="slug">{name}/{subdir}/{slug}.md</p>
+    <div class="frontmatter-box">
+      <table>{fm_rows}</table>
+    </div>
+    <div class="score-actions">
+      <span class="score-label">打分:</span>
+      {score_html}
+    </div>
+    <div class="markdown-body">
+      {rendered}
+    </div>
+    """
+
+    return render_template_string(
+        BASE_TEMPLATE,
+        content_html=content_html,
+        **_base_ctx(name),
+    )
+
+
+@app.route("/review")
+def review():
+    """99-待审 全局列表。"""
+    items = []
+    for md in sorted(WIKI_ROOT.rglob("99-待审核/*.md")):
+        rel = str(md.relative_to(WIKI_ROOT)).replace("\\", "/")
+        text = md.read_text(encoding="utf-8", errors="ignore")
+        fm, _ = _split_fm(text)
+        items.append({
+            "rel_path": rel,
+            "title": fm.get("title", md.stem),
+            "type": fm.get("type", ""),
+            "slug": fm.get("slug", ""),
+            "confidence": fm.get("confidence"),
+        })
+
+    rows = "".join(
+        f"""
+        <tr>
+          <td><a href="/raw/{i['rel_path']}">{i['title']}</a></td>
+          <td>{i['rel_path'].split('/')[0]}</td>
+          <td>{i['rel_path'].split('/')[1] if '/' in i['rel_path'] else ''}</td>
+          <td>{i['type']}</td>
+          <td>{("%.2f" % i['confidence']) if i['confidence'] is not None else ''}</td>
+        </tr>
+        """
+        for i in items
+    )
+
+    content_html = f"""
+    <h2>99-待审 队列</h2>
+    <p>{len(items)} 个待审条目(全局,跨产品)</p>
+    <table class="entity-table">
+      <thead>
+        <tr><th>title</th><th>product</th><th>subdir</th><th>type</th><th>confidence</th></tr>
+      </thead>
+      <tbody>{rows}</tbody>
+    </table>
+    """
+
+    return render_template_string(
+        BASE_TEMPLATE,
+        content_html=content_html,
+        **_base_ctx(None),
+    )
+
+
+@app.route("/raw/<path:rel_path>")
+def serve_md(rel_path: str):
+    """99-待审 等 raw md 的简易渲染(同 entity 路由但路径任意)。"""
+    md = WIKI_ROOT / rel_path
+    if not md.exists() or not md.is_file():
+        abort(404)
+    text = md.read_text(encoding="utf-8", errors="ignore")
+    fm, body = _split_fm(text)
+    rendered = _render_md(body)
+
+    fm_rows = "".join(
+        f"<tr><th>{k}</th><td>{v}</td></tr>"
+        for k, v in fm.items()
+    )
+
+    content_html = f"""
+    <h2>{fm.get('title', md.stem)}</h2>
+    <p class="slug">{rel_path}</p>
+    <div class="frontmatter-box">
+      <table>{fm_rows}</table>
+    </div>
+    <div class="markdown-body">{rendered}</div>
+    """
+
+    return render_template_string(
+        BASE_TEMPLATE,
+        content_html=content_html,
+        **_base_ctx(None),
+    )
+
+
+# ---------------------------------------------------------------------------
+# CLI 入口
+# ---------------------------------------------------------------------------
+
+
+def main():
+    parser = argparse.ArgumentParser(description="知识库 web UI")
+    parser.add_argument("--host", default="127.0.0.1")
+    parser.add_argument("--port", type=int, default=5000)
+    parser.add_argument("--debug", action="store_true")
+    args = parser.parse_args()
+    print(f"启动 UI: http://{args.host}:{args.port}")
+    app.run(host=args.host, port=args.port, debug=args.debug)
+
+
+if __name__ == "__main__":
+    main()
