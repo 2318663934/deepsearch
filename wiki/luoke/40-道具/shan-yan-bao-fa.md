@@ -1,0 +1,34 @@
+---
+title: 闪焰爆发
+type: item
+slug: shan-yan-bao-fa
+aliases: []
+sources:
+- raw\luoke\bilibili-wiki\2026-06-10\rocom_E997AAE784B0E78886E58F91.wikitext
+confidence: 0.95
+confidence_reason: 'B 站 wiki 物品信息模板结构化解析 | 硬规则校准: 无调整'
+created: '2026-06-11T10:05:45+08:00'
+updated: '2026-06-11T10:05:45+08:00'
+last_verified: '2026-06-11T10:05:45+08:00'
+status: verified
+version: 1
+---
+
+对火系或者火血脉的精灵使用，本回合技能威力提升100%
+
+## 事实
+### rarity
+- **值**: 绿
+- **原文依据**: rarity=绿
+
+### main_category
+- **值**: 血脉魔法
+- **原文依据**: main_category=血脉魔法
+
+### sub_category
+- **值**: 血脉魔法
+- **原文依据**: sub_category=血脉魔法
+
+### use
+- **值**: 对火系或者火血脉的精灵使用，本回合技能威力提升100%
+- **原文依据**: use=对火系或者火血脉的精灵使用，本回合技能威力提升100%
