@@ -248,13 +248,14 @@ def index():
     content_html = f"""
     <div class="onboard-hero">
       <h2>搜索并更新知识库</h2>
-      <p>输入产品名,系统自动判断是新产品(全量上线)还是已有产品(增量更新),然后搜索 → 爬取 → 抽取 → 入仓。</p>
+      <p>输入产品名,系统自动判断是新产品(全量上线)还是已有产品(增量更新),然后搜索 &rarr; 爬取 &rarr; 抽取 &rarr; 入仓。</p>
       <form method="post" action="/onboard" class="onboard-inline">
         <input type="text" name="product_name" placeholder="输入产品名,例如: 王者荣耀、洛克王国世界、原神..." required>
-        <input type="text" name="product_slug" placeholder="slug(可选,留空自动识别)">
+        <input type="text" name="product_slug" placeholder="英文缩写(可选,例如wangzhe/luoke)" style="max-width:220px;" title="slug(英文缩写)是产品的唯一标识,例如wangzhe/luoke。已有产品会自动识别,新产品留空自动用拼音生成。">
         <input type="number" name="max_urls" value="10" min="3" max="30" style="width:60px;" title="最多搜索页面数">
-        <button type="submit" class="btn-save">🚀 更新知识库</button>
+        <button type="submit" class="btn-save">更新知识库</button>
       </form>
+      <p class="onboard-hint">slug(英文缩写)是产品的唯一标识,用于文件路径和网址,例如wangzhe(王者荣耀)、luoke(洛克王国世界)。已有产品会自动识别,新产品留空自动用拼音生成。</p>
     </div>
     <h2>已有产品</h2>
     <div class="product-grid">{sub_items}</div>
