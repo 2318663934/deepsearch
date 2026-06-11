@@ -36,6 +36,12 @@ DEFAULT_UA = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
 )
 
+# Process-wide 反爬状态: 连续 567 计数 + 最后反爬时间
+_BAN_STREAK = 0
+_LAST_BAN_TIME = 0.0
+BAN_THRESHOLD = 8  # 连续 8 个 567 后整爬虫 sleep(单 title 退避 1+2+4+8=15s 占 4 个)
+BAN_COOLDOWN = 240  # 整爬虫 cooldown 4 分钟
+
 
 def _api_get(params: dict) -> dict:
     """调一次 MediaWiki API。"""
@@ -90,8 +96,9 @@ def fetch_page_raw(title: str, product: str = "luoke", source: str = "bilibili-w
                    delay_sec: float = 2.0, max_retries: int = 4) -> Optional[Path]:
     """抓一个页面的 ?action=raw 内容,落到 raw/{product}/{source}/{date}/{slug}.wikitext。
 
-    遇到 5xx/567 反爬时指数退避重试。
+    遇到 5xx/567 反爬时指数退避重试。整进程级反爬状态在 main 循环统计。
     """
+    global _BAN_STREAK, _LAST_BAN_TIME
     url_title = urllib.parse.quote(title)
     url = f"https://wiki.biligame.com/rocom/{url_title}?action=raw"
     headers = {"User-Agent": DEFAULT_UA}
@@ -101,12 +108,16 @@ def fetch_page_raw(title: str, product: str = "luoke", source: str = "bilibili-w
         try:
             resp = requests.get(url, headers=headers, timeout=30)
             if resp.status_code in (502, 503, 504, 567, 429):
+                _BAN_STREAK += 1
+                _LAST_BAN_TIME = time.time()
                 # 限速/服务端错误,退避重试
                 backoff = 2.0 ** attempt
                 print(f"  [retry {attempt+1}/{max_retries}] {title[:30]}: HTTP {resp.status_code}, 退避 {backoff:.1f}s")
                 time.sleep(backoff)
                 continue
             resp.raise_for_status()
+            # 成功后重置反爬计数
+            _BAN_STREAK = 0
             # 成功后落盘
             today = dt.date.today().isoformat()
             out_dir = RAW_ROOT / product / source / today
@@ -122,6 +133,8 @@ def fetch_page_raw(title: str, product: str = "luoke", source: str = "bilibili-w
             return path
         except requests.exceptions.HTTPError as e:
             last_err = e
+            _BAN_STREAK += 1
+            _LAST_BAN_TIME = time.time()
             if attempt < max_retries - 1:
                 backoff = 2.0 ** attempt
                 print(f"  [retry {attempt+1}/{max_retries}] {title[:30]}: {e}, 退避 {backoff:.1f}s")
@@ -129,6 +142,8 @@ def fetch_page_raw(title: str, product: str = "luoke", source: str = "bilibili-w
                 continue
         except Exception as e:
             last_err = e
+            _BAN_STREAK += 1
+            _LAST_BAN_TIME = time.time()
             if attempt < max_retries - 1:
                 backoff = 2.0 ** attempt
                 print(f"  [retry {attempt+1}/{max_retries}] {title[:30]}: {e}, 退避 {backoff:.1f}s")
@@ -245,6 +260,13 @@ def main():
                 state_path.write_text(json.dumps(sorted(seen), ensure_ascii=False), encoding="utf-8")
         else:
             failed += 1
+            # 整进程级反爬 cooldown:连续 BAN_THRESHOLD 个 567 后 sleep BAN_COOLDOWN 秒
+            if _BAN_STREAK >= BAN_THRESHOLD:
+                cooldown = BAN_COOLDOWN
+                print(f"  [cooldown] 连续 {_BAN_STREAK} 次反爬,整进程 sleep {cooldown}s 等封禁过期")
+                time.sleep(cooldown)
+                # 重置(下一轮再判定)
+                _BAN_STREAK = 0
 
     STATE_DIR.mkdir(parents=True, exist_ok=True)
     state_path.write_text(json.dumps(sorted(seen), ensure_ascii=False), encoding="utf-8")

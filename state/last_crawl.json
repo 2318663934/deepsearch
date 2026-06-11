@@ -943,5 +943,12 @@
     "saved_to": "raw\\luoke\\bilibili-wiki\\2026-06-10\\rocom_E69C8DE8A385E59BBEE989B4.wikitext",
     "bytes": 3940,
     "message": ""
+  },
+  "bilibili-wiki:https://wiki.biligame.com/rocom/%E6%A8%A1%E6%9D%BF:%E7%89%A9%E5%93%81%E4%BF%A1%E6%81%AF": {
+    "last_crawled": "2026-06-11T10:47:22",
+    "status": "ok",
+    "saved_to": "raw\\luoke\\bilibili-wiki\\2026-06-11\\rocom_E6A8A1E69DBFE789A9E59381E4BFA1E681AF.wikitext",
+    "bytes": 3573,
+    "message": ""
   }
 }
