@@ -1,6 +1,6 @@
 ---
 title: 冷却系统
-type: skill
+type: mechanism
 slug: cooldown-system
 aliases:
 - CDR
