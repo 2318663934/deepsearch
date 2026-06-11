@@ -332,6 +332,9 @@ def entity(name: str, subdir: str, slug: str):
     <div class="score-form-box">
       {score_form}
     </div>
+    <div class="page-actions">
+      <a href="/product/{name}/{subdir}/{slug}/edit" class="btn-edit">✏️ 编辑本文</a>
+    </div>
     <div class="markdown-body">
       {rendered}
     </div>
@@ -344,7 +347,89 @@ def entity(name: str, subdir: str, slug: str):
     )
 
 
-@app.route("/product/<name>/<subdir>/<slug>/score", methods=["POST"])
+@app.route("/product/<name>/<subdir>/<slug>/edit", methods=["GET", "POST"])
+def edit_entity(name: str, subdir: str, slug: str):
+    """GET: 渲染编辑表单 (textarea 装 body)。
+    POST: 写回 md + git commit。
+    """
+    if name not in KNOWN_PRODUCTS:
+        abort(404)
+    md_path = WIKI_ROOT / name / subdir / f"{slug}.md"
+    if not md_path.exists():
+        abort(404)
+    text = md_path.read_text(encoding="utf-8")
+    fm, body = _split_fm(text)
+    if not fm:
+        abort(500, "frontmatter 解析失败")
+
+    if request.method == "GET":
+        # 渲染编辑表单
+        title = fm.get("title", slug)
+        content_html = f"""
+        <h2>编辑: {title}</h2>
+        <p class="slug">{name}/{subdir}/{slug}.md</p>
+        <form method="post" action="/product/{name}/{subdir}/{slug}/edit" class="edit-form">
+          <div class="form-row">
+            <label>body (Markdown):</label>
+            <textarea name="body" rows="30" style="font-family: monospace;">{body}</textarea>
+          </div>
+          <div class="form-row">
+            <label>commit message (可选, 默认 "update: <slug> via UI"):</label>
+            <input type="text" name="commit_msg" placeholder="update: 修改说明">
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-save">💾 保存并 git commit</button>
+            <a href="/product/{name}/{subdir}/{slug}" class="btn-cancel">取消</a>
+          </div>
+        </form>
+        """
+        return render_template_string(
+            BASE_TEMPLATE, content_html=content_html, **_base_ctx(name)
+        )
+
+    # POST: 写回 + git commit
+    new_body = request.form.get("body", "").strip()
+    commit_msg = request.form.get("commit_msg", "").strip()
+    if not commit_msg:
+        commit_msg = f"update: {slug} via UI"
+
+    fm["updated"] = dt.datetime.now().astimezone().isoformat(timespec="seconds")
+    new_text = f"---\n{yaml.safe_dump(fm, allow_unicode=True, sort_keys=False, default_flow_style=False)}---\n\n{new_body}\n"
+    md_path.write_text(new_text, encoding="utf-8")
+
+    # git commit
+    import subprocess
+    rel = str(md_path.relative_to(_PROJECT_ROOT))
+    try:
+        subprocess.run(
+            ["git", "add", rel],
+            cwd=str(_PROJECT_ROOT),
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        result = subprocess.run(
+            ["git", "commit", "-m", commit_msg],
+            cwd=str(_PROJECT_ROOT),
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode != 0 and "nothing to commit" not in (result.stdout + result.stderr).lower():
+            git_msg = f"git commit 失败: {result.stderr.strip()[:200]}"
+        else:
+            git_msg = f"已 git commit: {commit_msg}"
+    except Exception as e:
+        git_msg = f"git 错误: {e}"
+
+    content_html = f"""
+    <h2>✓ 已保存</h2>
+    <p>{git_msg}</p>
+    <p>文件: <code>{rel}</code></p>
+    <a href="/product/{name}/{subdir}/{slug}" class="btn-primary">→ 返回详情</a>
+    """
+    return render_template_string(
+        BASE_TEMPLATE, content_html=content_html, **_base_ctx(name)
+    )
 def score_entity(name: str, subdir: str, slug: str):
     """接收打分表单提交, 写回 frontmatter。"""
     if name not in KNOWN_PRODUCTS:
