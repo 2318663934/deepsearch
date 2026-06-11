@@ -1,0 +1,32 @@
+---
+title: 增程电池
+type: item
+slug: zeng-cheng-dian-chi
+aliases: []
+sources:
+- raw\luoke\bilibili-wiki\2026-06-10\rocom_E68A80E883BDE79FB3_E5A29EE7A88BE794B5E6B1A0.wikitext
+confidence: 0.95
+confidence_reason: 'B 站 wiki 物品信息模板结构化解析 | 硬规则校准: 无调整'
+created: '2026-06-11T10:05:19+08:00'
+updated: '2026-06-11T10:05:19+08:00'
+last_verified: '2026-06-11T10:05:19+08:00'
+status: verified
+version: 1
+---
+
+## 事实
+### rarity
+- **值**: 蓝
+- **原文依据**: rarity=蓝
+
+### main_category
+- **值**: 技能石
+- **原文依据**: main_category=技能石
+
+### sub_category
+- **值**: 精灵技能学习道具
+- **原文依据**: sub_category=精灵技能学习道具
+
+### source
+- **值**: 炼金造物获得
+- **原文依据**: source=炼金造物获得
