@@ -8,10 +8,15 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki 物品信息模板结构化解析 | 硬规则校准: 无调整'
 created: '2026-06-10T18:53:18+08:00'
-updated: '2026-06-10T18:53:18+08:00'
+updated: '2026-06-11T11:10:58+08:00'
 last_verified: '2026-06-10T18:53:18+08:00'
 status: verified
 version: 1
+related:
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
+- 40-道具/CLAUDE.md
+- luoke/30-技能/re-qi-83ad.md
 ---
 
 魔力果混着无花果的清冽气息猛地撞进鼻腔，蒸腾的热气里浮着几颗圆润的可可果，像撒了把月亮的碎屑。深褐色的汤汁煨着半透明的果肉，炖得软烂的魔力果吸饱了汤汁，颤巍巍卧

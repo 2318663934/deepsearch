@@ -8,14 +8,16 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:31+08:00'
-updated: '2026-06-10T10:57:07+08:00'
+updated: '2026-06-11T11:10:52+08:00'
 last_verified: '2026-06-10T10:41:31+08:00'
 status: verified
 version: 1
 related:
-- 20-精灵/CLAUDE.md
 - 00-索引/CLAUDE.md
 - 10-产品概述/luoke-guowang-shijie.md
+- 20-精灵/CLAUDE.md
+- luoke/40-道具/kong-he-8190.md
+- luoke/40-道具/mai-fu-9f8b.md
 ---
 
 它们并不追逐也不恐吓，只是静静地埋伏，等待小洛克伸手想要开宝箱时，才会突然袭击。因此老练的魔法师们会说：“冒险不难，难的是抵达终点时敢不敢伸手。”

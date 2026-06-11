@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki 任务信息模板结构化解析 | 硬规则校准: 无调整'
 created: '2026-06-10T18:51:54+08:00'
-updated: '2026-06-10T18:51:54+08:00'
+updated: '2026-06-11T10:54:49+08:00'
 last_verified: '2026-06-10T18:51:54+08:00'
 status: verified
 version: 1
+related:
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
+- 50-任务/CLAUDE.md
 ---
 
 我从昏迷中醒来，发现自己躺在一个洞窟里。似乎有人救了我，我顺着这里唯一的一条路向外走，终于见到了救我的人——易西。

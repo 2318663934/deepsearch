@@ -8,10 +8,15 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki 物品信息模板结构化解析 | 硬规则校准: 无调整'
 created: '2026-06-11T10:04:59+08:00'
-updated: '2026-06-11T10:04:59+08:00'
+updated: '2026-06-11T11:10:58+08:00'
 last_verified: '2026-06-11T10:04:59+08:00'
 status: verified
 version: 1
+related:
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
+- 40-道具/CLAUDE.md
+- luoke/20-精灵/miao-miao.md
 ---
 
 有药用价值，副作用是会看到紫色喵喵在空中跳舞。 “尚不确定是否完全无毒无害，不建议尝试。”

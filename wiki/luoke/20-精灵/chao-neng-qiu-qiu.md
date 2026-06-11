@@ -8,14 +8,15 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:21+08:00'
-updated: '2026-06-10T10:57:06+08:00'
+updated: '2026-06-11T11:10:51+08:00'
 last_verified: '2026-06-10T10:41:21+08:00'
 status: verified
 version: 1
 related:
-- 20-精灵/CLAUDE.md
 - 00-索引/CLAUDE.md
 - 10-产品概述/luoke-guowang-shijie.md
+- 20-精灵/CLAUDE.md
+- luoke/40-道具/yun-shi-99a8.md
 ---
 
 主体是中心的球状陨石，其余均是由它操纵的石块，在它周围能检测到强烈的引力波动。力量几乎等同于一颗迷你行星，所幸大多个体性格温和，常被科学家们用作研究天体物理的对

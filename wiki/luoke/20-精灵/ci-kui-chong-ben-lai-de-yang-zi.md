@@ -8,14 +8,15 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:37:48+08:00'
-updated: '2026-06-10T10:57:06+08:00'
+updated: '2026-06-11T11:10:51+08:00'
 last_verified: '2026-06-10T10:37:48+08:00'
 status: verified
 version: 1
 related:
-- 20-精灵/CLAUDE.md
 - 00-索引/CLAUDE.md
 - 10-产品概述/luoke-guowang-shijie.md
+- 20-精灵/CLAUDE.md
+- luoke/40-道具/ji-ci-a398.md
 ---
 
 刺上会卡着贝壳，木片，海藻。长长的棘刺有大量感光细胞，对光线非常敏感，具有负趋光性，为了逃避光线会在日间抓着各种东西为自己遮挡光线。食物充足时移动距离也会稍微变

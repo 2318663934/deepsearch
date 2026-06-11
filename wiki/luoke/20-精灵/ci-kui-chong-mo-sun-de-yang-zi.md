@@ -8,14 +8,16 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:37:49+08:00'
-updated: '2026-06-10T10:57:06+08:00'
+updated: '2026-06-11T11:10:51+08:00'
 last_verified: '2026-06-10T10:37:49+08:00'
 status: verified
 version: 1
 related:
-- 20-精灵/CLAUDE.md
 - 00-索引/CLAUDE.md
 - 10-产品概述/luoke-guowang-shijie.md
+- 20-精灵/CLAUDE.md
+- luoke/40-道具/fang-yu-98b2.md
+- luoke/40-道具/ji-ci-a398.md
 ---
 
 在水中，普通的刺盔虫因为棘刺太长，容易被海草缠住，而被磨损了的刺盔虫，它们的短刺既能保护自己，又能减少移动阻力。它们被惊扰时收缩成一团，然后用坚硬的刺铠防御伤害

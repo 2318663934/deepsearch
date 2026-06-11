@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki 物品信息模板结构化解析 | 硬规则校准: 无调整'
 created: '2026-06-10T18:57:07+08:00'
-updated: '2026-06-10T18:57:07+08:00'
+updated: '2026-06-11T10:54:46+08:00'
 last_verified: '2026-06-10T18:57:07+08:00'
 status: verified
 version: 1
+related:
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
+- 40-道具/CLAUDE.md
 ---
 
 格里芬写给沃尔克的推荐信，描述了你曾经不可思议的经历，但其中，还有部分信息被魔力遮掩，我无法查探……

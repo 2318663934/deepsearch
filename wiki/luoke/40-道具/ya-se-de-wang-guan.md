@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki 物品信息模板结构化解析 | 硬规则校准: 无调整'
 created: '2026-06-11T10:43:42+08:00'
-updated: '2026-06-11T10:43:42+08:00'
+updated: '2026-06-11T10:54:49+08:00'
 last_verified: '2026-06-11T10:43:42+08:00'
 status: verified
 version: 1
+related:
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
+- 40-道具/CLAUDE.md
 ---
 
 在「法瑞莎莎的守护地」中获取的亚瑟遗物。使用后可将「亚瑟的王冠」佩戴给任意精灵。

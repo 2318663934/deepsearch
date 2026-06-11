@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki 物品信息模板结构化解析 | 硬规则校准: 无调整'
 created: '2026-06-10T18:53:08+08:00'
-updated: '2026-06-10T18:53:08+08:00'
+updated: '2026-06-11T10:54:46+08:00'
 last_verified: '2026-06-10T18:53:08+08:00'
 status: verified
 version: 1
+related:
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
+- 40-道具/CLAUDE.md
 ---
 
 藤蔓与石砖搭建而成的房屋，屋顶大面积的玻璃窗能够很好的采集阳光，宛如置身于茂密森林的树屋。

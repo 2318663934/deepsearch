@@ -8,14 +8,16 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:37:56+08:00'
-updated: '2026-06-10T10:57:07+08:00'
+updated: '2026-06-11T11:10:52+08:00'
 last_verified: '2026-06-10T10:37:56+08:00'
 status: verified
 version: 1
 related:
-- 20-精灵/CLAUDE.md
 - 00-索引/CLAUDE.md
 - 10-产品概述/luoke-guowang-shijie.md
+- 20-精灵/CLAUDE.md
+- luoke/40-道具/du-nang-af92.md
+- luoke/40-道具/ji-ci-a398.md
 ---
 
 平时它仍行动迟缓。但遇险时能短暂加速，脱离光照与威胁区域。受到轻微触碰时，棘刺会迅速聚合，并指向接触点，棘端的毒囊能造成刺痛与轻微麻木。

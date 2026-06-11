@@ -8,14 +8,15 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:12+08:00'
-updated: '2026-06-10T10:57:07+08:00'
+updated: '2026-06-11T11:10:52+08:00'
 last_verified: '2026-06-10T10:40:12+08:00'
 status: verified
 version: 1
 related:
-- 20-精灵/CLAUDE.md
 - 00-索引/CLAUDE.md
 - 10-产品概述/luoke-guowang-shijie.md
+- 20-精灵/CLAUDE.md
+- luoke/40-道具/mo-fa-fen-chen.md
 ---
 
 身上的绒毛柔软且密集，表面有微小的鳞片结构来吸附灰尘，喜欢从灰尘中吸食各种魔法粉尘，会追逐星星魔法，并吸食炸开的粉末。遇到洛克时容易惊慌失措，全身颤抖，在刺激下

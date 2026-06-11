@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki 物品信息模板结构化解析 | 硬规则校准: 无调整'
 created: '2026-06-10T18:57:03+08:00'
-updated: '2026-06-10T18:57:03+08:00'
+updated: '2026-06-11T10:54:46+08:00'
 last_verified: '2026-06-10T18:57:03+08:00'
 status: verified
 version: 1
+related:
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
+- 40-道具/CLAUDE.md
 ---
 
 向阳花混着天使草的暖香漫出来，勾得人鼻尖发痒。浅褐色的汤汁里卧着软糯的无花果，果肉在表面浮浮沉沉，最上头还撒了层细碎的彩玉花，玛瑙似的坠在油花里，光是看着就教人

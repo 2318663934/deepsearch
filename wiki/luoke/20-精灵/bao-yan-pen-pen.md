@@ -8,14 +8,15 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:39+08:00'
-updated: '2026-06-10T10:57:06+08:00'
+updated: '2026-06-11T11:10:51+08:00'
 last_verified: '2026-06-10T10:40:39+08:00'
 status: verified
 version: 1
 related:
-- 20-精灵/CLAUDE.md
 - 00-索引/CLAUDE.md
 - 10-产品概述/luoke-guowang-shijie.md
+- 20-精灵/CLAUDE.md
+- luoke/30-技能/re-qi-83ad.md
 ---
 
 腹部的爆焰囊扩张了三倍，蓄能时会使整个躯体膨胀如热气球，火焰甚至会从鳞片间隙逸散。古代文献记载，曾有爆焰喷喷在火山口蓄能三天三夜，最终喷射的龙焰照亮了整个夜空。

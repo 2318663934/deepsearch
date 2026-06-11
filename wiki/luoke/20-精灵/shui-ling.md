@@ -8,14 +8,15 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:16+08:00'
-updated: '2026-06-10T10:57:07+08:00'
+updated: '2026-06-11T11:10:52+08:00'
 last_verified: '2026-06-10T10:40:16+08:00'
 status: verified
 version: 1
 related:
-- 20-精灵/CLAUDE.md
 - 00-索引/CLAUDE.md
 - 10-产品概述/luoke-guowang-shijie.md
+- 20-精灵/CLAUDE.md
+- luoke/30-技能/chong-ji-86b2.md
 ---
 
 将刚刚孕育的胚胎顶在头上，胚胎由特殊水元素包裹着。能将身边的水元素汇集在一起喷射出去，产生强大的冲击力。“无论是云中落下的一滴水，还是湖面中微风吹起的一道涟漪，

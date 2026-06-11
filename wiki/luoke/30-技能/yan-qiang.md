@@ -8,10 +8,15 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki 技能模板结构化解析 | 硬规则校准: 无调整'
 created: '2026-06-10T18:57:55+08:00'
-updated: '2026-06-10T18:57:55+08:00'
+updated: '2026-06-11T11:10:54+08:00'
 last_verified: '2026-06-10T18:57:55+08:00'
 status: verified
 version: 1
+related:
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
+- 30-技能/CLAUDE.md
+- luoke/40-道具/ran-jin-8783.md
 ---
 
 ''“前锋听令——扬焚旗之矛，贯敌方于焦土，火族永不燃尽。”''

@@ -298,26 +298,36 @@ def check_orphans(files: Dict[str, WikiFile]) -> List[Alert]:
 
 
 def check_missing_refs(files: Dict[str, WikiFile]) -> List[Alert]:
-    """缺失交叉引用：body 中出现其他页面的 title/slug 但没在 related 中。"""
+    """缺失交叉引用：body 中出现其他页面的 title/slug 但没在 related 中。
+
+    算法:如果 body 提到某 title,而该 title 不在同子目录(自然会被同子目录其他页索引),
+    且该 title 不在 related 中,才报警。降低误报。
+    """
     alerts: List[Alert] = []
-    # 1) 建 slug/title 索引
+    # 1) 建 slug/title 索引 + 按子目录分组
     title_to_path: Dict[str, str] = {}
     slug_to_path: Dict[str, str] = {}
+    path_to_subdir: Dict[str, str] = {}
     for rel, wf in files.items():
         if rel.startswith("99-待审核"):
             continue
         title = str(wf.fm.get("title", "")).strip()
         slug = str(wf.fm.get("slug", "")).strip()
+        subdir = rel.rsplit("/", 1)[0] if "/" in rel else ""
         if title:
             title_to_path[title] = rel
         if slug:
             slug_to_path[slug] = rel
+        if subdir:
+            path_to_subdir[rel] = subdir
+
     # 2) 对每个文件 body，检查是否提到其他 title/slug
     for rel, wf in files.items():
         if rel.startswith("99-待审核"):
             continue
         body = wf.body
         related = set(wf.fm.get("related") or [])
+        my_subdir = path_to_subdir.get(rel, "")
         mentioned: Set[str] = set()
         for title, other_path in title_to_path.items():
             if not title or other_path == rel:
@@ -331,6 +341,11 @@ def check_missing_refs(files: Dict[str, WikiFile]) -> List[Alert]:
                 continue
             if slug in body:
                 mentioned.add(other_path)
+        # 过滤:同子目录的引用视为已覆盖(子目录 CLAUDE.md 覆盖)
+        mentioned = {
+            m for m in mentioned
+            if path_to_subdir.get(m, "") != my_subdir
+        }
         # 减去自身和已 related 的
         missing = mentioned - {rel} - related
         if missing:

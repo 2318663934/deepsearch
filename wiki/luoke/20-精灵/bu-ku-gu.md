@@ -8,14 +8,15 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:24+08:00'
-updated: '2026-06-10T10:57:06+08:00'
+updated: '2026-06-11T11:10:51+08:00'
 last_verified: '2026-06-10T10:39:24+08:00'
 status: verified
 version: 1
 related:
-- 20-精灵/CLAUDE.md
 - 00-索引/CLAUDE.md
 - 10-产品概述/luoke-guowang-shijie.md
+- 20-精灵/CLAUDE.md
+- luoke/40-道具/tui-hua-8080.md
 ---
 
 长期在暗处生存，双目视觉逐渐退化，演化出了胸前能够探测、储存幻系能量的触手。幻系能量凝聚在菌柄中，赋予了其极强的再生能力，即便是经过火焰的炙烤，依旧能迅速生出饱

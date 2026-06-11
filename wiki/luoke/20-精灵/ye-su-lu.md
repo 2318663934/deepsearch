@@ -8,14 +8,16 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:35+08:00'
-updated: '2026-06-10T10:57:08+08:00'
+updated: '2026-06-11T11:10:53+08:00'
 last_verified: '2026-06-10T10:38:35+08:00'
 status: verified
 version: 1
 related:
-- 20-精灵/CLAUDE.md
 - 00-索引/CLAUDE.md
 - 10-产品概述/luoke-guowang-shijie.md
+- 20-精灵/CLAUDE.md
+- luoke/40-道具/gou-hun-8bbe.md
+- luoke/40-道具/xia-tui-9093.md
 ---
 
 吓退其他精灵以取乐，有人说他们以恐惧为食，但没人考证过真假。看起来像眼睛的部分并没有视觉神经，实际通过感知热量来代替视觉。

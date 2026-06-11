@@ -145,5 +145,46 @@ def main():
     print(f"重建 {args.sub}/CLAUDE.md: 含 {n2} 条精灵")
 
 
+# ---------------------------------------------------------------------------
+# 通用版本: 给任一 sub 下所有 .md(非 CLAUDE)加 related 字段
+# ---------------------------------------------------------------------------
+
+
+def add_related_generic(product: str, sub: str, related_paths: List[str]) -> int:
+    """给 sub/ 下所有 .md(除 CLAUDE.md)加 related 字段。"""
+    root = WIKI_ROOT / product / sub
+    if not root.exists():
+        return 0
+    n = 0
+    for md in root.glob("*.md"):
+        if md.name == "CLAUDE.md":
+            continue
+        text = md.read_text(encoding="utf-8")
+        fm, body = _split_fm(text)
+        if not fm:
+            continue
+        existing = fm.get("related") or []
+        if not isinstance(existing, list):
+            existing = [str(existing)]
+        existing_set = set(str(x) for x in existing)
+        new_set = set(related_paths) - existing_set
+        if not new_set:
+            continue
+        fm["related"] = sorted(existing_set | set(related_paths))
+        fm["updated"] = dt.datetime.now().astimezone().isoformat(timespec="seconds")
+        new_text = f"---\n{_render_fm(fm)}---\n\n{body}"
+        md.write_text(new_text, encoding="utf-8")
+        n += 1
+    return n
+
+
 if __name__ == "__main__":
-    main()
+    import sys
+    if len(sys.argv) > 1 and sys.argv[1] == "batch":
+        # 批量模式: 给 30-技能/40-道具/50-任务/40-服装 全加 related
+        for sub in ["30-技能", "40-道具", "50-任务", "40-服装"]:
+            related = [f"{sub}/CLAUDE.md", "00-索引/CLAUDE.md", "10-产品概述/luoke-guowang-shijie.md"]
+            n = add_related_generic("luoke", sub, related)
+            print(f"{sub}: {n} 个文件加 related")
+    else:
+        main()

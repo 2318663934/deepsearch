@@ -8,14 +8,15 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:31+08:00'
-updated: '2026-06-10T10:57:07+08:00'
+updated: '2026-06-11T11:10:52+08:00'
 last_verified: '2026-06-10T10:38:31+08:00'
 status: verified
 version: 1
 related:
-- 20-精灵/CLAUDE.md
 - 00-索引/CLAUDE.md
 - 10-产品概述/luoke-guowang-shijie.md
+- 20-精灵/CLAUDE.md
+- luoke/40-道具/hua-xiang.md
 ---
 
 会嗅来嗅去寻找花蜜，吃的花蜜越多，鼻子分泌的粘液越香甜，并且带着花香的味道。

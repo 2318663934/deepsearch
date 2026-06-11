@@ -8,14 +8,15 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:50+08:00'
-updated: '2026-06-10T10:57:08+08:00'
+updated: '2026-06-11T11:10:52+08:00'
 last_verified: '2026-06-10T10:41:50+08:00'
 status: verified
 version: 1
 related:
-- 20-精灵/CLAUDE.md
 - 00-索引/CLAUDE.md
 - 10-产品概述/luoke-guowang-shijie.md
+- 20-精灵/CLAUDE.md
+- luoke/40-道具/liu-huo-b581.md
 ---
 
 岁首更替，丙午是天地通明的光明之年，传闻雅丹鬃是光明的使者，会在新年的子夜仰首长嘶，声如裂帛，鬃毛化作飞天的流火长带，照得千里沙海通明。此时，万盏红灯同时亮起，

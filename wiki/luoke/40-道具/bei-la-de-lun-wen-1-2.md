@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki 物品信息模板结构化解析 | 硬规则校准: 无调整'
 created: '2026-06-10T18:59:53+08:00'
-updated: '2026-06-10T18:59:53+08:00'
+updated: '2026-06-11T10:54:45+08:00'
 last_verified: '2026-06-10T18:59:53+08:00'
 status: verified
 version: 1
+related:
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
+- 40-道具/CLAUDE.md
 ---
 
 几篇纸张，其中书写的内容没头没尾，看上去是一部研究报告的残页，一部分内容如上。

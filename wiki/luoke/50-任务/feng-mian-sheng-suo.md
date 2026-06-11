@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki 任务信息模板结构化解析 | 硬规则校准: 无调整'
 created: '2026-06-10T18:51:54+08:00'
-updated: '2026-06-10T18:51:54+08:00'
+updated: '2026-06-11T10:54:49+08:00'
 last_verified: '2026-06-10T18:51:54+08:00'
 status: verified
 version: 1
+related:
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
+- 50-任务/CLAUDE.md
 ---
 
 在风眠圣所的最深处，我见到了伊里斯。他在我面前展现了真正的样子——一只有着美丽彩虹配色皮毛的精灵。我按住了打算掏咕噜球的手。伊里斯是我的朋友，洛克不能,至少不应

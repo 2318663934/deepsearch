@@ -8,14 +8,15 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:32+08:00'
-updated: '2026-06-10T10:57:07+08:00'
+updated: '2026-06-11T11:10:51+08:00'
 last_verified: '2026-06-10T10:39:32+08:00'
 status: verified
 version: 1
 related:
-- 20-精灵/CLAUDE.md
 - 00-索引/CLAUDE.md
 - 10-产品概述/luoke-guowang-shijie.md
+- 20-精灵/CLAUDE.md
+- luoke/40-道具/huang-shi-liu-shi.md
 ---
 
 罕见的矿石精灵之一，外壳酷似星彩榴石。有研究员专门研究它的晶体中生物发光现象与星光魔法的关联，其星芒纹在矿灯光下清晰可辨，常被老矿工们当作夜班巡逻搭档。

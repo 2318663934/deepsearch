@@ -8,14 +8,15 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:40+08:00'
-updated: '2026-06-10T10:57:07+08:00'
+updated: '2026-06-11T11:10:52+08:00'
 last_verified: '2026-06-10T10:39:40+08:00'
 status: verified
 version: 1
 related:
-- 20-精灵/CLAUDE.md
 - 00-索引/CLAUDE.md
 - 10-产品概述/luoke-guowang-shijie.md
+- 20-精灵/CLAUDE.md
+- luoke/40-道具/shai-tai-yang.md
 ---
 
 自由的精灵，初入森林的冒险者在见到松仔时总会放松警惕，甚至会尝试抚摸它角上的松果，而它总会跳跃着离开，似乎在与来者嬉戏。太多雨水会让它们的松果湿漉漉的，需要去晒

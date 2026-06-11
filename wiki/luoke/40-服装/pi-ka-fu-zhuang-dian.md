@@ -12,10 +12,32 @@ confidence: 0.95
 confidence_reason: '原文为结构化Wiki数据，信息清晰明确，包含具体的商店机制、刷新时间、货币类型以及多个赛季的服装列表和日期，所有事实均可直接对应原文表格和文本。
   | 硬规则校准: 无调整'
 created: '2026-06-10T12:31:47+08:00'
-updated: '2026-06-10T12:31:47+08:00'
+updated: '2026-06-11T11:10:54+08:00'
 last_verified: '2026-06-10T12:31:47+08:00'
 status: verified
 version: 1
+related:
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
+- 40-服装/CLAUDE.md
+- luoke/20-精灵/bai-jin-du-jiao-shou.md
+- luoke/20-精灵/cui-ding-fu-ren.md
+- luoke/20-精灵/da-er-mao-dou.md
+- luoke/20-精灵/dian-qiu-mie-mie.md
+- luoke/20-精灵/du-du-guo.md
+- luoke/20-精灵/hong-rong-shi-zi.md
+- luoke/20-精灵/hua-kui-feng-hou.md
+- luoke/20-精灵/hua-yi-die.md
+- luoke/20-精灵/jiu-you-gu.md
+- luoke/20-精灵/jue-shi-lu.md
+- luoke/20-精灵/ka-luo-er.md
+- luoke/20-精灵/li-du-xiu-luo.md
+- luoke/20-精灵/liu-li-shui-mu.md
+- luoke/20-精灵/luoke-guowang-shijie.md
+- luoke/20-精灵/rong-yan-bu-ding.md
+- luoke/20-精灵/yin-su-quan.md
+- luoke/40-道具/lian-jin-yao-ji.md
+- luoke/40-道具/xu-yuan-xing.md
 ---
 
 皮卡服装店是洛克王国世界中的道具商店，分为月刊商店和随机商店。月刊商店每14天刷新，使用洛克钻购买；随机商店每24小时刷新，使用许愿星购买。商店提供赛季服装，如第一赛季的“暗夜拾光”系列。

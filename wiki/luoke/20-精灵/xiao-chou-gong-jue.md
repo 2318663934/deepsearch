@@ -8,14 +8,15 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:57+08:00'
-updated: '2026-06-10T10:57:07+08:00'
+updated: '2026-06-11T11:10:52+08:00'
 last_verified: '2026-06-10T10:38:57+08:00'
 status: verified
 version: 1
 related:
-- 20-精灵/CLAUDE.md
 - 00-索引/CLAUDE.md
 - 10-产品概述/luoke-guowang-shijie.md
+- 20-精灵/CLAUDE.md
+- luoke/40-道具/po-zhan-a0b4.md
 ---
 
 依然爱动，所有躁动化作指尖球技，它的迈步从容而有节奏，抛球的轨迹优雅得像一门艺术。它的耳朵随着每一次弹跳有规律地颤动，就像洛克喜欢抖腿，这是它唯一泄露出来的小破

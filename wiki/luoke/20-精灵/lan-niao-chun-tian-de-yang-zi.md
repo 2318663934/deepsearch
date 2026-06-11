@@ -8,14 +8,15 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:11+08:00'
-updated: '2026-06-10T10:57:07+08:00'
+updated: '2026-06-11T11:10:52+08:00'
 last_verified: '2026-06-10T10:39:11+08:00'
 status: verified
 version: 1
 related:
-- 20-精灵/CLAUDE.md
 - 00-索引/CLAUDE.md
 - 10-产品概述/luoke-guowang-shijie.md
+- 20-精灵/CLAUDE.md
+- luoke/40-道具/ming-jiao.md
 ---
 
 它在春天迁徙而来时，出现的时间常与播种期接近，因此被视作开耕的信号。它的喉羽呈嫩黄，鸣叫时清脆婉转。播种后，它会在田埂与水渠边玩耍，用歌声和行动提醒：春天正在到

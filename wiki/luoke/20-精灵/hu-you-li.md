@@ -8,14 +8,17 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:23+08:00'
-updated: '2026-06-10T10:57:07+08:00'
+updated: '2026-06-11T11:10:51+08:00'
 last_verified: '2026-06-10T10:39:23+08:00'
 status: verified
 version: 1
 related:
-- 20-精灵/CLAUDE.md
 - 00-索引/CLAUDE.md
 - 10-产品概述/luoke-guowang-shijie.md
+- 20-精灵/CLAUDE.md
+- luoke/40-道具/fang-yu-98b2.md
+- luoke/40-道具/ju-du-89a7.md
+- luoke/40-道具/ying-hua-a1ac.md
 ---
 
 忽幽狸的尾巴覆盖着剧毒尖刺，静止时会伪装成灌木枝条。当感知到危险，尾巴会瞬间硬化成防御姿态，刺尖分泌的神经毒素能使猎物肌肉僵直。检测显示，其毒素对草系精灵效果加

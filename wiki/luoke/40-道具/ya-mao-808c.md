@@ -8,10 +8,15 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki 物品信息模板结构化解析 | 硬规则校准: 无调整'
 created: '2026-06-11T10:43:41+08:00'
-updated: '2026-06-11T10:43:41+08:00'
+updated: '2026-06-11T11:11:00+08:00'
 last_verified: '2026-06-11T10:43:41+08:00'
 status: verified
 version: 1
+related:
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
+- 40-道具/CLAUDE.md
+- luoke/20-精灵/cao-tou-ya.md
 ---
 
 从路边的草头鸭身上获得。因为剧烈运动而从草头鸭身上掉落下来的羽毛，外形与鸭吉吉羽毛极为相似，但缺少了一丝臭臭的味道，可用药。

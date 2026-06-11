@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki 任务信息模板结构化解析 | 硬规则校准: 无调整'
 created: '2026-06-10T18:51:54+08:00'
-updated: '2026-06-10T18:51:54+08:00'
+updated: '2026-06-11T10:54:49+08:00'
 last_verified: '2026-06-10T18:51:54+08:00'
 status: verified
 version: 1
+related:
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
+- 50-任务/CLAUDE.md
 ---
 
 逃学党的事情终于告一段落了。<br>费得、卡普、可丽希亚、菲尔特,都是我在驻地里见过的同学，但是身为逃学党的他们，似乎表现出了魔法师的另外一面。<br>噜噜老师

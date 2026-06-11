@@ -8,14 +8,15 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:39:33+08:00'
-updated: '2026-06-10T10:57:07+08:00'
+updated: '2026-06-11T11:10:51+08:00'
 last_verified: '2026-06-10T10:39:33+08:00'
 status: verified
 version: 1
 related:
-- 20-精灵/CLAUDE.md
 - 00-索引/CLAUDE.md
 - 10-产品概述/luoke-guowang-shijie.md
+- 20-精灵/CLAUDE.md
+- luoke/40-道具/lan-jing-bi-xi.md
 ---
 
 在资源丰富的矿洞中能遇见的罕见蜗类，周身的矿石与斑纹会因摄入矿物类型的不同，而呈现出不同的色彩。进食时，它会直接吞下成块矿石，并通过特殊的消化结构，将其转化并沉

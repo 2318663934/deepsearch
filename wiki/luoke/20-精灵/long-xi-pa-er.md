@@ -8,14 +8,15 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:42:10+08:00'
-updated: '2026-06-10T10:57:07+08:00'
+updated: '2026-06-11T11:10:52+08:00'
 last_verified: '2026-06-10T10:42:10+08:00'
 status: verified
 version: 1
 related:
-- 20-精灵/CLAUDE.md
 - 00-索引/CLAUDE.md
 - 10-产品概述/luoke-guowang-shijie.md
+- 20-精灵/CLAUDE.md
+- luoke/30-技能/deng-jia-jiao-huan.md
 ---
 
 在古老的典籍中记载，龙息帕尔和其他恶系精灵的行事风格不同，它们秉持着等价交换的原则，会严格遵守自己缔结的契约。在契约完成前绝不会离开，甚至愿意为此等待漫长的时光

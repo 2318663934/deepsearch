@@ -8,10 +8,15 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki 物品信息模板结构化解析 | 硬规则校准: 无调整'
 created: '2026-06-10T18:59:05+08:00'
-updated: '2026-06-10T18:59:05+08:00'
+updated: '2026-06-11T11:10:55+08:00'
 last_verified: '2026-06-10T18:59:05+08:00'
 status: verified
 version: 1
+related:
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
+- 40-道具/CLAUDE.md
+- luoke/20-精灵/cui-ding-fu-ren.md
 ---
 
 「翠顶夫人印象」时装兑换礼券，打开后永久获得套装。如果存在重复获取的部件，则使用礼券后将自动返还重复消耗的许愿星。未使用的兑换券会自动存入背包，可随时前往使用。

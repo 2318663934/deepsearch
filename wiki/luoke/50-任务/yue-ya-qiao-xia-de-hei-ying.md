@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki 任务信息模板结构化解析 | 硬规则校准: 无调整'
 created: '2026-06-10T18:51:54+08:00'
-updated: '2026-06-10T18:51:54+08:00'
+updated: '2026-06-11T10:54:49+08:00'
 last_verified: '2026-06-10T18:51:54+08:00'
 status: verified
 version: 1
+related:
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
+- 50-任务/CLAUDE.md
 ---
 
 月牙镇发生了「水怪」骚动，在当地人的建议下，我决定使用钓鱼的方式把水怪钓上来。说出去大家可能会觉得我傻了，但「水怪」真的可以钓上来。因为根本就没有什么「水怪」，

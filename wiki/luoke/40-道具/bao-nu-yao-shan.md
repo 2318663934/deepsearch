@@ -8,10 +8,15 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki 物品信息模板结构化解析 | 硬规则校准: 无调整'
 created: '2026-06-10T18:56:42+08:00'
-updated: '2026-06-10T18:56:42+08:00'
+updated: '2026-06-11T11:10:54+08:00'
 last_verified: '2026-06-10T18:56:42+08:00'
 status: verified
 version: 1
+related:
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
+- 40-道具/CLAUDE.md
+- luoke/30-技能/re-qi-83ad.md
 ---
 
 混着喷气菇与大嘴花的药香裹着魔力果的醇厚气息撞进鼻腔，蒸腾的热气里还浮着几粒恶魔雪茄爆成的脆花，像撒了把会发光的星星。浅褐色的汤汁煨着半透明的紫雀花花瓣，炖得酥

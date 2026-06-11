@@ -8,14 +8,16 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:30+08:00'
-updated: '2026-06-10T10:57:07+08:00'
+updated: '2026-06-11T11:10:52+08:00'
 last_verified: '2026-06-10T10:40:30+08:00'
 status: verified
 version: 1
 related:
-- 20-精灵/CLAUDE.md
 - 00-索引/CLAUDE.md
 - 10-产品概述/luoke-guowang-shijie.md
+- 20-精灵/CLAUDE.md
+- luoke/30-技能/re-qi-83ad.md
+- luoke/30-技能/zhuo-shang.md
 ---
 
 鼻子呼出的热热的气可能会灼伤小洛克的手，如果在雪山不小心被冻伤，去拜托灵狐帮忙吹一口热气，冻伤瞬间就会痊愈了。

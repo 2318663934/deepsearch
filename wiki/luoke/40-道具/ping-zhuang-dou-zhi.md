@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki 物品信息模板结构化解析 | 硬规则校准: 无调整'
 created: '2026-06-10T18:58:11+08:00'
-updated: '2026-06-10T18:58:11+08:00'
+updated: '2026-06-11T10:54:48+08:00'
 last_verified: '2026-06-10T18:58:11+08:00'
 status: verified
 version: 1
+related:
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
+- 40-道具/CLAUDE.md
 ---
 
 有洛克会在冒险前使用瓶装斗志，然后勇往直前，完成任务后才发现实际上瓶身还没有打碎。

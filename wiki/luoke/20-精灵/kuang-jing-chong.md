@@ -8,14 +8,15 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:53+08:00'
-updated: '2026-06-10T10:57:07+08:00'
+updated: '2026-06-11T11:10:52+08:00'
 last_verified: '2026-06-10T10:40:53+08:00'
 status: verified
 version: 1
 related:
-- 20-精灵/CLAUDE.md
 - 00-索引/CLAUDE.md
 - 10-产品概述/luoke-guowang-shijie.md
+- 20-精灵/CLAUDE.md
+- luoke/40-道具/zhe-she-8a98.md
 ---
 
 喜欢攀附于潮湿的岩层，以土壤中的矿粒为食，常被用作衡量矿产资源丰富度的标志。身上的晶体可以将细小的光线通过折射放大数倍，四只矿晶虫便能照亮一整个矿洞，是备受矿工

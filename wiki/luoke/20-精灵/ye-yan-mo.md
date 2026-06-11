@@ -8,14 +8,16 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:38:09+08:00'
-updated: '2026-06-10T10:57:08+08:00'
+updated: '2026-06-11T11:10:53+08:00'
 last_verified: '2026-06-10T10:38:09+08:00'
 status: verified
 version: 1
 related:
-- 20-精灵/CLAUDE.md
 - 00-索引/CLAUDE.md
 - 10-产品概述/luoke-guowang-shijie.md
+- 20-精灵/CLAUDE.md
+- luoke/40-道具/e-zuo-ju-81b6.md
+- luoke/40-道具/ran-jin-8783.md
 ---
 
 喜欢用恶系能量恶作剧，常常在探险的小洛克面前立一道空气墙，看洛克们撞得晕头转向。头顶的叶片中蕴含着强大的恶系能量，释放能量时，叶片会缓缓燃尽，需要很长一段时间才

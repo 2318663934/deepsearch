@@ -8,10 +8,14 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki 任务信息模板结构化解析 | 硬规则校准: 无调整'
 created: '2026-06-10T18:51:54+08:00'
-updated: '2026-06-10T18:51:54+08:00'
+updated: '2026-06-11T10:54:49+08:00'
 last_verified: '2026-06-10T18:51:54+08:00'
 status: verified
 version: 1
+related:
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
+- 50-任务/CLAUDE.md
 ---
 
 普通人和水手精灵，一个绝妙的组合！在卡洛西亚大陆，洛克和精灵似乎自古以来都是这样，互相支持而前进。（话说，这只板板壳，真的是“小脑壳”吗？）

@@ -8,14 +8,16 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:17+08:00'
-updated: '2026-06-10T10:57:07+08:00'
+updated: '2026-06-11T11:10:52+08:00'
 last_verified: '2026-06-10T10:40:17+08:00'
 status: verified
 version: 1
 related:
-- 20-精灵/CLAUDE.md
 - 00-索引/CLAUDE.md
 - 10-产品概述/luoke-guowang-shijie.md
+- 20-精灵/CLAUDE.md
+- luoke/40-道具/ji-qu-b1b2.md
+- luoke/40-道具/tan-lan-b4aa.md
 ---
 
 在洛克丝毫不会注意到的角落里，羽蛇悄悄靠近，没有半点声响。它不贪婪，也不说谎。它的目的是汲取你的知识。用最为珍贵的知识与它交换，就能平安离开。否则，羽蛇对付你总

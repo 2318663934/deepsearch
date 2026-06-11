@@ -8,10 +8,15 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki 技能模板结构化解析 | 硬规则校准: 无调整'
 created: '2026-06-10T18:53:14+08:00'
-updated: '2026-06-10T18:53:14+08:00'
+updated: '2026-06-11T11:10:53+08:00'
 last_verified: '2026-06-10T18:53:14+08:00'
 status: verified
 version: 1
+related:
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
+- 30-技能/CLAUDE.md
+- luoke/40-道具/jia-shi-9eb6.md
 ---
 
 ''崩的是对方的架势，合的是破招的美学。''

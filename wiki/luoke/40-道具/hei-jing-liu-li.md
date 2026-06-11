@@ -8,10 +8,15 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki 物品信息模板结构化解析 | 硬规则校准: 无调整'
 created: '2026-06-10T19:03:36+08:00'
-updated: '2026-06-10T19:03:36+08:00'
+updated: '2026-06-11T11:10:55+08:00'
 last_verified: '2026-06-10T19:03:36+08:00'
 status: verified
 version: 1
+related:
+- 00-索引/CLAUDE.md
+- 10-产品概述/luoke-guowang-shijie.md
+- 40-道具/CLAUDE.md
+- luoke/20-精灵/a-mi-ya-te.md
 ---
 
 “我的阿米亚特说这玩意儿太香了，嚼起来有些呛口，像火山灰，有纯正的拉布朗矿山味道。”

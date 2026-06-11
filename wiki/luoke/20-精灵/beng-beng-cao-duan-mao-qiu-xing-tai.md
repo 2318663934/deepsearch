@@ -8,14 +8,15 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:27+08:00'
-updated: '2026-06-10T10:57:06+08:00'
+updated: '2026-06-11T11:10:51+08:00'
 last_verified: '2026-06-10T10:41:27+08:00'
 status: verified
 version: 1
 related:
-- 20-精灵/CLAUDE.md
 - 00-索引/CLAUDE.md
 - 10-产品概述/luoke-guowang-shijie.md
+- 20-精灵/CLAUDE.md
+- luoke/40-道具/guang-he-zuo-yong.md
 ---
 
 每到干旱的时候，身体内水分相对减少，而这时花瓣会凝结出少量花蜜，散发的瓜果香气更加浓郁，这是其光合作用达到巅峰的标志，能吸引到一些虫系精灵和馋嘴的小洛克。

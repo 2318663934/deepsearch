@@ -8,14 +8,15 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:42:11+08:00'
-updated: '2026-06-10T10:57:07+08:00'
+updated: '2026-06-11T11:10:52+08:00'
 last_verified: '2026-06-10T10:42:11+08:00'
 status: verified
 version: 1
 related:
-- 20-精灵/CLAUDE.md
 - 00-索引/CLAUDE.md
 - 10-产品概述/luoke-guowang-shijie.md
+- 20-精灵/CLAUDE.md
+- luoke/40-道具/long-hou-be99.md
 ---
 
 长鳍长尾，身形纤细流畅，拥有强大的游泳能力和跳跃能力，身体的结构比起鱼更接近龙，证明其拥有少量龙系血脉，尾部的红珠中蕴含着些许龙系能量，可以在跃出水面时发出真正

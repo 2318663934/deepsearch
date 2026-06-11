@@ -8,14 +8,15 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:40:36+08:00'
-updated: '2026-06-10T10:57:08+08:00'
+updated: '2026-06-11T11:10:53+08:00'
 last_verified: '2026-06-10T10:40:36+08:00'
 status: verified
 version: 1
 related:
-- 20-精灵/CLAUDE.md
 - 00-索引/CLAUDE.md
 - 10-产品概述/luoke-guowang-shijie.md
+- 20-精灵/CLAUDE.md
+- luoke/40-道具/qi-pao-b094.md
 ---
 
 爱扎堆聊天的小话痨，走到哪聊到哪，头顶的烟花就是它们的聊天气泡，聊得越开心，烟花崩得越热闹。脑袋上噼里啪啦闪个不停，如果看到落单的烟花团一整天头上都没有冒出烟花

@@ -8,14 +8,15 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:37:35+08:00'
-updated: '2026-06-10T10:57:07+08:00'
+updated: '2026-06-11T11:10:51+08:00'
 last_verified: '2026-06-10T10:37:35+08:00'
 status: verified
 version: 1
 related:
-- 20-精灵/CLAUDE.md
 - 00-索引/CLAUDE.md
 - 10-产品概述/luoke-guowang-shijie.md
+- 20-精灵/CLAUDE.md
+- luoke/40-道具/bao-zi-ada2.md
 ---
 
 “在古老的遗迹中发现了九幽菇的石雕，当时的洛克对九幽菇充满了崇拜，他们会在仪式上围着九幽菇唱歌，并在祭祀的指导下服用其孢子，进入幻觉，企图沟通神明，然而也存在接

@@ -8,14 +8,15 @@ sources:
 confidence: 0.95
 confidence_reason: 'B 站 wiki SMW 模板结构化解析,字段精确,无需 LLM | 硬规则校准: 无调整'
 created: '2026-06-10T10:41:43+08:00'
-updated: '2026-06-10T10:57:08+08:00'
+updated: '2026-06-11T11:10:53+08:00'
 last_verified: '2026-06-10T10:41:43+08:00'
 status: verified
 version: 1
 related:
-- 20-精灵/CLAUDE.md
 - 00-索引/CLAUDE.md
 - 10-产品概述/luoke-guowang-shijie.md
+- 20-精灵/CLAUDE.md
+- luoke/40-道具/guo-wang-qiu.md
 ---
 
 在这个虫族中存在着森严的等级制度，某些虫有资格吃到更稀有的咕噜球。咕噜球研究科曾经提出过一个实验课题《陨星虫与国王球的对撞实验》，后来课题被取消了，原因不明。
