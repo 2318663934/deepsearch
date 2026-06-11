@@ -175,6 +175,7 @@ BASE_TEMPLATE = """
     <nav>
       <a href="{{ url_for('index') }}">产品</a>
       <a href="{{ url_for('onboard') }}">+上线</a>
+      <a href="{{ url_for('raw_stats') }}">raw</a>
       <a href="{{ url_for('review') }}">99-待审 ({{ pending_count }})</a>
     </nav>
   </header>
@@ -638,6 +639,76 @@ def review():
         BASE_TEMPLATE,
         content_html=content_html,
         **_base_ctx(None),
+    )
+
+
+@app.route("/raw-stats")
+def raw_stats():
+    """raw/ 扫描状态 + 一键入仓按钮。"""
+    from scripts.raw_scanner import scan_raw, scan_stats
+    pending = scan_raw()
+    summary = scan_stats(pending)
+
+    rows = "".join(
+        f"""
+        <tr>
+          <td>{p['product']}</td>
+          <td>{p['source']}</td>
+          <td>{p['date']}</td>
+          <td><code>{p['filename'][:50]}</code></td>
+          <td>{p['bytes']:,} B</td>
+        </tr>
+        """
+        for p in pending[:50]
+    )
+
+    action_form = ""
+    if pending:
+        action_form = f"""
+        <form method="post" action="/raw-stats/ingest"
+              onsubmit="return confirm('确认对未处理的 {len(pending)} 个 raw 文件执行 ingest?')">
+          <button type="submit" class="btn-save">🚀 一键入仓({len(pending)} 个)</button>
+        </form>
+        """
+
+    content_html = f"""
+    <h2>raw/ 扫描状态</h2>
+    <pre class="raw-summary">{summary}</pre>
+    {action_form}
+    <h3>待处理列表(前 50)</h3>
+    <table class="entity-table">
+      <thead><tr><th>产品</th><th>源</th><th>日期</th><th>文件名</th><th>大小</th></tr></thead>
+      <tbody>{rows or '<tr><td colspan="5">所有 raw 文件均已入仓 ✅</td></tr>'}</tbody>
+    </table>
+    """
+    return render_template_string(
+        BASE_TEMPLATE, content_html=content_html, **_base_ctx(None),
+    )
+
+
+@app.route("/raw-stats/ingest", methods=["POST"])
+def raw_ingest_trigger():
+    """执行一键入仓。"""
+    from scripts.raw_scanner import scan_raw, run_ingest_batch
+    pending = scan_raw()
+    if not pending:
+        content_html = "<h2>✅ 没有待入仓的 raw 文件</h2><a href='/raw-stats'>返回</a>"
+    else:
+        stats = run_ingest_batch(pending)
+        rows = "".join(
+            f"<tr><td>{k}</td><td>{v}</td></tr>"
+            for k, v in sorted(stats.items()) if v
+        )
+        content_html = f"""
+        <h2>入仓完成</h2>
+        <table class="entity-table" style="max-width:400px;">
+          <thead><tr><th>状态</th><th>数量</th></tr></thead>
+          <tbody>{rows}</tbody>
+        </table>
+        <p style="margin-top:16px;"><a href="/raw-stats" class="btn-primary">返回</a></p>
+        """
+    return render_template_string(
+        BASE_TEMPLATE, content_html=content_html, **_base_ctx(None),
     )
 
 
