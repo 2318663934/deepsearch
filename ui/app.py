@@ -174,6 +174,7 @@ BASE_TEMPLATE = """
     <a href="{{ url_for('index') }}"><h1>📚 知识库</h1></a>
     <nav>
       <a href="{{ url_for('index') }}">产品</a>
+      <a href="{{ url_for('onboard') }}">+上线</a>
       <a href="{{ url_for('review') }}">99-待审 ({{ pending_count }})</a>
     </nav>
   </header>
@@ -252,6 +253,99 @@ def index():
         BASE_TEMPLATE,
         content_html=content_html,
         **_base_ctx(None),
+    )
+
+
+@app.route("/onboard", methods=["GET", "POST"])
+def onboard():
+    """新产品上线: GET 渲染表单, POST 执行搜索+爬取+入仓流水线。"""
+    if request.method == "GET":
+        content_html = """
+        <h2>上线新产品</h2>
+        <p>输入产品名,系统将自动搜索、爬取、抽取、入仓。</p>
+        <form method="post" action="/onboard" class="edit-form">
+          <div class="form-row">
+            <label>产品名(中文):</label>
+            <input type="text" name="product_name" placeholder="例如: 原神" required>
+          </div>
+          <div class="form-row">
+            <label>产品 slug (可选, 留空自动拼音):</label>
+            <input type="text" name="product_slug" placeholder="例如: yuan-shen">
+          </div>
+          <div class="form-row">
+            <label>最多搜索 N 个页面:</label>
+            <input type="number" name="max_urls" value="10" min="3" max="30">
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-save">🚀 开始上线</button>
+            <a href="/" class="btn-cancel">取消</a>
+          </div>
+        </form>
+        """
+        return render_template_string(
+            BASE_TEMPLATE, content_html=content_html, **_base_ctx(None),
+        )
+
+    # POST: 执行 onboard 流水线
+    product_name = request.form.get("product_name", "").strip()
+    product_slug = request.form.get("product_slug", "").strip() or None
+    max_urls = int(request.form.get("max_urls", "10"))
+
+    if not product_name:
+        abort(400, "产品名不能为空")
+
+    from scripts.onboard import run_onboard
+    result = run_onboard(
+        product_name=product_name,
+        product_slug=product_slug,
+        max_urls=max_urls,
+        auto_ingest=True,
+        verbose=False,
+    )
+
+    slug = result.get("slug", "")
+    ing = result.get("ingest") or {}
+    error = result.get("error", "")
+
+    if error and error != "所有页面下载失败":
+        content_html = f"""
+        <h2>⚠️ 上线未完全成功</h2>
+        <p>产品: <strong>{product_name}</strong> (slug: {slug})</p>
+        <p>错误: {error}</p>
+        <a href="/onboard" class="btn-primary">重试</a>
+        <a href="/" class="btn-cancel">返回首页</a>
+        """
+    elif slug and slug not in KNOWN_PRODUCTS:
+        KNOWN_PRODUCTS.append(slug)
+        # fall through to success display
+        content_html = f"""
+        <h2>✅ 上线完成</h2>
+        <table class="entity-table" style="max-width: 600px;">
+          <tr><th>项</th><th>值</th></tr>
+          <tr><td>产品名</td><td><strong>{product_name}</strong></td></tr>
+          <tr><td>slug</td><td><code>{slug}</code></td></tr>
+          <tr><td>搜索到</td><td>{result.get('urls_found', 0)} 个页面</td></tr>
+          <tr><td>下载成功</td><td>{result.get('downloaded', 0)} 个</td></tr>
+          <tr><td>入仓</td><td style="color:#1a7f37"><strong>{ing.get('written', 0)}</strong></td></tr>
+          <tr><td>待审核(0.4-0.7)</td><td style="color:#d4a72c">{ing.get('review', 0)}</td></tr>
+          <tr><td>丢弃(&lt;0.4)</td><td style="color:#cf222e">{ing.get('discarded', 0)}</td></tr>
+        </table>
+        <p style="margin-top: 16px;">
+          <a href="/product/{slug}" class="btn-primary">→ 查看 {product_name} 知识库</a>
+          <a href="/" class="btn-cancel">返回首页</a>
+        </p>
+        """
+    else:
+        content_html = f"""
+        <h2>⚠️ 上线未完全成功</h2>
+        <p>产品: <strong>{product_name}</strong> (slug: {slug})</p>
+        <p>错误: {error or '下载的页面内容不足,无法抽取有效信息'}</p>
+        <a href="/onboard" class="btn-primary">重试</a>
+        <a href="/" class="btn-cancel">返回首页</a>
+        """
+
+    return render_template_string(
+        BASE_TEMPLATE, content_html=content_html, **_base_ctx(None),
     )
 
 

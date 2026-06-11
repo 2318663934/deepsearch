@@ -34,11 +34,13 @@ def load_product_prompt(name: str, product: str) -> str:
         替换后的 prompt 文本
 
     Raises:
-        KeyError: product 不在 PRODUCT_DISPLAY 中
         FileNotFoundError: prompt 文件不存在
     """
     if product not in PRODUCT_DISPLAY:
-        raise KeyError(f"未知 product: {product},已知: {list(PRODUCT_DISPLAY)}")
+        # 未知产品:用 product 本身作为显示名,url-safe slug
+        from scripts.lib_luoke_parser import slugify_zh
+        PRODUCT_DISPLAY[product] = product
+        PRODUCT_SLUG[product] = slugify_zh(product)
     text = (PROMPTS_DIR / name).read_text(encoding="utf-8")
     text = text.replace("{{PRODUCT}}", PRODUCT_DISPLAY[product])
     text = text.replace("{{PRODUCT_SLUG}}", PRODUCT_SLUG[product])
