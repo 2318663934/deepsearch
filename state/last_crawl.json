@@ -950,5 +950,47 @@
     "saved_to": "raw\\luoke\\bilibili-wiki\\2026-06-11\\rocom_E6A8A1E69DBFE789A9E59381E4BFA1E681AF.wikitext",
     "bytes": 3573,
     "message": ""
+  },
+  "moegirl-baike-sub:https://mzh.moegirl.org.cn/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%3A%E5%B1%80%E5%86%85%E6%8A%80%E8%83%BD": {
+    "last_crawled": "2026-06-11T15:18:21",
+    "status": "failed",
+    "saved_to": null,
+    "bytes": 0,
+    "message": "HTTP 抓取失败"
+  },
+  "moegirl-baike-sub:https://mzh.moegirl.org.cn/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%3A%E8%A3%85%E5%A4%87": {
+    "last_crawled": "2026-06-11T15:18:31",
+    "status": "failed",
+    "saved_to": null,
+    "bytes": 0,
+    "message": "HTTP 抓取失败"
+  },
+  "moegirl-baike-sub:https://mzh.moegirl.org.cn/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%3A%E9%93%AD%E6%96%87": {
+    "last_crawled": "2026-06-11T15:18:42",
+    "status": "failed",
+    "saved_to": null,
+    "bytes": 0,
+    "message": "HTTP 抓取失败"
+  },
+  "moegirl-wz-sub:https://mzh.moegirl.org.cn/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80/%E5%B1%80%E5%86%85%E6%8A%80%E8%83%BD": {
+    "last_crawled": "2026-06-11T15:21:09",
+    "status": "ok",
+    "saved_to": "raw\\wangzhe\\moegirl-wz-sub\\2026-06-11\\E78E8BE88085E88DA3E88080_E5B180E58685E68A80E883BD.txt",
+    "bytes": 14017,
+    "message": ""
+  },
+  "moegirl-wz-sub:https://mzh.moegirl.org.cn/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80/%E8%A3%85%E5%A4%87": {
+    "last_crawled": "2026-06-11T15:21:13",
+    "status": "ok",
+    "saved_to": "raw\\wangzhe\\moegirl-wz-sub\\2026-06-11\\E78E8BE88085E88DA3E88080_E8A385E5A487.txt",
+    "bytes": 39882,
+    "message": ""
+  },
+  "moegirl-wz-sub:https://mzh.moegirl.org.cn/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80/%E9%93%AD%E6%96%87": {
+    "last_crawled": "2026-06-11T15:21:21",
+    "status": "failed",
+    "saved_to": null,
+    "bytes": 0,
+    "message": "HTTP 抓取失败"
   }
 }
