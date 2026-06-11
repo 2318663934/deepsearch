@@ -204,6 +204,39 @@ main {
 .score-label { font-weight: 600; color: #57606a; }
 .score-value { color: #d4a72c; font-size: 16px; letter-spacing: 2px; }
 
+.score-form-box {
+  background: #ddf4ff;
+  border: 1px solid #54aeff;
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.star-rating {
+  display: inline-flex;
+  gap: 2px;
+}
+.star-btn {
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  color: #d4a72c;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+}
+.star-btn:hover {
+  transform: scale(1.15);
+}
+.score-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+}
+
 footer {
   text-align: center;
   padding: 16px;

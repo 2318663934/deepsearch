@@ -309,6 +309,16 @@ def entity(name: str, subdir: str, slug: str):
     else:
         score_html = '<span class="score-value">暂无评分</span>'
 
+    # 5 星打分 UI(form 提交到 /score 端点)
+    score_form = f"""
+    <form method="post" action="/product/{name}/{subdir}/{slug}/score" class="score-form">
+      <span class="score-label">给该实体打分:</span>
+      <div class="star-rating">
+        {"".join(f'<button type="submit" name="score" value="{i}" class="star-btn">{("★" if (score and i <= int(score)) else "☆")}</button>' for i in range(1, 6))}
+      </div>
+    </form>
+    """
+
     content_html = f"""
     <h2>{fm.get('title', slug)}</h2>
     <p class="slug">{name}/{subdir}/{slug}.md</p>
@@ -316,8 +326,11 @@ def entity(name: str, subdir: str, slug: str):
       <table>{fm_rows}</table>
     </div>
     <div class="score-actions">
-      <span class="score-label">打分:</span>
+      <span class="score-label">当前打分:</span>
       {score_html}
+    </div>
+    <div class="score-form-box">
+      {score_form}
     </div>
     <div class="markdown-body">
       {rendered}
@@ -329,6 +342,37 @@ def entity(name: str, subdir: str, slug: str):
         content_html=content_html,
         **_base_ctx(name),
     )
+
+
+@app.route("/product/<name>/<subdir>/<slug>/score", methods=["POST"])
+def score_entity(name: str, subdir: str, slug: str):
+    """接收打分表单提交, 写回 frontmatter。"""
+    if name not in KNOWN_PRODUCTS:
+        abort(404)
+    md_path = WIKI_ROOT / name / subdir / f"{slug}.md"
+    if not md_path.exists():
+        abort(404)
+    try:
+        score = int(request.form.get("score", "0"))
+    except ValueError:
+        abort(400)
+    if not (1 <= score <= 5):
+        abort(400)
+    text = md_path.read_text(encoding="utf-8")
+    fm, body = _split_fm(text)
+    if not fm:
+        abort(500, "frontmatter 解析失败")
+    fm["score"] = score
+    fm["score_at"] = dt.datetime.now().astimezone().isoformat(timespec="seconds")
+    fm["updated"] = fm["score_at"]
+    # 重写文件
+    new_text = f"---\n{yaml.safe_dump(fm, allow_unicode=True, sort_keys=False, default_flow_style=False)}---\n\n{body}"
+    md_path.write_text(new_text, encoding="utf-8")
+    return f"""<!doctype html>
+    <meta http-equiv="refresh" content="1; url=/product/{name}/{subdir}/{slug}">
+    <p>打分 {score}/5 已保存。正在跳转回详情页...</p>
+    <a href="/product/{name}/{subdir}/{slug}">手动返回</a>
+    """
 
 
 @app.route("/review")
