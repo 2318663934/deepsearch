@@ -146,6 +146,7 @@ def find_existing_page(entity_type: str, slug: str, product: str = "wangzhe") ->
         "skill": "30-技能", "mechanism": "30-机制",
         "item": "40-道具", "clothing": "40-服装",
         "summoner_spell": "80-召唤师技能", "equipment": "90-局内装备",
+        "skin": "40-皮肤",
         "quest": "50-任务",
         "map": "60-地图",
         "overview": "10-产品概述",

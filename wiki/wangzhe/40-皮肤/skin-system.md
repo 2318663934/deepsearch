@@ -1,6 +1,6 @@
 ---
 title: 王者荣耀皮肤系统与星元机制
-type: overview
+type: stub
 slug: skin-system
 aliases: []
 sources:
@@ -14,6 +14,10 @@ updated: '2026-06-11T15:31:36+08:00'
 last_verified: '2026-06-11T15:31:36+08:00'
 status: verified
 version: 1
+related:
+- 40-皮肤/CLAUDE.md
+- 00-索引/CLAUDE.md
+- 10-产品概述/wangzhe-rongyao.md
 ---
 
 本文档详细阐述了王者荣耀的皮肤品质分级体系（B至SR级）及其对应的特效、加载、语音等特性，并介绍了星元系统的货币机制（蓝/紫星币合并为星币）、获取方式及部件分类，涵盖了从普通皮肤到荣耀典藏皮肤的完整外观生态。
