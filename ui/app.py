@@ -120,6 +120,43 @@ def _get_product_display_name(product: str) -> str:
     return {"wangzhe": "王者荣耀", "luoke": "洛克王国世界"}.get(product, product)
 
 
+def _product_last_crawl(product: str) -> Optional[str]:
+    """从 state 文件读该产品最近的成功爬取时间, 用于 UI 展示。"""
+    import json as _json
+    best_ts: Optional[str] = None
+
+    # 1) state/last_crawl.json — 通过 config/urls.json 找到该产品的 URLs
+    state_path = _PROJECT_ROOT / "state" / "last_crawl.json"
+    config_path = _PROJECT_ROOT / "config" / "urls.json"
+    if state_path.exists() and config_path.exists():
+        cfg = _json.loads(config_path.read_text(encoding="utf-8"))
+        urls: List[str] = []
+        if "products" in cfg:
+            for block in cfg["products"]:
+                if block.get("name") == product:
+                    for u in block.get("urls", []):
+                        urls.append(u.get("source", "") + ":" + u.get("url", ""))
+        state = _json.loads(state_path.read_text(encoding="utf-8"))
+        for key, rec in state.items():
+            if any(key.startswith(u) for u in urls):
+                ts = rec.get("last_crawled", "")
+                if ts and (not best_ts or ts > best_ts):
+                    best_ts = ts
+
+    # 2) crawl_luoke 状态文件(洛克专用)
+    luoke_state = _PROJECT_ROOT / "state" / "luoke_crawled.json"
+    if product == "luoke" and luoke_state.exists():
+        try:
+            import os
+            mtime = os.path.getmtime(str(luoke_state))
+            mt = dt.datetime.fromtimestamp(mtime).isoformat(timespec="seconds")
+            if not best_ts or mt > best_ts:
+                best_ts = mt
+        except Exception:
+            pass
+    return best_ts[:19] if best_ts else None
+
+
 # ---------------------------------------------------------------------------
 # 模板(用 {{ content_html|safe }} 占位)
 # ---------------------------------------------------------------------------
@@ -181,11 +218,13 @@ def index():
             continue
         stats = _product_stats(p)
         total = sum(stats.values())
+        last = _product_last_crawl(p)
         products.append({
             "name": p,
             "display": _get_product_display_name(p),
             "total": total,
             "subdirs": stats,
+            "last_crawl": last or "暂无记录",
         })
 
     sub_items = ""
@@ -199,6 +238,7 @@ def index():
           <h3>{p['display']}</h3>
           <p class="slug">{p['name']}</p>
           <p class="count">累计实体: <strong>{p['total']}</strong></p>
+          <p class="muted">最后爬取: {p['last_crawl']}</p>
           <ul class="subdir-list">{sub_list}</ul>
         </a>
         """
@@ -546,7 +586,7 @@ def serve_md(rel_path: str):
 def main():
     parser = argparse.ArgumentParser(description="知识库 web UI")
     parser.add_argument("--host", default="127.0.0.1")
-    parser.add_argument("--port", type=int, default=5000)
+    parser.add_argument("--port", type=int, default=9003)
     parser.add_argument("--debug", action="store_true")
     args = parser.parse_args()
     print(f"启动 UI: http://{args.host}:{args.port}")
