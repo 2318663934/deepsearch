@@ -246,7 +246,17 @@ def index():
         """
 
     content_html = f"""
-    <h2>产品列表</h2>
+    <div class="onboard-hero">
+      <h2>搜索并更新知识库</h2>
+      <p>输入产品名,系统自动判断是新产品(全量上线)还是已有产品(增量更新),然后搜索 → 爬取 → 抽取 → 入仓。</p>
+      <form method="post" action="/onboard" class="onboard-inline">
+        <input type="text" name="product_name" placeholder="输入产品名,例如: 王者荣耀、洛克王国世界、原神..." required>
+        <input type="text" name="product_slug" placeholder="slug(可选,留空自动识别)">
+        <input type="number" name="max_urls" value="10" min="3" max="30" style="width:60px;" title="最多搜索页面数">
+        <button type="submit" class="btn-save">🚀 更新知识库</button>
+      </form>
+    </div>
+    <h2>已有产品</h2>
     <div class="product-grid">{sub_items}</div>
     """
 
@@ -287,7 +297,7 @@ def onboard():
             BASE_TEMPLATE, content_html=content_html, **_base_ctx(None),
         )
 
-    # POST: 执行 onboard 流水线
+    # POST: 执行 onboard 流水线(自动判断新产品/已有产品)
     product_name = request.form.get("product_name", "").strip()
     product_slug = request.form.get("product_slug", "").strip() or None
     max_urls = int(request.form.get("max_urls", "10"))
@@ -295,55 +305,134 @@ def onboard():
     if not product_name:
         abort(400, "产品名不能为空")
 
-    from scripts.onboard import run_onboard
-    result = run_onboard(
-        product_name=product_name,
-        product_slug=product_slug,
-        max_urls=max_urls,
-        auto_ingest=True,
-        verbose=False,
-    )
+    # 智能判断: 已有产品还是新产品
+    is_existing = False
+    if product_slug is None:
+        # 从 product_name 反向查 slug(支持中文名输入)
+        for known_slug, known_display in {
+            "wangzhe": "王者荣耀", "luoke": "洛克王国世界",
+        }.items():
+            if product_name in (known_slug, known_display):
+                product_slug = known_slug
+                is_existing = True
+                break
+    else:
+        is_existing = product_slug in KNOWN_PRODUCTS
 
-    slug = result.get("slug", "")
-    ing = result.get("ingest") or {}
-    error = result.get("error", "")
+    if product_slug is None:
+        # 纯新产品,自动生成 slug
+        from scripts.onboard import _product_slug
+        product_slug = _product_slug(product_name)
 
-    if error and error != "所有页面下载失败":
+    from scripts.onboard import run_onboard, search_sources, download_page
+    from scripts.ingest import ingest_one
+    from scripts.lib_llm import LlamaCppClient
+
+    if is_existing:
+        # 增量更新: 搜索 → 下载 → 只 ingest 未处理的新文件 → 已有 wiki 走 decide_action
+        import json as _json
+        mode_label = f"增量更新({product_name})"
+        sources = search_sources(product_name, max_results=max_urls)
+        downloaded = 0
+        for s in sources:
+            from urllib.parse import urlparse
+            domain = urlparse(s["url"]).netloc.replace(".", "-")
+            source_name = f"web-{domain[:30]}"
+            path = download_page(s["url"], product_slug, source_name)
+            if path:
+                downloaded += 1
+
+        # 扫描新 raw 并 ingest
+        raw_root = _PROJECT_ROOT / "raw" / product_slug
+        new_raws = []
+        if raw_root.exists():
+            for rp in sorted(raw_root.rglob("*.txt")):
+                if not rp.with_suffix(rp.suffix + ".processed").exists():
+                    new_raws.append(rp)
+
+        client = LlamaCppClient()
+        stats = {"written": 0, "replaced": 0, "review": 0, "discarded": 0, "failed": 0}
+        for rp in new_raws:
+            try:
+                res = ingest_one(rp, client, product=product_slug)
+                status = res.get("status", "unknown")
+                if status in ("written", "replaced"):
+                    stats["written"] += 1
+                elif status == "review":
+                    stats["review"] += 1
+                elif status == "discarded":
+                    stats["discarded"] += 1
+                else:
+                    stats["failed"] += 1
+            except Exception:
+                stats["failed"] += 1
+
         content_html = f"""
-        <h2>⚠️ 上线未完全成功</h2>
-        <p>产品: <strong>{product_name}</strong> (slug: {slug})</p>
-        <p>错误: {error}</p>
-        <a href="/onboard" class="btn-primary">重试</a>
-        <a href="/" class="btn-cancel">返回首页</a>
-        """
-    elif slug and slug not in KNOWN_PRODUCTS:
-        KNOWN_PRODUCTS.append(slug)
-        # fall through to success display
-        content_html = f"""
-        <h2>✅ 上线完成</h2>
+        <h2>✅ 增量更新完成</h2>
+        <p>产品: <strong>{product_name}</strong> (已有, slug: {product_slug})</p>
         <table class="entity-table" style="max-width: 600px;">
           <tr><th>项</th><th>值</th></tr>
-          <tr><td>产品名</td><td><strong>{product_name}</strong></td></tr>
-          <tr><td>slug</td><td><code>{slug}</code></td></tr>
-          <tr><td>搜索到</td><td>{result.get('urls_found', 0)} 个页面</td></tr>
-          <tr><td>下载成功</td><td>{result.get('downloaded', 0)} 个</td></tr>
-          <tr><td>入仓</td><td style="color:#1a7f37"><strong>{ing.get('written', 0)}</strong></td></tr>
-          <tr><td>待审核(0.4-0.7)</td><td style="color:#d4a72c">{ing.get('review', 0)}</td></tr>
-          <tr><td>丢弃(&lt;0.4)</td><td style="color:#cf222e">{ing.get('discarded', 0)}</td></tr>
+          <tr><td>搜索到</td><td>{len(sources)} 个页面</td></tr>
+          <tr><td>下载成功</td><td>{downloaded} 个</td></tr>
+          <tr><td>新入仓</td><td style="color:#1a7f37"><strong>{stats['written']}</strong></td></tr>
+          <tr><td>替换已有</td><td>{stats['replaced']}</td></tr>
+          <tr><td>待审核</td><td style="color:#d4a72c">{stats['review']}</td></tr>
+          <tr><td>丢弃</td><td style="color:#cf222e">{stats['discarded']}</td></tr>
         </table>
         <p style="margin-top: 16px;">
-          <a href="/product/{slug}" class="btn-primary">→ 查看 {product_name} 知识库</a>
+          <a href="/product/{product_slug}" class="btn-primary">→ 查看 {product_name} 知识库</a>
           <a href="/" class="btn-cancel">返回首页</a>
         </p>
         """
     else:
-        content_html = f"""
-        <h2>⚠️ 上线未完全成功</h2>
-        <p>产品: <strong>{product_name}</strong> (slug: {slug})</p>
-        <p>错误: {error or '下载的页面内容不足,无法抽取有效信息'}</p>
-        <a href="/onboard" class="btn-primary">重试</a>
-        <a href="/" class="btn-cancel">返回首页</a>
-        """
+        # 全新产品: 全量上线
+        mode_label = f"全量上线({product_name})"
+        result = run_onboard(
+            product_name=product_name,
+            product_slug=product_slug,
+            max_urls=max_urls,
+            auto_ingest=True,
+            verbose=False,
+        )
+        slug = result.get("slug", "")
+        ing = result.get("ingest") or {}
+        error = result.get("error", "")
+
+        if error and error != "所有页面下载失败":
+            content_html = f"""
+            <h2>⚠️ 上线未完全成功</h2>
+            <p>产品: <strong>{product_name}</strong> (slug: {slug})</p>
+            <p>错误: {error}</p>
+            <a href="/onboard" class="btn-primary">重试</a>
+            <a href="/" class="btn-cancel">返回首页</a>
+            """
+        elif slug and slug not in KNOWN_PRODUCTS:
+            KNOWN_PRODUCTS.append(slug)
+            content_html = f"""
+            <h2>✅ 上线完成</h2>
+            <table class="entity-table" style="max-width: 600px;">
+              <tr><th>项</th><th>值</th></tr>
+              <tr><td>产品名</td><td><strong>{product_name}</strong></td></tr>
+              <tr><td>slug</td><td><code>{slug}</code></td></tr>
+              <tr><td>搜索到</td><td>{result.get('urls_found', 0)} 个页面</td></tr>
+              <tr><td>下载成功</td><td>{result.get('downloaded', 0)} 个</td></tr>
+              <tr><td>入仓</td><td style="color:#1a7f37"><strong>{ing.get('written', 0)}</strong></td></tr>
+              <tr><td>待审核(0.4-0.7)</td><td style="color:#d4a72c">{ing.get('review', 0)}</td></tr>
+              <tr><td>丢弃(&lt;0.4)</td><td style="color:#cf222e">{ing.get('discarded', 0)}</td></tr>
+            </table>
+            <p style="margin-top: 16px;">
+              <a href="/product/{slug}" class="btn-primary">→ 查看 {product_name} 知识库</a>
+              <a href="/" class="btn-cancel">返回首页</a>
+            </p>
+            """
+        else:
+            content_html = f"""
+            <h2>⚠️ 上线未完全成功</h2>
+            <p>产品: <strong>{product_name}</strong> (slug: {slug})</p>
+            <p>错误: {error or '下载的页面内容不足,无法抽取有效信息'}</p>
+            <a href="/onboard" class="btn-primary">重试</a>
+            <a href="/" class="btn-cancel">返回首页</a>
+            """
 
     return render_template_string(
         BASE_TEMPLATE, content_html=content_html, **_base_ctx(None),
